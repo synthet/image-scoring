@@ -1,0 +1,25 @@
+.cursor/mcp.json
+.DS_Store
+Thumbs.db
+*.log
+
+# --- synthet-code-framework agent paths ---
+secrets.json
+.env
+.env.*
+!.env.example
+.claude/settings.local.json
+.agent/scratch/*
+!.agent/scratch/.gitkeep
+.agent-memory/raw-sessions/*
+!.agent-memory/raw-sessions/.gitkeep
+.agent-memory/dreams/*
+!.agent-memory/dreams/.gitkeep
+.agent-runs/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+node_modules/
+dist/
+graphify-out/

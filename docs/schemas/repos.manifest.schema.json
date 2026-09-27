@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Image Scoring sibling manifest",
+  "type": "object",
+  "required": ["version", "layout", "repositories"],
+  "properties": {
+    "version": { "type": "integer" },
+    "layout": {
+      "type": "object",
+      "required": ["kind", "parentDir", "hubDir"],
+      "properties": {
+        "kind": { "const": "sibling" },
+        "parentDir": { "type": "string" },
+        "hubDir": { "type": "string" }
+      }
+    },
+    "repositories": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "dir", "role", "description"],
+        "properties": {
+          "id": { "type": "string" },
+          "dir": { "type": "string" },
+          "path": { "type": "string", "description": "Absolute local path when layout is fixed (optional)." },
+          "github": { "type": "string" },
+          "clone": {
+            "type": "object",
+            "properties": {
+              "https": { "type": "string" },
+              "ssh": { "type": "string" }
+            }
+          },
+          "role": { "type": "string" },
+          "product": { "type": "string" },
+          "description": { "type": "string" }
+        }
+      }
+    },
+    "optionalSiblings": { "type": "array" }
+  }
+}

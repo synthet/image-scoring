@@ -1,0 +1,20 @@
+#:schema https://developers.openai.com/codex/config-schema.json
+
+# Project-scoped Codex defaults. Codex loads this file only after the repository
+# is trusted. Keep credentials and machine-specific provider settings in
+# ~/.codex/config.toml, never here.
+[agents]
+max_threads = 4
+max_depth = 1
+
+[mcp_servers.openaiDeveloperDocs]
+url = "https://developers.openai.com/mcp"
+
+# TypeSafe Jev — secrets in D:/Projects/jev-mcp/.env (JEV_ENV_FILE); paid API per tool call.
+[mcp_servers.jev-rw-systemone]
+command = "uv"
+args = ["run", "--project", "D:/Projects/jev-mcp", "python", "D:/Projects/jev-mcp/scripts/run_jev_mcp.py"]
+
+[mcp_servers.jev-rw-systemone.env]
+JEV_ENV_FILE = "D:/Projects/jev-mcp/.env"
+JEV_MODEL = "jev-1.13.0"

@@ -1,0 +1,139 @@
+{
+  "$schema": "./docs/schemas/repos.manifest.schema.json",
+  "version": 1,
+  "layout": {
+    "kind": "sibling",
+    "parentDir": "D:\\Projects",
+    "hubDir": "image-scoring"
+  },
+  "repositories": [
+    {
+      "id": "hub",
+      "dir": "image-scoring",
+      "path": "D:\\Projects\\image-scoring",
+      "github": "synthet/image-scoring",
+      "clone": {
+        "https": "https://github.com/synthet/image-scoring.git",
+        "ssh": "git@github.com:synthet/image-scoring.git"
+      },
+      "role": "meta",
+      "description": "Umbrella workspace, docs, and cross-repo scripts (this repo)."
+    },
+    {
+      "id": "backend",
+      "dir": "image-scoring-backend",
+      "path": "D:\\Projects\\image-scoring-backend",
+      "github": "synthet/image-scoring-backend",
+      "clone": {
+        "https": "https://github.com/synthet/image-scoring-backend.git",
+        "ssh": "git@github.com:synthet/image-scoring-backend.git"
+      },
+      "role": "application",
+      "product": "Vexlum Scoring",
+      "description": "AI DAM pipeline, Gradio WebUI, Postgres, MCP (is-be-*)."
+    },
+    {
+      "id": "gallery",
+      "dir": "image-scoring-gallery",
+      "path": "D:\\Projects\\image-scoring-gallery",
+      "github": "synthet/image-scoring-gallery",
+      "clone": {
+        "https": "https://github.com/synthet/image-scoring-gallery.git",
+        "ssh": "git@github.com:synthet/image-scoring-gallery.git"
+      },
+      "role": "application",
+      "product": "Driftara Gallery",
+      "description": "Electron + React desktop gallery (is-ui-*)."
+    },
+    {
+      "id": "model",
+      "dir": "image-scoring-model",
+      "path": "D:\\Projects\\image-scoring-model",
+      "github": "synthet/image-scoring-model",
+      "clone": {
+        "https": "https://github.com/synthet/image-scoring-model.git",
+        "ssh": "git@github.com:synthet/image-scoring-model.git"
+      },
+      "role": "library",
+      "product": "eye-quality",
+      "description": "Wildlife eye pose + eye-focus scoring; integrates into backend phases."
+    },
+    {
+      "id": "ui",
+      "dir": "image-scoring-ui",
+      "path": "D:\\Projects\\image-scoring-ui",
+      "github": "synthet/image-scoring-ui",
+      "clone": {
+        "https": "https://github.com/synthet/image-scoring-ui.git",
+        "ssh": "git@github.com:synthet/image-scoring-ui.git"
+      },
+      "role": "library",
+      "product": "@synthet/image-scoring-design",
+      "description": "Shared design tokens and CSS/TS artifacts for backend SPA and gallery."
+    },
+    {
+      "id": "skills",
+      "dir": "image-scoring-skills",
+      "path": "D:\\Projects\\image-scoring-skills",
+      "github": "synthet/image-scoring-skills",
+      "clone": {
+        "https": "https://github.com/synthet/image-scoring-skills.git",
+        "ssh": "git@github.com:synthet/image-scoring-skills.git"
+      },
+      "role": "prompts",
+      "description": "Photo evaluation / carousel prompts; optional MCP to backend scores."
+    }
+  ],
+  "infrastructure": [
+    {
+      "id": "llm-wiki",
+      "dir": "synthet-llm-wiki",
+      "path": "D:\\Projects\\synthet-llm-wiki",
+      "github": "synthet/synthet-llm-wiki",
+      "role": "knowledge",
+      "description": "Evidence-bound LLM Wiki — llmwiki-ro-core MCP; in default workspace.",
+      "mcp": {
+        "serverKey": "llmwiki-ro-core",
+        "launcher": "scripts/run_llmwiki_mcp.py"
+      }
+    },
+    {
+      "id": "code-framework",
+      "dir": "synthet-code-framework",
+      "path": "D:\\Projects\\synthet-code-framework",
+      "github": "synthet/synthet-code-framework",
+      "role": "upstream",
+      "description": "Generic agent scaffold; hub refreshed via scripts/framework-adopt.ps1."
+    },
+    {
+      "id": "jev-mcp",
+      "dir": "jev-mcp",
+      "path": "D:\\Projects\\jev-mcp",
+      "github": "synthet/jev-mcp",
+      "clone": {
+        "https": "https://github.com/synthet/jev-mcp.git",
+        "ssh": "git@github.com:synthet/jev-mcp.git"
+      },
+      "role": "mcp",
+      "description": "TypeSafe System One MCP (jev-rw-systemone); pairs with backend agent harness.",
+      "mcp": {
+        "serverKey": "jev-rw-systemone",
+        "launcher": "scripts/run_jev_mcp.py"
+      }
+    }
+  ],
+  "referenceDocuments": [
+    {
+      "title": "Jev Engineering for Coding Agents",
+      "path": "D:\\Projects\\image-scoring\\docs\\raw\\Jev-Engineering-for-Coding-Agents.pdf",
+      "adoption": "docs/guides/JEV_ENGINEERING_ADOPTION.md"
+    }
+  ],
+  "optionalSiblings": [
+    {
+      "dir": "subagent-orchestrator",
+      "github": "synthet/subagent-orchestrator",
+      "note": "External CLI reviews (imgscore-subagent-orchestrator MCP); see backend docs/technical/EXTERNAL_CLI_REVIEWS.md."
+    }
+  ]
+}

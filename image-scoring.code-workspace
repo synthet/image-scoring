@@ -1,0 +1,56 @@
+{
+  "folders": [
+    {
+      "name": "image-scoring",
+      "path": "D:\\Projects\\image-scoring"
+    },
+    {
+      "name": "synthet-llm-wiki",
+      "path": "D:\\Projects\\synthet-llm-wiki"
+    },
+    {
+      "name": "jev-mcp",
+      "path": "D:\\Projects\\jev-mcp"
+    },
+    {
+      "name": "image-scoring-gallery",
+      "path": "D:\\Projects\\image-scoring-gallery"
+    },
+    {
+      "name": "image-scoring-model",
+      "path": "D:\\Projects\\image-scoring-model"
+    },
+    {
+      "name": "image-scoring-skills",
+      "path": "D:\\Projects\\image-scoring-skills"
+    },
+    {
+      "name": "image-scoring-ui",
+      "path": "D:\\Projects\\image-scoring-ui"
+    },
+    {
+      "name": "image-scoring-backend",
+      "path": "D:\\Projects\\image-scoring-backend"
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "**/.git": true,
+      "**/__pycache__": true,
+      "**/node_modules": true
+    },
+    "search.exclude": {
+      "**/node_modules": true,
+      "**/dist": true,
+      "**/.venv": true
+    }
+  },
+  "extensions": {
+    "recommendations": [
+      "ms-python.python",
+      "charliermarsh.ruff",
+      "dbaeumer.vscode-eslint",
+      "bradlc.vscode-tailwindcss"
+    ]
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "_comment": "Multi-root workspace MCP. Open image-scoring.code-workspace. Copy to mcp.json (gitignored). Build image-scoring-backend and image-scoring-gallery mcp-server packages before enabling is-be-mcp / is-ui-mcp.",
+  "mcpServers": {
+    "jev-rw-systemone": {
+      "_comment": "TypeSafe Jev / System One — paid API; set JEV_TOKEN in jev-mcp/.env",
+      "side_effects": "write-capable",
+      "approval_required": true,
+      "approval_note": "Each judgment spends API quota.",
+      "command": "uv",
+      "args": [
+        "run",
+        "--project",
+        "${workspaceFolder:jev-mcp}",
+        "python",
+        "${workspaceFolder:jev-mcp}/scripts/run_jev_mcp.py"
+      ],
+      "env": {
+        "JEV_ENV_FILE": "${workspaceFolder:jev-mcp}/.env",
+        "JEV_MODEL": "jev-1.13.0"
+      }
+    },
+    "llmwiki-ro-core": {
+      "_comment": "Shared evidence wiki — sibling synthet-llm-wiki",
+      "side_effects": "read-only",
+      "command": "uv",
+      "args": [
+        "run",
+        "--project",
+        "${workspaceFolder:synthet-llm-wiki}",
+        "python",
+        "${workspaceFolder:synthet-llm-wiki}/scripts/run_llmwiki_mcp.py"
+      ]
+    },
+    "is-be-mcp": {
+      "command": "node",
+      "args": ["mcp-server/dist/compactIndex.js"],
+      "cwd": "${workspaceFolder:image-scoring-backend}"
+    },
+    "is-ui-mcp": {
+      "command": "node",
+      "args": ["mcp-server/dist/compactIndex.js"],
+      "cwd": "${workspaceFolder:image-scoring-gallery}"
+    },
+    "is-be-live": {
+      "_comment": "Optional — WebUI running only",
+      "url": "http://127.0.0.1:7860/mcp/sse",
+      "headers": {
+        "Authorization": "Bearer ${env:IMGSCORE_MCP_TOKEN}"
+      }
+    },
+    "is-ui-live": {
+      "_comment": "Optional — Electron dev running only",
+      "url": "http://127.0.0.1:9373/mcp/sse",
+      "headers": {
+        "Authorization": "Bearer ${env:GALLERY_MCP_TOKEN}"
+      }
+    }
+  },
+  "_examples": {
+    "proj-ro-fff-be": {
+      "_comment": "Optional fff index for backend — copy into mcpServers",
+      "side_effects": "read-only",
+      "command": "fff-mcp",
+      "args": ["${workspaceFolder:image-scoring-backend}"],
+      "cwd": "${workspaceFolder:image-scoring-backend}"
+    }
+  }
+}
