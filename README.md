@@ -7,7 +7,7 @@ Umbrella hub for the **Vexlum Scoring** ecosystem: sibling git repos under one p
 | Folder | GitHub | Role |
 |--------|--------|------|
 | **image-scoring** (here) | [synthet/image-scoring](https://github.com/synthet/image-scoring) | Meta hub |
-| **image-scoring-backend** | [synthet/image-scoring-backend](https://github.com/synthet/image-scoring-backend) | Vexlum Scoring — pipeline, WebUI, Postgres, MCP `is-be-*` |
+| **image-scoring-pipeline** | [synthet/image-scoring-pipeline](https://github.com/synthet/image-scoring-pipeline) | Vexlum Scoring — pipeline, WebUI, Postgres, MCP `is-be-*` |
 | **image-scoring-gallery** | [synthet/image-scoring-gallery](https://github.com/synthet/image-scoring-gallery) | Driftara Gallery — Electron app, MCP `is-ui-*` |
 | **image-scoring-model** | [synthet/image-scoring-model](https://github.com/synthet/image-scoring-model) | `eye-quality` — eye pose / focus scoring |
 | **image-scoring-ui** | [synthet/image-scoring-ui](https://github.com/synthet/image-scoring-ui) | `@synthet/image-scoring-design` tokens |
@@ -60,4 +60,4 @@ Agent scaffold from **[synthet-code-framework](https://github.com/synthet/synthe
 - **LLM Wiki OKF bundle** — `synthet-llm-wiki/docs/ecosystems/image-scoring/`; sync: `.\scripts\llmwiki-sync-ecosystem.ps1` ([`docs/llm-wiki/README.md`](docs/llm-wiki/README.md)).
 - **[`.cursor/README.md`](.cursor/README.md)** — multi-root MCP (`mcp.example.json`).
 
-Canonical product docs stay in **image-scoring-backend** and **image-scoring-gallery**; do not duplicate long setup guides here.
+Canonical product docs stay in **image-scoring-pipeline** and **image-scoring-gallery**; do not duplicate long setup guides here.

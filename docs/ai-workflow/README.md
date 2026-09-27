@@ -33,13 +33,13 @@ okf_version: 0.1
 ### Image Scoring hub vs app repos
 
 This **umbrella** repo keeps the framework default (`.claude/` canonical). Sibling app repos
-(`image-scoring-backend`, `image-scoring-gallery`, …) are **Cursor-first** domain forks — see
+(`image-scoring-pipeline`, `image-scoring-gallery`, …) are **Cursor-first** domain forks — see
 [`docs/FRAMEWORK_AND_WIKI.md`](../FRAMEWORK_AND_WIKI.md) and backend
 `docs/raw/framework-adoption-port-manifest.md`. Cross-repo contract work: [`.agent/workflows/cross_repo_contract_change.md`](../../.agent/workflows/cross_repo_contract_change.md).
 
 **Evidence:** use skill `llm-wiki` + MCP `llmwiki-ro-core` (`synthet-llm-wiki`) for reviewed facts; use repo `docs/CANONICAL_SOURCES.md` for live contracts.
 
-**Jev:** design note adopted in [`docs/guides/JEV_ENGINEERING_ADOPTION.md`](../guides/JEV_ENGINEERING_ADOPTION.md); harness code in `image-scoring-backend`; skills `jev-harness-ecosystem`, `jev-mcp`.
+**Jev:** design note adopted in [`docs/guides/JEV_ENGINEERING_ADOPTION.md`](../guides/JEV_ENGINEERING_ADOPTION.md); harness code in `image-scoring-pipeline`; skills `jev-harness-ecosystem`, `jev-mcp`.
 
 ## CLI tooling skills
 

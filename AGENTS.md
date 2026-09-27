@@ -28,9 +28,9 @@ See [`.agent/SAFETY.md`](.agent/SAFETY.md), [`docs/ai-workflow/README.md`](docs/
 |--------|------|-----|
 | [synthet-code-framework](https://github.com/synthet/synthet-code-framework) | `D:\Projects\synthet-code-framework` | Refresh hub scaffold: `.\scripts\framework-adopt.ps1` |
 | [synthet-llm-wiki](https://github.com/synthet/synthet-llm-wiki) | `D:\Projects\synthet-llm-wiki` | `llmwiki-ro-core` MCP; OKF bundle `docs/ecosystems/image-scoring/`; sync `.\scripts\llmwiki-sync-ecosystem.ps1` |
-| Jev Engineering note + harness | PDF in hub `docs/raw/`; harness in `image-scoring-backend` | [`JEV_ENGINEERING_ADOPTION.md`](docs/guides/JEV_ENGINEERING_ADOPTION.md), [`JEV_MCP_INTEGRATION.md`](docs/guides/JEV_MCP_INTEGRATION.md); `.\scripts\jev-mcp-integrate.ps1`; MCP `jev-rw-systemone` |
+| Jev Engineering note + harness | PDF in hub `docs/raw/`; harness in `image-scoring-pipeline` | [`JEV_ENGINEERING_ADOPTION.md`](docs/guides/JEV_ENGINEERING_ADOPTION.md), [`JEV_MCP_INTEGRATION.md`](docs/guides/JEV_MCP_INTEGRATION.md); `.\scripts\jev-mcp-integrate.ps1`; MCP `jev-rw-systemone` |
 
-App siblings remain **Cursor-first** forks; see `image-scoring-backend/docs/raw/framework-adoption-port-manifest.md`.
+App siblings remain **Cursor-first** forks; see `image-scoring-pipeline/docs/raw/framework-adoption-port-manifest.md`.
 
 <!-- END SYNTHET-CODE-FRAMEWORK -->
 
@@ -39,7 +39,7 @@ You are in the **meta hub** (`image-scoring`). Application code, tests, and MCP 
 
 ## Layout contract
 
-- **Sibling layout:** `image-scoring`, `image-scoring-backend`, `image-scoring-gallery`, `image-scoring-model`, `image-scoring-ui`, and `image-scoring-skills` share the same parent directory (see [`repos.manifest.json`](repos.manifest.json)).
+- **Sibling layout:** `image-scoring`, `image-scoring-pipeline`, `image-scoring-gallery`, `image-scoring-model`, `image-scoring-ui`, and `image-scoring-skills` share the same parent directory (see [`repos.manifest.json`](repos.manifest.json)).
 - **Open workspace:** [`image-scoring.code-workspace`](image-scoring.code-workspace) — folder names must match `${workspaceFolder:…}` keys in [`.cursor/mcp.example.json`](.cursor/mcp.example.json).
 - **Verify:** `.\scripts\layout-doctor.ps1` from the hub root.
 
@@ -47,7 +47,7 @@ You are in the **meta hub** (`image-scoring`). Application code, tests, and MCP 
 
 | Task | Repo | Entry docs |
 |------|------|------------|
-| Pipeline, scoring, Postgres, Gradio, doctor | `image-scoring-backend` | `README.md`, `AGENTS.md`, `docs/DIAGNOSTICS.md` |
+| Pipeline, scoring, Postgres, Gradio, doctor | `image-scoring-pipeline` | `README.md`, `AGENTS.md`, `docs/DIAGNOSTICS.md` |
 | Electron gallery, `npm run doctor` | `image-scoring-gallery` | `README.md`, `docs/DEVELOPMENT.md` |
 | Eye-quality model, training, API contract | `image-scoring-model` | `README.md`, `docs/guides/BACKEND_INTEGRATION.md` |
 | Design tokens, `npm run build` before consumers | `image-scoring-ui` | `README.md` |
@@ -58,13 +58,13 @@ You are in the **meta hub** (`image-scoring`). Application code, tests, and MCP 
 
 ## MCP (multi-root)
 
-- Backend template: `image-scoring-backend/.cursor/mcp.pair.example.json`
+- Backend template: `image-scoring-pipeline/.cursor/mcp.pair.example.json`
 - Hub copy (same semantics): [`.cursor/mcp.example.json`](.cursor/mcp.example.json) → copy to `.cursor/mcp.json` (gitignored) after building both `mcp-server` packages.
 - **User** `~/.cursor/mcp.json`: cross-repo tools only — not `is-be-*` / `is-ui-*` (see backend `AGENTS.md`).
 
 ## PR / hygiene
 
-- Backend: ruff + pytest subsets per `image-scoring-backend/AGENTS.md`
+- Backend: ruff + pytest subsets per `image-scoring-pipeline/AGENTS.md`
 - Gallery: lint, `test:run`, tsc per `image-scoring-gallery/AGENTS.md`
 - Hub: no runtime tests; keep manifest and scripts in sync when adding a repo
 

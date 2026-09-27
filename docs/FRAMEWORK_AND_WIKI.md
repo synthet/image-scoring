@@ -45,7 +45,7 @@ python scripts/sync_assistant_trees.py --check   # CI
 | Repo class | Agent SOT | Notes |
 |------------|-----------|-------|
 | **Hub** (`image-scoring`) | `.claude/` → `.cursor/` (framework default) | SDLC commands, safety, memory; no product runtime |
-| **Backend / gallery / …** | `.cursor/` → `.claude/` (domain fork) | See `image-scoring-backend/docs/raw/framework-adoption-port-manifest.md` |
+| **Backend / gallery / …** | `.cursor/` → `.claude/` (domain fork) | See `image-scoring-pipeline/docs/raw/framework-adoption-port-manifest.md` |
 
 Cherry-pick generic improvements from framework into app repos; never blind-merge domain MCP rules or pipeline docs.
 
@@ -77,7 +77,7 @@ Install wiki once per machine (`uv sync --extra dev` in `synthet-llm-wiki`). Lau
 |------|----------|
 | Working note PDF | [`docs/raw/Jev-Engineering-for-Coding-Agents.pdf`](raw/Jev-Engineering-for-Coding-Agents.pdf) |
 | Adoption map | [`docs/guides/JEV_ENGINEERING_ADOPTION.md`](guides/JEV_ENGINEERING_ADOPTION.md) |
-| Live harness | `image-scoring-backend/docs/technical/JEV_AGENT_HARNESS.md` |
+| Live harness | `image-scoring-pipeline/docs/technical/JEV_AGENT_HARNESS.md` |
 | MCP judgments | `jev-mcp` workspace folder + `jev-rw-systemone` in `.cursor/mcp.example.json` |
 
 Skills: `jev-harness-ecosystem` (where to edit hooks/packs), `jev-mcp` (interactive System One calls).

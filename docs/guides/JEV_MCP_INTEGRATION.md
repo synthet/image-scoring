@@ -71,7 +71,7 @@ git clone https://github.com/synthet/jev-mcp.git D:\Projects\jev-mcp
 
 | Layer | Repo | Role |
 |-------|------|------|
-| **Hooks / packs / policy** | `image-scoring-backend` | Per-turn Jev via `scripts/agent_harness/` |
+| **Hooks / packs / policy** | `image-scoring-pipeline` | Per-turn Jev via `scripts/agent_harness/` |
 | **Interactive MCP** | `jev-mcp` | Ad-hoc judgments in chat |
 | **Design note** | hub `docs/raw/Jev-Engineering-for-Coding-Agents.pdf` | [`JEV_ENGINEERING_ADOPTION.md`](JEV_ENGINEERING_ADOPTION.md) |
 

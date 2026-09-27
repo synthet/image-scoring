@@ -16,7 +16,7 @@ okf_version: 0.1
 
 ## Thesis (one paragraph)
 
-Coding agents are a loop; **leverage is what the harness feeds each turn**. Jev is the **decision layer** beside frontier models: structured state + a narrow question → typed **choice**, **score**, or **noul** with probabilities. The harness validates and branches without parsing prose. Image Scoring implements much of this in **image-scoring-backend** (hooks, packs, policy, MCP search rerank); the hub documents cross-repo adoption and wires **jev-mcp** for ad-hoc judgments in the umbrella workspace.
+Coding agents are a loop; **leverage is what the harness feeds each turn**. Jev is the **decision layer** beside frontier models: structured state + a narrow question → typed **choice**, **score**, or **noul** with probabilities. The harness validates and branches without parsing prose. Image Scoring implements much of this in **image-scoring-pipeline** (hooks, packs, policy, MCP search rerank); the hub documents cross-repo adoption and wires **jev-mcp** for ad-hoc judgments in the umbrella workspace.
 
 ## PDF concepts → where we implement
 
@@ -33,7 +33,7 @@ Coding agents are a loop; **leverage is what the harness feeds each turn**. Jev 
 | Tiered tools | snippets first, schema on demand | MCP compact index; skills with short descriptions |
 | Conditional instructions | AGENTS/rules per area | Cursor `globs` + Jev pack ladder; footguns packs per domain |
 
-**Operator doc (detail):** `image-scoring-backend/docs/technical/JEV_AGENT_HARNESS.md`  
+**Operator doc (detail):** `image-scoring-pipeline/docs/technical/JEV_AGENT_HARNESS.md`  
 **Gallery:** hooks delegate to backend `scripts/agent_harness/hook.py` with `--repo`.
 
 ## Hub agent assets

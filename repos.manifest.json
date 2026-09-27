@@ -20,13 +20,13 @@
       "description": "Umbrella workspace, docs, and cross-repo scripts (this repo)."
     },
     {
-      "id": "backend",
-      "dir": "image-scoring-backend",
-      "path": "D:\\Projects\\image-scoring-backend",
-      "github": "synthet/image-scoring-backend",
+      "id": "pipeline",
+      "dir": "image-scoring-pipeline",
+      "path": "D:\\Projects\\image-scoring-pipeline",
+      "github": "synthet/image-scoring-pipeline",
       "clone": {
-        "https": "https://github.com/synthet/image-scoring-backend.git",
-        "ssh": "git@github.com:synthet/image-scoring-backend.git"
+        "https": "https://github.com/synthet/image-scoring-pipeline.git",
+        "ssh": "git@github.com:synthet/image-scoring-pipeline.git"
       },
       "role": "application",
       "product": "Vexlum Scoring",

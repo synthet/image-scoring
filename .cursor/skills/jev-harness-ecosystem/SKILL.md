@@ -1,10 +1,10 @@
 ---
 name: jev-harness-ecosystem
-description: Use when changing agent hooks, Jev harness modes, rule packs, programmable permissions, routing, review bundles, or MCP search rerank across image-scoring-backend and image-scoring-gallery; or when the user cites Jev Engineering for Coding Agents.
+description: Use when changing agent hooks, Jev harness modes, rule packs, programmable permissions, routing, review bundles, or MCP search rerank across image-scoring-pipeline and image-scoring-gallery; or when the user cites Jev Engineering for Coding Agents.
 capability: "Image Scoring Jev harness operator guide"
 side_effect_level: local_write
 approval_required: false
-requires_tools: "image-scoring-backend scripts/agent_harness/cli.py; optional jev-rw-systemone for ad-hoc judgments"
+requires_tools: "image-scoring-pipeline scripts/agent_harness/cli.py; optional jev-rw-systemone for ad-hoc judgments"
 output_schema: "Concrete file paths and mode changes"
 risk_class: medium
 ---
@@ -18,14 +18,14 @@ The **working note** *Jev Engineering for Coding Agents* is adopted in this mono
 | Doc | Repo |
 |-----|------|
 | `image-scoring/docs/guides/JEV_ENGINEERING_ADOPTION.md` | hub — PDF → implementation map |
-| `image-scoring-backend/docs/technical/JEV_AGENT_HARNESS.md` | backend — modes, hooks, files |
+| `image-scoring-pipeline/docs/technical/JEV_AGENT_HARNESS.md` | backend — modes, hooks, files |
 | PDF | `image-scoring/docs/raw/Jev-Engineering-for-Coding-Agents.pdf` |
 
 ## When to edit what
 
 | Task | Where |
 |------|--------|
-| Hook behaviour, rubrics, policy | `image-scoring-backend/scripts/agent_harness/` |
+| Hook behaviour, rubrics, policy | `image-scoring-pipeline/scripts/agent_harness/` |
 | Per-repo pack triggers, route prices | `.agent/jev_harness.json` in backend **and** gallery |
 | Rule packs (visibility ladder) | `.cursor/rules/*.mdc` in target app repo → sync to `.claude/` |
 | MCP search rerank | backend `config.json` `typesafe.mcp_search_rerank` + `typesafe.enabled` |
@@ -34,7 +34,7 @@ The **working note** *Jev Engineering for Coding Agents* is adopted in this mono
 ## Operator CLI (backend)
 
 ```bash
-cd image-scoring-backend
+cd image-scoring-pipeline
 python scripts/agent_harness/cli.py budget
 python scripts/agent_harness/cli.py packs
 python scripts/agent_harness/cli.py route --task "..." --files path1,path2

@@ -1,5 +1,5 @@
 {
-  "_comment": "Multi-root workspace MCP. Open image-scoring.code-workspace. Copy to mcp.json (gitignored). Build image-scoring-backend and image-scoring-gallery mcp-server packages before enabling is-be-mcp / is-ui-mcp.",
+  "_comment": "Multi-root workspace MCP. Open image-scoring.code-workspace. Copy to mcp.json (gitignored). Build image-scoring-pipeline and image-scoring-gallery mcp-server packages before enabling is-be-mcp / is-ui-mcp.",
   "mcpServers": {
     "jev-rw-systemone": {
       "_comment": "TypeSafe Jev / System One — paid API; set JEV_TOKEN in jev-mcp/.env",
@@ -34,7 +34,7 @@
     "is-be-mcp": {
       "command": "node",
       "args": ["mcp-server/dist/compactIndex.js"],
-      "cwd": "${workspaceFolder:image-scoring-backend}"
+      "cwd": "${workspaceFolder:image-scoring-pipeline}"
     },
     "is-ui-mcp": {
       "command": "node",
@@ -61,8 +61,8 @@
       "_comment": "Optional fff index for backend — copy into mcpServers",
       "side_effects": "read-only",
       "command": "fff-mcp",
-      "args": ["${workspaceFolder:image-scoring-backend}"],
-      "cwd": "${workspaceFolder:image-scoring-backend}"
+      "args": ["${workspaceFolder:image-scoring-pipeline}"],
+      "cwd": "${workspaceFolder:image-scoring-pipeline}"
     }
   }
 }
