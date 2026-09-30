@@ -17,11 +17,13 @@ flowchart LR
   subgraph clients [Clients]
     G[Driftara Gallery]
     W[Gradio WebUI]
+    Mbl[Mobile Labeler]
     S[Skills prompts]
   end
   subgraph core [Core]
     B[Vexlum Scoring backend]
     DB[(PostgreSQL)]
+    Hub[Labeling Hub]
   end
   subgraph libs [Libraries]
     M[eye-quality model]
@@ -38,6 +40,8 @@ flowchart LR
   G --> DB
   W --> B
   W --> DB
+  Mbl --> Hub
+  Hub --> B
   S -. optional MCP .-> B
   B --> DB
   B --> M
@@ -57,6 +61,7 @@ flowchart LR
 | From | To | Mechanism |
 |------|-----|-----------|
 | Gallery | Backend | REST API / SQL mode; sibling folder for default port discovery |
+| Mobile | Labeling Hub / Backend | REST / SQLite outbox; leases task batches, posts annotation events |
 | Backend | Model | `pip install -e ../image-scoring-model`; phase `eye_quality` (see model `BACKEND_INTEGRATION.md`) |
 | Backend SPA, Gallery | UI package | `file:../image-scoring-ui` or GitHub tag dependency |
 | Skills | Backend | Sibling path + `.cursor/mcp.json` stdio or SSE |

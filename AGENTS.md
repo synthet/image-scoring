@@ -17,6 +17,7 @@ python scripts/sync_assistant_trees.py --check
 python scripts/okf_lint.py --profile project docs
 python scripts/ci/check_agent_frontmatter.py
 python scripts/ci/check_secrets.py
+python scripts/ci/check_private_docs_not_tracked.py
 .\scripts\layout-doctor.ps1
 ```
 
@@ -39,7 +40,7 @@ You are in the **meta hub** (`image-scoring`). Application code, tests, and MCP 
 
 ## Layout contract
 
-- **Sibling layout:** `image-scoring`, `image-scoring-pipeline`, `image-scoring-gallery`, `image-scoring-model`, `image-scoring-ui`, and `image-scoring-skills` share the same parent directory (see [`repos.manifest.json`](repos.manifest.json)).
+- **Sibling layout:** `image-scoring`, `image-scoring-pipeline`, `image-scoring-gallery`, `image-scoring-mobile`, `image-scoring-model`, `image-scoring-ui`, and `image-scoring-skills` share the same parent directory (see [`repos.manifest.json`](repos.manifest.json)).
 - **Open workspace:** [`image-scoring.code-workspace`](image-scoring.code-workspace) — folder names must match `${workspaceFolder:…}` keys in [`.cursor/mcp.example.json`](.cursor/mcp.example.json).
 - **Verify:** `.\scripts\layout-doctor.ps1` from the hub root.
 
@@ -49,6 +50,7 @@ You are in the **meta hub** (`image-scoring`). Application code, tests, and MCP 
 |------|------|------------|
 | Pipeline, scoring, Postgres, Gradio, doctor | `image-scoring-pipeline` | `README.md`, `AGENTS.md`, `docs/DIAGNOSTICS.md` |
 | Electron gallery, `npm run doctor` | `image-scoring-gallery` | `README.md`, `docs/DEVELOPMENT.md` |
+| Mobile labeler (Expo / React Native) | `image-scoring-mobile` | `README.md`, `AGENTS.md` |
 | Eye-quality model, training, API contract | `image-scoring-model` | `README.md`, `docs/guides/BACKEND_INTEGRATION.md` |
 | Design tokens, `npm run build` before consumers | `image-scoring-ui` | `README.md` |
 | Editorial `/review`, `/carousel`, imgscore MCP | `image-scoring-skills` | `AGENTS.md`, `docs/image-scoring-db.md` |
@@ -66,6 +68,7 @@ You are in the **meta hub** (`image-scoring`). Application code, tests, and MCP 
 
 - Backend: ruff + pytest subsets per `image-scoring-pipeline/AGENTS.md`
 - Gallery: lint, `test:run`, tsc per `image-scoring-gallery/AGENTS.md`
+- Mobile: expo lint + tsc per `image-scoring-mobile/AGENTS.md`
 - Hub: no runtime tests; keep manifest and scripts in sync when adding a repo
 
 ## Infrastructure siblings

@@ -9,6 +9,7 @@ Umbrella hub for the **Vexlum Scoring** ecosystem: sibling git repos under one p
 | **image-scoring** (here) | [synthet/image-scoring](https://github.com/synthet/image-scoring) | Meta hub |
 | **image-scoring-pipeline** | [synthet/image-scoring-pipeline](https://github.com/synthet/image-scoring-pipeline) | Vexlum Scoring — pipeline, WebUI, Postgres, MCP `is-be-*` |
 | **image-scoring-gallery** | [synthet/image-scoring-gallery](https://github.com/synthet/image-scoring-gallery) | Driftara Gallery — Electron app, MCP `is-ui-*` |
+| **image-scoring-mobile** | [synthet/image-scoring-mobile](https://github.com/synthet/image-scoring-mobile) | Mobile Labeler — Expo / React Native offline-first human labeling app |
 | **image-scoring-model** | [synthet/image-scoring-model](https://github.com/synthet/image-scoring-model) | `eye-quality` — eye pose / focus scoring |
 | **image-scoring-ui** | [synthet/image-scoring-ui](https://github.com/synthet/image-scoring-ui) | `@synthet/image-scoring-design` tokens |
 | **image-scoring-skills** | [synthet/image-scoring-skills](https://github.com/synthet/image-scoring-skills) | Editorial / carousel prompts + optional DB MCP |

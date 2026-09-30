@@ -46,6 +46,19 @@
       "description": "Electron + React desktop gallery (is-ui-*)."
     },
     {
+      "id": "mobile",
+      "dir": "image-scoring-mobile",
+      "path": "D:\\Projects\\image-scoring-mobile",
+      "github": "synthet/image-scoring-mobile",
+      "clone": {
+        "https": "https://github.com/synthet/image-scoring-mobile.git",
+        "ssh": "git@github.com:synthet/image-scoring-mobile.git"
+      },
+      "role": "application",
+      "product": "Vexlum Mobile Labeler",
+      "description": "Offline-first Expo / React Native mobile app for Vexlum human labeling (culling, binary, pairwise)."
+    },
+    {
       "id": "model",
       "dir": "image-scoring-model",
       "path": "D:\\Projects\\image-scoring-model",

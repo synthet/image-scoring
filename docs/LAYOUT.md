@@ -15,6 +15,7 @@ okf_version: 0.1
 ```
 D:\Projects\image-scoring              # hub (meta)
 D:\Projects\image-scoring-gallery
+D:\Projects\image-scoring-mobile
 D:\Projects\image-scoring-model
 D:\Projects\image-scoring-skills
 D:\Projects\image-scoring-ui
@@ -26,6 +27,7 @@ Canonical paths are also in [`repos.manifest.json`](../repos.manifest.json) (`pa
 ## Why siblings matter
 
 - **Gallery** discovers backend API port via sibling `webui.lock` unless `api.url` / `api.port` is set.
+- **Mobile** leases batches and flushes annotations to the labeling hub / backend.
 - **Skills** MCP launchers assume `../image-scoring-pipeline`.
 - **UI package** local dev uses `file:../image-scoring-ui` from backend and gallery `package.json`.
 - **Model** integration docs use `pip install -e /path/to/image-scoring-model`.
