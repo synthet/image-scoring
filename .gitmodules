@@ -1,0 +1,18 @@
+[submodule "image-scoring-ui"]
+	path = image-scoring-ui
+	url = https://github.com/synthet/image-scoring-ui.git
+[submodule "image-scoring-skills"]
+	path = image-scoring-skills
+	url = https://github.com/synthet/image-scoring-skills.git
+[submodule "image-scoring-model"]
+	path = image-scoring-model
+	url = https://github.com/synthet/image-scoring-model.git
+[submodule "image-scoring-mobile"]
+	path = image-scoring-mobile
+	url = https://github.com/synthet/image-scoring-mobile.git
+[submodule "image-scoring-gallery"]
+	path = image-scoring-gallery
+	url = https://github.com/synthet/image-scoring-gallery.git
+[submodule "image-scoring-pipeline"]
+	path = image-scoring-pipeline
+	url = https://github.com/synthet/image-scoring-pipeline.git
