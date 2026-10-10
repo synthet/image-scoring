@@ -20,6 +20,7 @@ D:\Projects\image-scoring-model
 D:\Projects\image-scoring-skills
 D:\Projects\image-scoring-ui
 D:\Projects\image-scoring-pipeline
+D:\Projects\kestrel                   # local instrument (no GitHub remote)
 ```
 
 Canonical paths are also in [`repos.manifest.json`](../repos.manifest.json) (`path` per repo). On another machine, update those paths or rely on sibling `dir` + `layout.parentDir`.
@@ -40,3 +41,8 @@ Canonical paths are also in [`repos.manifest.json`](../repos.manifest.json) (`pa
 | Single repo root | Focused PRs, repo-native slash commands and CI |
 
 The hub repo is safe to open alone for manifest/script edits; it is not sufficient for running the full stack.
+
+## Submodules & Local Deduplication
+
+The hub tracks each component as a Git submodule (`git submodule status`). For local workflows comparing sibling folders vs. nested submodules, and how to physically deduplicate them using NTFS Directory Junctions without breaking sibling path discovery, see [`guides/SUBMODULE_DEDUPLICATION_OPTIONS.md`](guides/SUBMODULE_DEDUPLICATION_OPTIONS.md).
+
