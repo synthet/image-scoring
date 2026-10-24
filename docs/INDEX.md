@@ -13,6 +13,8 @@ okf_version: 0.1
 ## Governance & conventions
 - [README.md](README.md) — documentation hub
 - [CANONICAL_SOURCES.md](CANONICAL_SOURCES.md) — authority map
+- [LAYOUT.md](LAYOUT.md) — sibling folder layout
+- [guides/RENAME_BACKEND_TO_PIPELINE.md](guides/RENAME_BACKEND_TO_PIPELINE.md) — backend to pipeline rename migration guide
 - [WIKI_SCHEMA.md](WIKI_SCHEMA.md) — wiki structure & maintenance
 - [OKF_ADOPTION.md](OKF_ADOPTION.md) — OKF profile & lint
 
@@ -26,5 +28,15 @@ okf_version: 0.1
 - [project/INDEX.md](project/INDEX.md) — project governance index
 - [project/00-backlog-workflow.md](project/00-backlog-workflow.md) — backlog/board contract
 
+## Feature specifications (cross-repo)
+
+- [planning/focus-evidence-synergy-2026-10-23.md](planning/focus-evidence-synergy-2026-10-23.md) — proposed Nikon/Kestrel/model/pipeline/skills integration and acceptance criteria
+- [specs/README.md](specs/README.md) — how specs are split across siblings
+- [specs/visual-evidence-overlays/INDEX.md](specs/visual-evidence-overlays/INDEX.md) — evidence overlay spec map
+- [specs/05-diagnostics-and-visual-inspection.md](specs/05-diagnostics-and-visual-inspection.md) — behaviour authority
+- [planning/visual-evidence-overlays-ecosystem.md](planning/visual-evidence-overlays-ecosystem.md) — delivery phases
+
 ## Activity
+
+- [reports/INDEX.md](reports/INDEX.md) — cross-project research, including the 2026-10-23 model/pipeline/skills synergy audit
 - [log.md](log.md) — append-only wiki log

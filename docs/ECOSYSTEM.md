@@ -66,6 +66,12 @@ flowchart LR
 | Backend SPA, Gallery | UI package | `file:../image-scoring-ui` or GitHub tag dependency |
 | Skills | Backend | Sibling path + `.cursor/mcp.json` stdio or SSE |
 
+## Local instruments
+
+| Folder | Role |
+|--------|------|
+| `kestrel` | Wildlife burst culling: Python scorer and desktop review. Local only; `clone-siblings.ps1` skips it because the manifest has no clone URL. |
+
 ## Canonical sources
 
 Do not fork long guides into this hub. Prefer:
@@ -73,3 +79,8 @@ Do not fork long guides into this hub. Prefer:
 - Backend: `docs/README.md`, `docs/features/implemented/INDEX.md`
 - Gallery: `docs/README.md`, `docs/features/implemented/INDEX.md`
 - Model: `docs/CANONICAL_SOURCES.md`
+
+## Visual evidence overlays (cross-repo)
+
+Phased delivery index: [planning/visual-evidence-overlays-ecosystem.md](planning/visual-evidence-overlays-ecosystem.md).
+Behaviour spec: [specs/05-diagnostics-and-visual-inspection.md](specs/05-diagnostics-and-visual-inspection.md).
