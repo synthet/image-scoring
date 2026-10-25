@@ -1,0 +1,31 @@
+[
+  {
+    "path": "docs/specs/as-built/nikon-af-metadata.md",
+    "before_sha256": null,
+    "after_sha256": "7bbe7392bac954a750ef63bd24602a3029abed5e6147c15f621d83e1021bd8ea"
+  },
+  {
+    "path": "docs/specs/as-built/INDEX.md",
+    "before_sha256": "06780c58f593f9d4ca28f035e46e0166d36e63a1869628bfb5a398cb78b52ad3",
+    "after_sha256": "b6611182ba75553ee3869bd3eb27a4946320f5a1a468a8108e018a895039cd6c",
+    "script_after_sha256": "db259e3af5ccb26ac8d2142fb9c8efac59fc9dfeab3b7d2cca98095ee09064c5",
+    "note": "Link text aligned with neighboring rows after the script ran; after_sha256 matches commit 322decec"
+  },
+  {
+    "path": "docs/INDEX.md",
+    "before_sha256": "629eabbda6bb6e08637ecf105edb70e4c87af7f8758cc86ff9a4e853c25aad7e",
+    "after_sha256": "6e8d135acea14ca2fd176a01e5b7fc5873be1f9daad10daea589eef3fe320757",
+    "script_after_sha256": "b21ae1835238411b7411f5d8abc047acefcfe7b0766a25595d90d9393e01a78b",
+    "note": "Entry moved from the sibling-repository table to the As-built behavior list after the script ran; after_sha256 matches commit 322decec"
+  },
+  {
+    "path": "docs/CANONICAL_SOURCES.md",
+    "before_sha256": "d5e0532ca45fde13b39b5395d6a763e8bb0bf9c59b1bf3b16008d258ac03084a",
+    "after_sha256": "652698ad84a07a463ecb6038a0c60ced0e1e866b075c4cfbf76fb351c5dfd799"
+  },
+  {
+    "path": "docs/log.md",
+    "before_sha256": "fcb09e1ce390d76c8815f3fa11ed55c6fcfdf0a7928adbe4ca1a8aeefbfd6aeb",
+    "after_sha256": "9f64658a86c83e1f447659db2c22087bca5980b2267fdb0f0f3c3d8c1a8a1cde"
+  }
+]

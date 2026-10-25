@@ -1,0 +1,29 @@
+{
+  "started_at": "2026-10-24T16:10:26.388675+00:00",
+  "command": [
+    "docker",
+    "run",
+    "--rm",
+    "--network",
+    "none",
+    "--read-only",
+    "--tmpfs",
+    "/tmp",
+    "--mount",
+    "type=bind,source=D:\\Projects\\image-scoring-pipeline,target=/review,readonly",
+    "--mount",
+    "type=bind,source=D:\\Projects\\image-scoring,target=/hub,readonly",
+    "--workdir",
+    "/review",
+    "--env",
+    "PYTHONPATH=/review",
+    "--entrypoint",
+    "python",
+    "sha256:6b957786788e946f3ac1ef7e653b868a3f46c09ffd2d89224b908389dc2f08f0",
+    "-B",
+    "/hub/.agent/scratch/focus-af-validation-2026-10-24/replay_z8_af_in_container.py"
+  ],
+  "runner_sha256": "30b1b442e7eb97ac99d973557f6615fd2925aef78a362fa411954ae54b76a222",
+  "baseline_commit": "d887d47a4541e9c5fcc1600d9535cc5b6315aa09",
+  "baseline_blob_sha256": "c8b6f13ef495248636958068cdd6f4b66c47d589482461b72dfb01db9391a42c"
+}

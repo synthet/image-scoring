@@ -1,0 +1,33 @@
+{
+  "started_at": "2026-10-24T16:09:06.710986+00:00",
+  "elapsed_seconds": 0.724979099992197,
+  "cwd": "D:\\Projects\\image-scoring",
+  "command": [
+    "docker",
+    "run",
+    "--rm",
+    "--network",
+    "none",
+    "--read-only",
+    "--tmpfs",
+    "/tmp",
+    "--mount",
+    "type=bind,source=D:/Projects/image-scoring-pipeline,target=/review,readonly",
+    "--workdir",
+    "/review",
+    "--entrypoint",
+    "python",
+    "image-scoring:latest",
+    "-m",
+    "ruff",
+    "check",
+    "--no-cache",
+    "modules/exif_extractor.py",
+    "tests/test_exif_af_validation.py"
+  ],
+  "timeout_seconds": 120,
+  "exit_code": 0,
+  "output_sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+  "output_file": "lint-final.log",
+  "campaign_gpu_hours": 0
+}

@@ -1,0 +1,13 @@
+{
+  "captured_at": "2026-10-24T15:59:32.477646+00:00",
+  "head": "d887d47a4541e9c5fcc1600d9535cc5b6315aa09",
+  "status": [
+    "?? .agent/workspaces/"
+  ],
+  "files": {
+    "modules/exif_extractor.py": "c8b6f13ef495248636958068cdd6f4b66c47d589482461b72dfb01db9391a42c",
+    "tests/test_exif_extractor_af.py": "fcb0d911b80449d583f32ba8b4cb6fb989e0e0c94e4ffe634eaf599ea31d88aa"
+  },
+  "test_sha256": "096824086fe397b13e9fe92d5ebc9ecaa1b6381d37b4ab35e610509e6f07b522",
+  "scope": "AF numeric/availability validation only; no scoring, schema or photo writes"
+}
