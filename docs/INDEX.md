@@ -38,5 +38,6 @@ okf_version: 0.1
 
 ## Activity
 
+- [planning/unfinished-business-2026-10-26.md](planning/unfinished-business-2026-10-26.md) — consolidated unfinished work, next actions, issues, epics and local delivery gaps
 - [reports/INDEX.md](reports/INDEX.md) — cross-project research, including the 2026-10-23 model/pipeline/skills synergy audit
 - [log.md](log.md) — append-only wiki log
