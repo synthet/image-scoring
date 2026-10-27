@@ -1,0 +1,178 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-27",
+  "inventory": {
+    "commit": "d48701085118269cfac9bfd81a92d8dd3f847752",
+    "push_verified": true,
+    "paths": 8,
+    "docs_lint": "passed",
+    "count_integrity": "passed",
+    "staged_links": "passed",
+    "secrets": "passed",
+    "private_docs": "passed"
+  },
+  "pr591": {
+    "url": "https://github.com/synthet/image-scoring-pipeline/pull/591",
+    "head": "6809cc08312368d6dd05bce060088e538c0c80d5",
+    "base": "59e241e148db9e58cacfe5f77546e3ee7c6dd449",
+    "state": "OPEN",
+    "mergeable": "MERGEABLE",
+    "merge_state": "CLEAN",
+    "checks": [
+      {
+        "name": "backend-pytest-fast",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/synthet/image-scoring-pipeline/actions/runs/40544701561/job/122332056505"
+      },
+      {
+        "name": "conflict-markers",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/synthet/image-scoring-pipeline/actions/runs/40544701526/job/122332056673"
+      },
+      {
+        "name": "docs-dependency-lint",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/synthet/image-scoring-pipeline/actions/runs/40544701540/job/122332056359"
+      },
+      {
+        "name": "api-types",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/synthet/image-scoring-pipeline/actions/runs/40544701549/job/122332056496"
+      },
+      {
+        "name": "collect-wsl-tests",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/synthet/image-scoring-pipeline/actions/runs/40544701555/job/122332056275"
+      },
+      {
+        "name": "f821",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/synthet/image-scoring-pipeline/actions/runs/40544701586/job/122332056671"
+      },
+      {
+        "name": "api-contract",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/synthet/image-scoring-pipeline/actions/runs/40544701561/job/122332056802"
+      },
+      {
+        "name": "okf-bundle-lint",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/synthet/image-scoring-pipeline/actions/runs/40544701540/job/122332055920"
+      }
+    ],
+    "targeted_tests": 94,
+    "adjacent_tests": 32,
+    "deprecation_warnings": 14,
+    "scoped_static_checks": "passed",
+    "compose": "passed",
+    "docs": "passed",
+    "secrets": "passed",
+    "initial_attempt": "read-only source cache write failed; same tree passed in container-local writable copy",
+    "source_scope": 15,
+    "deployment_performed": false,
+    "temporary_worktree_removed": true
+  },
+  "promotion694": {
+    "head": "3a7eaba1f6ca176fc3c745c3a560877a032caeb5",
+    "branch": "fix/694-promotion-gate-tooling",
+    "files": [
+      {
+        "path": "scripts/research/detector_benchmark/promotion_694_gate.py",
+        "sha256": "3003edfe2abf40339ce9d5fd8f22c661ff42398e5c5bed7a267af10fdec0c598"
+      },
+      {
+        "path": "tests/test_promotion_694_gate.py",
+        "sha256": "9559a06a847784fcf980d856178215844ba28a272ac1c20871ff9e184ce9054a"
+      }
+    ],
+    "tests_passed": 26,
+    "lint": "passed",
+    "sources_unchanged": true,
+    "files_staged_or_committed": false,
+    "provider_calls": 0,
+    "production_mutations": 0
+  },
+  "skills4": {
+    "url": "https://github.com/synthet/image-scoring-skills/pull/4",
+    "head": "5f7d7d07f950b4e1b11def16db80db8e95790c88",
+    "merge_base": "875b9fa221b408d63a942cb1c55b2c93562d5395",
+    "remains_draft": true,
+    "remote_ci_log_access": "unavailable: CLI HTTP 403, connected workflow endpoint HTTP 404",
+    "local_checks": [
+      {
+        "name": "compile",
+        "exit_code": 0,
+        "elapsed_seconds": 0.21
+      },
+      {
+        "name": "twins",
+        "exit_code": 0,
+        "elapsed_seconds": 0.04
+      },
+      {
+        "name": "inventory",
+        "exit_code": 1,
+        "elapsed_seconds": 0.05
+      },
+      {
+        "name": "frontmatter",
+        "exit_code": 0,
+        "elapsed_seconds": 0.04
+      },
+      {
+        "name": "secrets",
+        "exit_code": 0,
+        "elapsed_seconds": 1.17
+      },
+      {
+        "name": "eval-fixtures",
+        "exit_code": 0,
+        "elapsed_seconds": 0.03
+      },
+      {
+        "name": "docs",
+        "exit_code": 0,
+        "elapsed_seconds": 0.09
+      },
+      {
+        "name": "tests",
+        "exit_code": 0,
+        "elapsed_seconds": 4.2
+      }
+    ],
+    "local_tests_passed": 30,
+    "inherited_inventory_drift": true,
+    "inventory_input_identities": {
+      ".cursor": {
+        "head": "ec950a02ac01b2eea2a77c8ef3ddd0d79d911285",
+        "merge_base": "ec950a02ac01b2eea2a77c8ef3ddd0d79d911285",
+        "unchanged_by_pr": true
+      },
+      "scripts/generate_agent_asset_inventory.py": {
+        "head": "58344fa121de0901bb0e67e291314de28dee420c",
+        "merge_base": "58344fa121de0901bb0e67e291314de28dee420c",
+        "unchanged_by_pr": true
+      },
+      "docs/agent-asset-inventory.md": {
+        "head": "6a375960ec0d0e0d793449204b5e128e3ea682b2",
+        "merge_base": "6a375960ec0d0e0d793449204b5e128e3ea682b2",
+        "unchanged_by_pr": true
+      }
+    },
+    "source_changes_performed": false,
+    "temporary_worktree_removed": true
+  },
+  "limits": [
+    "Fake-model and synthetic regression checks do not certify real GPU parity or promotion eligibility",
+    "Skills remote CI failure logs were not accessible; the inherited inventory failure is a local reproduction",
+    "Original issue collection is a dated snapshot, not a newly refreshed live backlog"
+  ]
+}

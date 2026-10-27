@@ -15,6 +15,8 @@ okf_version: 0.1
 
 Post-collection update, 2026-10-27: [pipeline PR #679](https://github.com/synthet/image-scoring-pipeline/pull/679) merged after conflict resolution `092f39a623a372bd8d95aed3513e41748b2bfa74` and five passing CI checks. Pipeline #591 remains open and conflicting; skills #4 remains a draft with UNSTABLE checks. The retrieval-state table below is historical. The JSON retains the original resolution under `post_collection_updates` and the latest delivery state under `delivery_refresh`.
 
+Later execution: [PR #591](https://github.com/synthet/image-scoring-pipeline/pull/591) is now CLEAN/MERGEABLE after `6809cc08`, with eight CI checks passing. The #694 tooling passed 26 tests unchanged; draft #4's local inventory drift was traced to its merge base. See the [four-step closeout](../execution-2026-10-27/INDEX.md); original retrieval rows below remain historical.
+
 Snapshot contains **225 open issues** across eight repositories. An open issue is a tracker record, not proof its original defect still reproduces. Titles and statuses are preserved as retrieved; stale claims require reproduction before implementation.
 
 Collection used paginated GitHub CLI queries with a 2,000-issue limit per repository; no repository reached that limit. All 319 board items were received. Closed issue #695 and merged PR #696 were reconciled during collection. The Kestrel checkout now uses synthet/krestel; the manifest description saying it has no remote is stale.

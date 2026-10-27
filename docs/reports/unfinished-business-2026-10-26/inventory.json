@@ -9114,9 +9114,11 @@
     },
     "pr591": {
       "state": "OPEN",
-      "mergeable": "CONFLICTING",
-      "merge_state": "DIRTY",
-      "head": "9ddefb1855bc00a2a8a887e6d855d4f00e041ee0"
+      "mergeable": "MERGEABLE",
+      "merge_state": "CLEAN",
+      "head": "6809cc08312368d6dd05bce060088e538c0c80d5",
+      "passing_checks": 8,
+      "local_regression_tests": 126
     },
     "skills_pr4": {
       "state": "OPEN",
@@ -9124,6 +9126,17 @@
       "merge_state": "UNSTABLE",
       "head": "5f7d7d07f950b4e1b11def16db80db8e95790c88"
     },
-    "remaining_open_prs_from_snapshot": 2
+    "remaining_open_prs_from_snapshot": 2,
+    "execution_closeout": {
+      "inventory_commit": "d48701085118269cfac9bfd81a92d8dd3f847752",
+      "promotion694_tests": 26,
+      "promotion694_lint": "passed",
+      "promotion694_sources_unchanged": true,
+      "skills4_local_tests": 30,
+      "skills4_local_failure": "stale generated inventory",
+      "skills4_failure_inherited": true,
+      "skills4_remote_ci_logs_accessible": false,
+      "closeout": "reports/execution-2026-10-27/INDEX.md"
+    }
   }
 }

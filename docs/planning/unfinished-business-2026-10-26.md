@@ -14,7 +14,7 @@ This is a dated reconciliation of the eight product/hub repositories, their curr
 
 The complete records are in the [issue and epic register](../reports/unfinished-business-2026-10-26/INDEX.md), [source-marker appendix](../reports/unfinished-business-2026-10-26/source-markers.md) and [machine-readable snapshot](../reports/unfinished-business-2026-10-26/inventory.json). The snapshot retains all open issue links, priorities, assignees, board stages, stage labels, formal parent/child relationships, open PRs, branch identities and plan-file hashes. Counts below describe that collection, not an enduring live dashboard.
 
-**Post-collection update, 2026-10-27:** pipeline PR #679 merged at `2026-10-27T03:15:05Z` after the owner-requested conflict resolution `092f39a623a372bd8d95aed3513e41748b2bfa74`; all five CI checks passed. Of the three PRs originally collected, two remain open: pipeline #591 is conflicting and skills #4 is a draft with an UNSTABLE check state. The snapshot preserves the original retrieval state and records later delivery updates separately.
+**Post-collection update, 2026-10-27:** pipeline PR #679 merged at `2026-10-27T03:15:05Z` after resolution `092f39a6`. The inventory was published as `d487010`; PR #591's conflicts were then resolved and pushed as `6809cc08`, with all eight CI checks passing. Its review/merge and skills draft #4 remain open. The draft's locally reproduced CI problem is an inherited stale generated inventory; 30 tests and the other declared checks pass. Existing #694 tooling passed 26 tests without source edits or real calibration/promotion. See the [four-step execution closeout](../reports/execution-2026-10-27/INDEX.md). The snapshot preserves original collection records separately from later execution updates.
 
 ## Status and scope
 
@@ -53,7 +53,7 @@ These recommendations respect existing Stage and ownership; they do not promote 
 
 | Order | Next action | Owner and existing record | Observable completion |
 |---|---|---|---|
-| 1 | Reconcile active delivery before starting overlapping work: resolve conflicting PR #591 and investigate draft skills #4's non-green checks. Preserve the active #694 tooling while reconciling the local checkout with merged #679/#696. | Pipeline/skills; PR list below | Each PR has a documented disposition and relevant current checks; no unrelated local edits are bundled. |
+| 1 | Review/merge the now-clean PR #591; regenerate the inherited stale inventory and complete design review for draft skills #4. Preserve the verified, untracked #694 tooling while reconciling the local checkout with merged #679/#696. | Pipeline/skills; PR list below | Each PR has a documented disposition and relevant current checks; no unrelated local edits are bundled. |
 | 2 | Continue the source-current duplicate-study closeout already reported in progress: verify v2, repair the held eleven April rows, then perform the separately bound April v3 replay. | Skills [#5](https://github.com/synthet/image-scoring-skills/issues/5), pipeline [#601](https://github.com/synthet/image-scoring-pipeline/issues/601) | All 10,077 development-frame identities are source-current; reused January/February snapshots verify; preservation and replay receipts exist. This is not permission to launch or interrupt another run. |
 | 3 | Resolve the localization promotion prerequisite before judging the frozen fresh sample. | Pipeline [#694](https://github.com/synthet/image-scoring-pipeline/issues/694), [#638](https://github.com/synthet/image-scoring-pipeline/issues/638) | Three judges meet the unchanged 18/20 calibration rule; otherwise retain HOLD. Current record has only one qualified judge. |
 | 4 | Reproduce and address the highest-priority Ready work without duplicating in-flight changes. Security #218, missing phase-state #166 and grouping bug #278 are concrete candidates. | Pipeline Ready queue; existing assignees and claim rules apply | A bounded reproduction, scoped fix and targeted regression check for the selected issue. [#253](https://github.com/synthet/image-scoring-pipeline/issues/253) and [#143](https://github.com/synthet/image-scoring-pipeline/issues/143) are also P1 Ready epics, not single small fixes. |
@@ -162,8 +162,8 @@ The pipeline and model branch snapshots have no configured upstream. That fact a
 | PR | Observed status | Required next action |
 |---|---|---|
 | Pipeline [#679](https://github.com/synthet/image-scoring-pipeline/pull/679) | Merged; five CI checks passed | No further conflict resolution or merge task. Reconcile local checkouts without overwriting active work. |
-| Pipeline [#591](https://github.com/synthet/image-scoring-pipeline/pull/591) | Open, merge state DIRTY/CONFLICTING | Resolve against current master in an isolated checkout, then verify the remote-inference tests and remaining #549 acceptance criteria. |
-| Skills [#4](https://github.com/synthet/image-scoring-skills/pull/4) | Draft, merge state UNSTABLE | Inspect the failed/pending checks before deciding design readiness; complete review/validation or retain it as a draft. |
+| Pipeline [#591](https://github.com/synthet/image-scoring-pipeline/pull/591) | Open, CLEAN/MERGEABLE after `6809cc08`; all eight CI checks passed | Review and merge through the owning workflow. Remaining #549 acceptance work is not completed by conflict resolution. |
+| Skills [#4](https://github.com/synthet/image-scoring-skills/pull/4) | Draft, merge state UNSTABLE; local reproduction finds inherited inventory drift, other checks and 30 tests pass | Regenerate the inventory and complete design review. Remote CI job logs were inaccessible, so the exact remote failure remains unverified. |
 
 ## Documentation, knowledge and queue hygiene
 
