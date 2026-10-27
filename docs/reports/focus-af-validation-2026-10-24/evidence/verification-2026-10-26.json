@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "verified_at": "2026-10-26T20:30:20.7277959-05:00",
+  "pipeline_revision": "e787a0392b81038a93b6289b6e16458019c14e88",
+  "branch": "release/v9.2.1-localization",
+  "working_tree_changes": [
+    "CHANGELOG.md",
+    "modules/version.py"
+  ],
+  "image_tag": "image-scoring:af-check",
+  "image_id": "sha256:159ddd73722b37164ffba2ab2c6e1bddf65ca81f4334e0282c7dd9264496ac2d",
+  "build": {
+    "command": "docker build --progress=plain -t image-scoring:af-check .",
+    "exit_code": 0,
+    "context_bytes_approx": 2360000000,
+    "cached_layers_reused": true
+  },
+  "decoder": {
+    "command": "docker run --rm --network none --read-only --entrypoint exiftool image-scoring:af-check -ver",
+    "exit_code": 0,
+    "version": "13.52"
+  },
+  "unit": {
+    "command": "python -B -m pytest -q --tb=short -x -p no:cacheprovider -m \"not sample_data\" tests/test_exif_af_validation.py tests/test_exif_extractor_af.py tests/test_exif_extractor_camera_lens_unit.py",
+    "exit_code": 0,
+    "passed": 97,
+    "deselected": 3,
+    "skipped": 0,
+    "failures": 0,
+    "errors": 0,
+    "offline": true,
+    "read_only_root": true
+  },
+  "integration": {
+    "command": "python -B -m pytest -q --tb=short -x -rs -p no:cacheprovider -m \"postgres and not ml\" tests/integration/test_pipeline_nef_samples.py",
+    "exit_code": 0,
+    "passed": 5,
+    "deselected": 2,
+    "skipped": 0,
+    "failures": 0,
+    "errors": 0,
+    "sample_root": "tests/fixtures/testing_samples/public/Z8",
+    "max_images": 5,
+    "ml_enabled": false,
+    "database": "image_scoring_test",
+    "database_image": "pgvector/pgvector:pg17",
+    "isolated_internal_network": true,
+    "host_ports_published": false,
+    "temporary_sample_copies": true
+  },
+  "cleanup": {
+    "remaining_test_containers": 0,
+    "remaining_test_networks": 0,
+    "verification_image_retained": true
+  },
+  "limits": [
+    "Current working tree includes existing uncommitted release edits",
+    "Five Z8 samples only; ML and GPU inference excluded",
+    "Historical eleven-record metadata replay not rerun",
+    "No geometry calibration, ranking promotion, deployment or release-readiness claim"
+  ],
+  "local_evidence_sha256": [
+    {
+      "file": "build.log",
+      "sha256": "e02c43efac2113c5ee3224468e89956076e623c14785931e5eb21f93343117d3",
+      "availability": "retained locally"
+    },
+    {
+      "file": "unit.log",
+      "sha256": "9785d89c5874a25777684b035bb7b107ec0ffeed68603c5cfc7640c8f80b8e1b",
+      "availability": "retained locally"
+    },
+    {
+      "file": "unit.xml",
+      "sha256": "73b2eb8d076ab22df7961d6ab7793778b0146dd6d8bbbe12f3c7fa3544df10f0",
+      "availability": "retained locally"
+    },
+    {
+      "file": "integration.log",
+      "sha256": "bc9cc9a78269b3223815717100f2b073112324a3015e6b3c9d4ee9398bc5e79e",
+      "availability": "retained locally"
+    },
+    {
+      "file": "integration.xml",
+      "sha256": "5caa92c8c82d79d70f90c10526911dfd34ee2ebb454b98c6a64b858140b815f4",
+      "availability": "retained locally"
+    },
+    {
+      "file": "cleanup.json",
+      "sha256": "16c43b245754e4903854886548b56e24a64e31ce93af5b1d1b2a0f779b7a5e09",
+      "availability": "retained locally"
+    }
+  ]
+}
