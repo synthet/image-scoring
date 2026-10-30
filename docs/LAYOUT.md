@@ -42,7 +42,6 @@ Canonical paths are also in [`repos.manifest.json`](../repos.manifest.json) (`pa
 
 The hub repo is safe to open alone for manifest/script edits; it is not sufficient for running the full stack.
 
-## Submodules & Local Deduplication
+## Sibling Checkouts (No Nested Submodules)
 
-The hub tracks each component as a Git submodule (`git submodule status`). For local workflows comparing sibling folders vs. nested submodules, and how to physically deduplicate them using NTFS Directory Junctions without breaking sibling path discovery, see [`guides/SUBMODULE_DEDUPLICATION_OPTIONS.md`](guides/SUBMODULE_DEDUPLICATION_OPTIONS.md).
-
+The hub operates strictly via the **sibling layout contract**; child checkouts are not nested as Git submodules inside `image-scoring`. All components reside as peer directories in `D:\Projects\<repo>` and are aggregated via [`image-scoring.code-workspace`](../image-scoring.code-workspace) and [`repos.manifest.json`](../repos.manifest.json).
