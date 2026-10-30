@@ -15,6 +15,7 @@ okf_version: 0.1
 - [CANONICAL_SOURCES.md](CANONICAL_SOURCES.md) — authority map
 - [LAYOUT.md](LAYOUT.md) — sibling folder layout
 - [guides/RENAME_BACKEND_TO_PIPELINE.md](guides/RENAME_BACKEND_TO_PIPELINE.md) — backend to pipeline rename migration guide
+- [guides/SUBMODULE_DEDUPLICATION_OPTIONS.md](guides/SUBMODULE_DEDUPLICATION_OPTIONS.md) — historical submodule junction options (superseded)
 - [WIKI_SCHEMA.md](WIKI_SCHEMA.md) — wiki structure & maintenance
 - [OKF_ADOPTION.md](OKF_ADOPTION.md) — OKF profile & lint
 

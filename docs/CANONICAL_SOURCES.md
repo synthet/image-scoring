@@ -16,6 +16,7 @@ question.
 
 | Contract / convention | Source of truth (fill in) |
 |-----------------------|---------------------------|
+| Sibling workspace and directory layout | [`LAYOUT.md`](LAYOUT.md) and [`../repos.manifest.json`](../repos.manifest.json) |
 | Public API shape | `<path to API contract / OpenAPI>` |
 | Data model / schema | `<path to schema / migrations>` |
 | Config keys | `<path to config module / schema>` |
@@ -30,6 +31,8 @@ question.
 | Agent assets (rules/commands/skills/agents) | [`ai-workflow/README.md`](ai-workflow/README.md) |
 | Safety rules | [`../.agent/SAFETY.md`](../.agent/SAFETY.md) |
 | Wiki conventions | [`WIKI_SCHEMA.md`](WIKI_SCHEMA.md) |
+| Current cross-repo review evidence and gaps | [2026-10-23 sibling campaign](reports/architecture-review-2026-10-23/INDEX.md); as-built contracts remain in each owning sibling |
+| Proposed focus evidence integration | [Focus synergy plan](planning/focus-evidence-synergy-2026-10-23.md); proposed behavior, subject to owning-repo gates |
 
 **Rule:** code and the written contract must never disagree. If you change one, change the other in
 the same PR (see [`../.agent/workflows/cross_repo_contract_change.md`](../.agent/workflows/cross_repo_contract_change.md)).

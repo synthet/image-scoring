@@ -22,3 +22,5 @@ The **common comprehensive OKF bundle** for this ecosystem is maintained in the 
 | Query (reviewed) | MCP `llmwiki-ro-core` — skill `llm-wiki` |
 
 Hub-local summaries (`ECOSYSTEM.md`, `guides/*`) remain for offline/git; **prefer the llm-wiki bundle** for cited cross-repo answers after ingest + review.
+
+Latest cross-project research: [model, pipeline, and skills synergy — 2026-10-23](../reports/model-pipeline-skills-synergy-2026-10-23.md). The detailed report is `model-pipeline-skills-synergy-2026-10-23.md` in the shared bundle; unreviewed extracted claims remain candidates.
