@@ -95,6 +95,14 @@
       },
       "role": "prompts",
       "description": "Photo evaluation / carousel prompts; optional MCP to backend scores."
+    },
+    {
+      "id": "kestrel",
+      "dir": "kestrel",
+      "path": "D:\\Projects\\kestrel",
+      "role": "instrument",
+      "product": "Kestrel",
+      "description": "Local wildlife burst-culling workbench: Python scorer and desktop review. No GitHub remote."
     }
   ],
   "infrastructure": [

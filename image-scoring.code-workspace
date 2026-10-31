@@ -35,6 +35,10 @@
     {
       "name": "image-scoring-pipeline",
       "path": "D:\\Projects\\image-scoring-pipeline"
+    },
+    {
+      "name": "kestrel",
+      "path": "D:\\Projects\\kestrel"
     }
   ],
   "settings": {

@@ -13,6 +13,7 @@ Umbrella hub for the **Vexlum Scoring** ecosystem: sibling git repos under one p
 | **image-scoring-model** | [synthet/image-scoring-model](https://github.com/synthet/image-scoring-model) | `eye-quality` — eye pose / focus scoring |
 | **image-scoring-ui** | [synthet/image-scoring-ui](https://github.com/synthet/image-scoring-ui) | `@synthet/image-scoring-design` tokens |
 | **image-scoring-skills** | [synthet/image-scoring-skills](https://github.com/synthet/image-scoring-skills) | Editorial / carousel prompts + optional DB MCP |
+| **kestrel** | local only | Kestrel — wildlife burst culling (Python scorer and desktop review) |
 
 Machine-readable list: [`repos.manifest.json`](repos.manifest.json). Architecture notes: [`docs/ECOSYSTEM.md`](docs/ECOSYSTEM.md).
 
