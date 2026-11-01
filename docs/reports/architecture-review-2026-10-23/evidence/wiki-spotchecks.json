@@ -1,0 +1,38 @@
+[
+  {
+    "status": "fulfilled",
+    "value": {
+      "claim_revision_id": "17bfaca1-2d58-49c8-a428-0742ae585cf7",
+      "status": "candidate",
+      "source_revision_ids": [
+        "74dc45db-61a3-4442-9bf4-2ee44abb4d1e"
+      ],
+      "nonempty_quotes": true,
+      "reviews": 0
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "claim_revision_id": "2318143b-d3ba-4cf5-999e-ea0f7a6c70ea",
+      "status": "candidate",
+      "source_revision_ids": [
+        "f07cd241-dc7c-42fe-ad31-198a1e2107c3"
+      ],
+      "nonempty_quotes": true,
+      "reviews": 0
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "claim_revision_id": "87c5e041-1b97-40e1-aaa9-c262727083bb",
+      "status": "candidate",
+      "source_revision_ids": [
+        "c5544833-d035-4d57-b7c5-c433890f4511"
+      ],
+      "nonempty_quotes": true,
+      "reviews": 0
+    }
+  }
+]

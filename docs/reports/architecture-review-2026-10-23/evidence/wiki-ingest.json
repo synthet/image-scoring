@@ -1,0 +1,154 @@
+[
+  {
+    "path": "image-scoring/docs/reports/architecture-review-2026-10-23/INDEX.md",
+    "sha256": "2eacc3b79d61455a4c2161064a6e1d974e636eeaa2c322e3b29134f00ea949ae",
+    "command": [
+      "~/.local/bin/llmwiki.exe",
+      "--root",
+      "D:/Projects/synthet-llm-wiki",
+      "--json",
+      "--mode",
+      "agent",
+      "ingest",
+      "D:\\Projects\\image-scoring\\docs\\reports\\architecture-review-2026-10-23\\INDEX.md",
+      "--rights",
+      "unknown",
+      "--idempotency-key",
+      "architecture-review-2026-10-23:2eacc3b79d61455a4c2161064a6e1d974e636eeaa2c322e3b29134f00ea949ae"
+    ],
+    "exit_code": 0,
+    "response": {
+      "ok": true,
+      "result": {
+        "created_at": "2026-10-24T03:10:25+00:00",
+        "error": null,
+        "id": "48b0c48b-b298-405a-9ef4-4e086a8de4a6",
+        "idempotency_key": "architecture-review-2026-10-23:2eacc3b79d61455a4c2161064a6e1d974e636eeaa2c322e3b29134f00ea949ae",
+        "kind": "ingest_file",
+        "request": {
+          "path": "D:\\Projects\\image-scoring\\docs\\reports\\architecture-review-2026-10-23\\INDEX.md",
+          "rights": "unknown"
+        },
+        "result": {
+          "digest": "2eacc3b79d61455a4c2161064a6e1d974e636eeaa2c322e3b29134f00ea949ae",
+          "nodes": 24,
+          "parsed": true,
+          "reused": false,
+          "revision_id": "c010dd0a-6a89-4b2b-81f0-ee0343e99dd1",
+          "source_id": "e47c1ac5-91f1-4e08-a8a8-c496115051ea",
+          "status": "ready"
+        },
+        "status": "completed",
+        "updated_at": "2026-10-24T03:10:27+00:00"
+      }
+    }
+  },
+  {
+    "path": "image-scoring/docs/reports/architecture-review-2026-10-23/kestrel-as-built.md",
+    "sha256": "73f4b5eebb68c40bc8ee28e3f6ffe511932f0abd98fbcefd7ead0a4ed2b18938",
+    "command": [
+      "~/.local/bin/llmwiki.exe",
+      "--root",
+      "D:/Projects/synthet-llm-wiki",
+      "--json",
+      "--mode",
+      "agent",
+      "ingest",
+      "D:\\Projects\\image-scoring\\docs\\reports\\architecture-review-2026-10-23\\kestrel-as-built.md",
+      "--rights",
+      "unknown",
+      "--idempotency-key",
+      "architecture-review-2026-10-23:73f4b5eebb68c40bc8ee28e3f6ffe511932f0abd98fbcefd7ead0a4ed2b18938"
+    ],
+    "exit_code": 0,
+    "response": {
+      "ok": true,
+      "result": {
+        "created_at": "2026-10-24T03:10:28+00:00",
+        "error": null,
+        "id": "5be8c71e-8436-4b32-a774-a0a232b15d2d",
+        "idempotency_key": "architecture-review-2026-10-23:73f4b5eebb68c40bc8ee28e3f6ffe511932f0abd98fbcefd7ead0a4ed2b18938",
+        "kind": "ingest_file",
+        "request": {
+          "path": "D:\\Projects\\image-scoring\\docs\\reports\\architecture-review-2026-10-23\\kestrel-as-built.md",
+          "rights": "unknown"
+        },
+        "result": {
+          "digest": "73f4b5eebb68c40bc8ee28e3f6ffe511932f0abd98fbcefd7ead0a4ed2b18938",
+          "nodes": 15,
+          "parsed": true,
+          "reused": false,
+          "revision_id": "392e8bf7-1875-458b-9f78-67bff7514d32",
+          "source_id": "18557a41-c4e4-4e93-bd54-e44e85398280",
+          "status": "ready"
+        },
+        "status": "completed",
+        "updated_at": "2026-10-24T03:10:28+00:00"
+      }
+    }
+  },
+  {
+    "path": "image-scoring/docs/planning/focus-evidence-synergy-2026-10-23.md",
+    "sha256": "a097c3a57610dd56571c652d7d752001c0e6ce3f07a0e1632cde30718b48eb9a",
+    "command": [
+      "~/.local/bin/llmwiki.exe",
+      "--root",
+      "D:/Projects/synthet-llm-wiki",
+      "--json",
+      "--mode",
+      "agent",
+      "ingest",
+      "D:\\Projects\\image-scoring\\docs\\planning\\focus-evidence-synergy-2026-10-23.md",
+      "--rights",
+      "unknown",
+      "--idempotency-key",
+      "architecture-review-2026-10-23:a097c3a57610dd56571c652d7d752001c0e6ce3f07a0e1632cde30718b48eb9a"
+    ],
+    "exit_code": 0,
+    "response": {
+      "ok": true,
+      "result": {
+        "created_at": "2026-10-24T03:10:29+00:00",
+        "error": null,
+        "id": "83dc91b3-96d2-4e1e-9a08-36561dce1038",
+        "idempotency_key": "architecture-review-2026-10-23:a097c3a57610dd56571c652d7d752001c0e6ce3f07a0e1632cde30718b48eb9a",
+        "kind": "ingest_file",
+        "request": {
+          "path": "D:\\Projects\\image-scoring\\docs\\planning\\focus-evidence-synergy-2026-10-23.md",
+          "rights": "unknown"
+        },
+        "result": {
+          "digest": "a097c3a57610dd56571c652d7d752001c0e6ce3f07a0e1632cde30718b48eb9a",
+          "nodes": 35,
+          "parsed": true,
+          "reused": false,
+          "revision_id": "b14304a3-ec74-4bec-9385-cec5bd0b1e48",
+          "source_id": "b7f12672-a780-4057-91bd-118bd8c486d9",
+          "status": "ready"
+        },
+        "status": "completed",
+        "updated_at": "2026-10-24T03:10:31+00:00"
+      }
+    }
+  },
+  {
+    "path": "image-scoring-model/docs/specs/as-built/eye-evidence.md",
+    "sha256": "f6131a505d7a29b532df9504bf42f36e769337565648787f6a406475597c18be",
+    "command": [
+      "~/.local/bin/llmwiki.exe",
+      "--root",
+      "D:/Projects/synthet-llm-wiki",
+      "--json",
+      "--mode",
+      "agent",
+      "ingest",
+      "D:\\Projects\\image-scoring-model\\docs\\specs\\as-built\\eye-evidence.md",
+      "--rights",
+      "unknown",
+      "--idempotency-key",
+      "architecture-review-2026-10-23:f6131a505d7a29b532df9504bf42f36e769337565648787f6a406475597c18be"
+    ],
+    "exit_code": 5,
+    "error": "{\"error\":{\"code\":\"path_outside_allowed_roots\",\"details\":{\"path\":\"D:\\\\Projects\\\\image-scoring-model\\\\docs\\\\specs\\\\as-built\\\\eye-evidence.md\"},\"message\":\"Source path is outside configured allowed roots.\",\"next_steps\":[],\"retryable\":false},\"ok\":false}\n"
+  }
+]

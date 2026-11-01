@@ -1,0 +1,12 @@
+[
+  {
+    "path": "image-scoring-pipeline/docs/technical/MULTI_MODEL_SCORING.md",
+    "before": "c653ea81173a16c0969d9e0f3fd579c77c4fe0109c99aaaadeebae29cac08898",
+    "after": "0bd2a965c4d1419fa484004ef8aa8282d1a9de5ff2ecee51e3cfc6d84b11354b"
+  },
+  {
+    "path": "image-scoring-model/docs/architecture/PIPELINE.md",
+    "before": "5da1873e6d812a8d3abbec4bb8457c446c0df254118b7634a19f193243ae50f9",
+    "after": "91007b168cfdbd33a55ec3b2356ade6ec4b81503dd4bb251fa09bfc8b62684f9"
+  }
+]

@@ -1,0 +1,29 @@
+{
+  "started_at": "2026-10-24T03:08:07.032202+00:00",
+  "elapsed_seconds": 0.1321845999918878,
+  "cwd": "D:\\Projects\\image-scoring",
+  "command": [
+    "python",
+    "scripts/okf_lint.py",
+    "--profile",
+    "project",
+    "docs",
+    "--only",
+    "planning/focus-evidence-synergy-2026-10-23.md",
+    "--only",
+    "reports/architecture-review-2026-10-23/INDEX.md",
+    "--only",
+    "reports/architecture-review-2026-10-23/kestrel-as-built.md",
+    "--only",
+    "reports/INDEX.md",
+    "--only",
+    "INDEX.md",
+    "--only",
+    "CANONICAL_SOURCES.md"
+  ],
+  "timeout_seconds": 600,
+  "exit_code": 1,
+  "output_sha256": "82098ec3ef099497758e99058f53662ec9bb4b9b3897f23cad80bd787c5f3925",
+  "output_file": "hub-docs.log",
+  "campaign_gpu_hours": 0
+}

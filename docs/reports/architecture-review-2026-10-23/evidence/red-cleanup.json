@@ -1,0 +1,31 @@
+{
+  "started_at": "2026-10-24T02:07:54.447568+00:00",
+  "elapsed_seconds": 1.502012500015553,
+  "cwd": "D:\\Projects\\image-scoring",
+  "command": [
+    "docker",
+    "run",
+    "--rm",
+    "--network",
+    "none",
+    "--read-only",
+    "--tmpfs",
+    "/tmp",
+    "--mount",
+    "type=bind,source=D:/Projects/image-scoring-skills,target=/review,readonly",
+    "--workdir",
+    "/review",
+    "--entrypoint",
+    "python",
+    "image-scoring:latest",
+    "-B",
+    "-m",
+    "unittest",
+    "scripts.neardupe_study.test_cleanup_finite"
+  ],
+  "timeout_seconds": 600,
+  "exit_code": 1,
+  "output_sha256": "f68762552e3b3bc2ff74c06dfe9143552955528c201ec6d869de242427bc59ca",
+  "output_file": "red-cleanup.log",
+  "campaign_gpu_hours": 0
+}

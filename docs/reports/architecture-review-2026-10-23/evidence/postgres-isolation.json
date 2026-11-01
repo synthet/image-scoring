@@ -1,0 +1,9 @@
+{
+  "container_id": "3a51aec4516d20f78a40362195fdefdd09b54340048ae0bb4e36f89175d26834",
+  "image_id": "sha256:494dff7e67e7bc2c826b94c331364978d145ebb86fd338154138b084223b7f67",
+  "network": "none",
+  "published_ports": [],
+  "persistent_or_host_mounts": [],
+  "database": "image_scoring_test",
+  "storage": "tmpfs; destroyed when test server stops"
+}

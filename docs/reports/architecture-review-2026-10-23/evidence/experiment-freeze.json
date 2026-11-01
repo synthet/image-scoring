@@ -1,0 +1,38 @@
+{
+  "runner_sha256": "876d9aed67b285814ff9ce1feee8a066e39c12211e264c48a68fdf9a3c98fafc",
+  "inputs": {
+    "image-scoring-pipeline\\reports\\model-selection-2026-10-01\\snapshot.json.gz": "fe26c0e7710362424e123fc42f75ad911c2b41bd468c66896e31467d4c9fe7fa",
+    "image-scoring-pipeline\\reports\\model-selection-2026-10-01\\sample.json": "58aad71be26e94ce1d37e31a1573e194ed86381b371586fb1ea3a04c210e43ae",
+    "image-scoring-pipeline\\reports\\model-selection-2026-10-01\\reviews.jsonl": "2b2967cb14bbb9534d14186d9dec5739b29292209f700aea0dfa10fdb2fe5df9",
+    "image-scoring-skills\\work\\disk\\library-dedupe-2026-10-21\\score\\cleanup-dryrun-2026-10-23\\shoots\\53922fb959c438b001bf\\measurements.json": "528b7b1eba03c1efbea017bf3882d94937b297a3937aa8472b0ea742287581e5",
+    "image-scoring-skills\\work\\disk\\library-dedupe-2026-10-21\\score\\cleanup-dryrun-2026-10-23\\shoots\\f2cdc06853bf79237b88\\measurements.json": "62ce10a786317a4445207be6a2fe4d3c20227ffd9b0def0cf6b829099c425cb8",
+    "image-scoring-skills\\work\\disk\\library-dedupe-2026-10-21\\score\\cleanup-dryrun-2026-10-23\\shoots\\f5702142a8d8bfd33596\\measurements.json": "dfe82166b2fb9a810cf929b9fd0521566d79cf88bafaf575f6430423c2582ff1",
+    "image-scoring-pipeline\\modules\\score_normalization.py": "f4e3d20d58959e860a8cc33cc13b9833e6f20817e49fae498e8fd63bfc329b2b",
+    "image-scoring-pipeline\\modules\\score_analytics\\study.py": "1f4b6b617e79f22cdd6830cd5db178c2eff75155ddad8e82e5fdef3b8fc45362",
+    "image-scoring-pipeline\\modules\\score_analytics\\study_report.py": "f1adfd483269311d00aee5867df36f716db495326dbcffd45eefe7da4c6c229f",
+    "image-scoring-model\\src\\eye_quality\\scoring\\aggregate.py": "4becb6f53428ce9314eed25acf9ee4b0a12d1fa91b03b0389e45bf751385bb9a",
+    "image-scoring-skills\\scripts\\neardupe_study\\cleanup\\physical.py": "a0dd06cb2925f9aaff71ac8699b4345f97a35e2c6fe0e3148addfe19f777417b",
+    "image-scoring-skills\\scripts\\neardupe_study\\cleanup\\represent.py": "fc20d55e820b5fff6e8f60f7b0184488dea357cdac8c20ae783b818a803031ce"
+  },
+  "gpu_hours_max": 0,
+  "timeout_seconds": 600,
+  "weights": "none loaded; frozen scores/measurements only",
+  "parameters": {
+    "bootstrap_resamples": 1000,
+    "bootstrap_seed": 20261001,
+    "variants": [
+      "current",
+      "continuous-v2-candidate",
+      "without-arniqa"
+    ],
+    "eye": "focus [.2,.5,.7,.9] x confidence [.1,.3,.45,.9], two visible 48px crops",
+    "dedupe": "unchanged physical POLICY vs uncertainty_margin=true; no threshold search"
+  },
+  "metrics": {
+    "eye": "selection disagreement/grade, synthetic conformance only",
+    "scoring": "fixed train/validation human_blind weighted rho/top1, block bootstrap; no test labels",
+    "dedupe": "per-shoot coverage/edges/suppressions/representatives, no accuracy claim"
+  },
+  "stopping": "fail on identity drift, leakage, invalid labels or timeout; no retries for metric shopping",
+  "decisions": "No production adoption from conformance alone. Natural-image adoption needs independent held-out evidence."
+}

@@ -1,0 +1,24 @@
+{
+  "started_at": "2026-10-24T02:59:35.381597+00:00",
+  "elapsed_seconds": 16.89272780000465,
+  "cwd": "D:\\Projects\\kestrel",
+  "command": [
+    "D:/Projects/kestrel/.venv/Scripts/python.exe",
+    "-m",
+    "pytest",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp",
+    "D:/Projects/image-scoring/.agent/scratch/architecture-review/kestrel-test-native-temp",
+    "kestrel-py/tests/test_scoring.py",
+    "kestrel-py/tests/test_models.py",
+    "kestrel-py/tests/test_bursts.py",
+    "kestrel-py/tests/test_session.py"
+  ],
+  "timeout_seconds": 180,
+  "exit_code": 0,
+  "output_sha256": "e8f608e2d7a0bc9bc3fd17c0d50b1ab4885a58cda9e7500a8fb25f63ce00fec3",
+  "output_file": "kestrel-tests-native.log",
+  "campaign_gpu_hours": 0
+}

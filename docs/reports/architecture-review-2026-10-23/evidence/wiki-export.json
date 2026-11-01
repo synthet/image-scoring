@@ -1,0 +1,27 @@
+{
+  "command": [
+    "~/.local/bin/llmwiki.exe",
+    "--root",
+    "D:/Projects/synthet-llm-wiki",
+    "--json",
+    "--mode",
+    "agent",
+    "compile",
+    "--revision-id",
+    "f07cd241-dc7c-42fe-ad31-198a1e2107c3",
+    "--revision-id",
+    "c5544833-d035-4d57-b7c5-c433890f4511",
+    "--revision-id",
+    "74dc45db-61a3-4442-9bf4-2ee44abb4d1e",
+    "--export-request",
+    "D:\\Projects\\image-scoring\\.agent\\scratch\\architecture-review\\wiki-request-current.json"
+  ],
+  "exit_code": 0,
+  "response": {
+    "ok": true,
+    "result": {
+      "path": "D:\\Projects\\image-scoring\\.agent\\scratch\\architecture-review\\wiki-request-current.json",
+      "run_id": "da4d81b8-000d-48ff-8687-52e24ea3dc92"
+    }
+  }
+}

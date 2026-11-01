@@ -1,0 +1,134 @@
+[
+  {
+    "path": "image-scoring/docs/reports/architecture-review-2026-10-23/INDEX.md",
+    "sha256": "216743c7c3fc2186649ae8b1a7c6394afe2de6054be857d2aded6eca871c921a",
+    "command": [
+      "~/.local/bin/llmwiki.exe",
+      "--root",
+      "D:/Projects/synthet-llm-wiki",
+      "--json",
+      "--mode",
+      "agent",
+      "ingest",
+      "D:\\Projects\\image-scoring\\docs\\reports\\architecture-review-2026-10-23\\INDEX.md",
+      "--rights",
+      "unknown",
+      "--idempotency-key",
+      "architecture-review-2026-10-23:216743c7c3fc2186649ae8b1a7c6394afe2de6054be857d2aded6eca871c921a"
+    ],
+    "exit_code": 0,
+    "response": {
+      "ok": true,
+      "result": {
+        "created_at": "2026-10-24T15:25:46+00:00",
+        "error": null,
+        "id": "76e1dab4-0d62-482e-88c8-79058b10abd9",
+        "idempotency_key": "architecture-review-2026-10-23:216743c7c3fc2186649ae8b1a7c6394afe2de6054be857d2aded6eca871c921a",
+        "kind": "ingest_file",
+        "request": {
+          "path": "D:\\Projects\\image-scoring\\docs\\reports\\architecture-review-2026-10-23\\INDEX.md",
+          "rights": "unknown"
+        },
+        "result": {
+          "digest": "216743c7c3fc2186649ae8b1a7c6394afe2de6054be857d2aded6eca871c921a",
+          "nodes": 25,
+          "parsed": true,
+          "reused": false,
+          "revision_id": "f07cd241-dc7c-42fe-ad31-198a1e2107c3",
+          "source_id": "e47c1ac5-91f1-4e08-a8a8-c496115051ea",
+          "status": "ready"
+        },
+        "status": "completed",
+        "updated_at": "2026-10-24T15:25:49+00:00"
+      }
+    }
+  },
+  {
+    "path": "image-scoring/docs/reports/architecture-review-2026-10-23/kestrel-as-built.md",
+    "sha256": "3cb168985486c4430dbae3b9cd573e1fcb7daf65e742f0b2655290120dabad7f",
+    "command": [
+      "~/.local/bin/llmwiki.exe",
+      "--root",
+      "D:/Projects/synthet-llm-wiki",
+      "--json",
+      "--mode",
+      "agent",
+      "ingest",
+      "D:\\Projects\\image-scoring\\docs\\reports\\architecture-review-2026-10-23\\kestrel-as-built.md",
+      "--rights",
+      "unknown",
+      "--idempotency-key",
+      "architecture-review-2026-10-23:3cb168985486c4430dbae3b9cd573e1fcb7daf65e742f0b2655290120dabad7f"
+    ],
+    "exit_code": 0,
+    "response": {
+      "ok": true,
+      "result": {
+        "created_at": "2026-10-24T15:25:50+00:00",
+        "error": null,
+        "id": "da70c1bc-d02d-41a3-b6f0-3aa6bc22e563",
+        "idempotency_key": "architecture-review-2026-10-23:3cb168985486c4430dbae3b9cd573e1fcb7daf65e742f0b2655290120dabad7f",
+        "kind": "ingest_file",
+        "request": {
+          "path": "D:\\Projects\\image-scoring\\docs\\reports\\architecture-review-2026-10-23\\kestrel-as-built.md",
+          "rights": "unknown"
+        },
+        "result": {
+          "digest": "3cb168985486c4430dbae3b9cd573e1fcb7daf65e742f0b2655290120dabad7f",
+          "nodes": 15,
+          "parsed": true,
+          "reused": false,
+          "revision_id": "c5544833-d035-4d57-b7c5-c433890f4511",
+          "source_id": "18557a41-c4e4-4e93-bd54-e44e85398280",
+          "status": "ready"
+        },
+        "status": "completed",
+        "updated_at": "2026-10-24T15:25:51+00:00"
+      }
+    }
+  },
+  {
+    "path": "image-scoring/docs/planning/focus-evidence-synergy-2026-10-23.md",
+    "sha256": "7899afbe8a5e791284f70d4748b6d4c0b44b8ca88e51e0b84e9f688dd652996c",
+    "command": [
+      "~/.local/bin/llmwiki.exe",
+      "--root",
+      "D:/Projects/synthet-llm-wiki",
+      "--json",
+      "--mode",
+      "agent",
+      "ingest",
+      "D:\\Projects\\image-scoring\\docs\\planning\\focus-evidence-synergy-2026-10-23.md",
+      "--rights",
+      "unknown",
+      "--idempotency-key",
+      "architecture-review-2026-10-23:7899afbe8a5e791284f70d4748b6d4c0b44b8ca88e51e0b84e9f688dd652996c"
+    ],
+    "exit_code": 0,
+    "response": {
+      "ok": true,
+      "result": {
+        "created_at": "2026-10-24T15:25:52+00:00",
+        "error": null,
+        "id": "5217c10e-5869-45f9-aff1-315a7c25e81a",
+        "idempotency_key": "architecture-review-2026-10-23:7899afbe8a5e791284f70d4748b6d4c0b44b8ca88e51e0b84e9f688dd652996c",
+        "kind": "ingest_file",
+        "request": {
+          "path": "D:\\Projects\\image-scoring\\docs\\planning\\focus-evidence-synergy-2026-10-23.md",
+          "rights": "unknown"
+        },
+        "result": {
+          "digest": "7899afbe8a5e791284f70d4748b6d4c0b44b8ca88e51e0b84e9f688dd652996c",
+          "nodes": 35,
+          "parsed": true,
+          "reused": false,
+          "revision_id": "74dc45db-61a3-4442-9bf4-2ee44abb4d1e",
+          "source_id": "b7f12672-a780-4057-91bd-118bd8c486d9",
+          "status": "ready"
+        },
+        "status": "completed",
+        "updated_at": "2026-10-24T15:25:55+00:00"
+      }
+    }
+  }
+]

@@ -1,0 +1,182 @@
+[
+  {
+    "repository": "image-scoring-model",
+    "path": "image-scoring-model/docs/architecture/PIPELINE.md",
+    "before": "b7d6bb3705c53193fedb9749f7445806ec6d9efa47f88e76fe78344ea52685ab",
+    "after": "5da1873e6d812a8d3abbec4bb8457c446c0df254118b7634a19f193243ae50f9"
+  },
+  {
+    "repository": "image-scoring-model",
+    "path": "image-scoring-model/docs/technical/API_CONTRACT.md",
+    "before": "1942d754eeb7ab5e30453d660e06a1f825e2704c8b600d0c52c8ef986b3f86f4",
+    "after": "57c02797252fc4e0a063d3e4c3ef07dc973f804031cb7f38d2f98943b6364356"
+  },
+  {
+    "repository": "image-scoring-pipeline",
+    "path": "image-scoring-pipeline/docs/technical/MODELS_SUMMARY.md",
+    "before": "c6421d2c8a38714bbea5f16f27ccd243113a001e0cc3bfbbe5611c324e2e6b7b",
+    "after": "a6d2aa521847caa1da293e243030c5ed8b919d054cb61095a5c7b3e194b08d10"
+  },
+  {
+    "repository": "image-scoring-pipeline",
+    "path": "image-scoring-pipeline/docs/technical/MULTI_MODEL_SCORING.md",
+    "before": "c0cfd94a3cc89c857acd3f12b36793d6ff4c9aa23e4836273bf5431a1f022aa9",
+    "after": "c653ea81173a16c0969d9e0f3fd579c77c4fe0109c99aaaadeebae29cac08898"
+  },
+  {
+    "repository": "image-scoring-pipeline",
+    "path": "image-scoring-pipeline/docs/architecture/pipeline-architecture.md",
+    "before": "d1745ae11e1bd9e3b4b69673ec948e4647d7f6a5914a68cdce6fcd79999d1b9d",
+    "after": "ab98fc8ebd68bcc34a6fa288372df5927b05dac4d45500ffc4538dc892d6e3c1"
+  },
+  {
+    "repository": "image-scoring-skills",
+    "path": "image-scoring-skills/docs/library-dedupe-cleanup-workflow.md",
+    "before": "a5f02dec979bb4d0860d67af25701ee7c9bc6cdd09929f655313226ec7d5179e",
+    "after": "0a2c5f9bfaa1f5109a1c02d5108a9eb295e8772dbbd0d154c8d4bf654558b440"
+  },
+  {
+    "repository": "image-scoring-skills",
+    "path": "image-scoring-skills/docs/jev-decision-layer.md",
+    "before": "79f784411130eed9fdd2bbc50ade738aaabbb29a3cb65111ba5ba4a04870c990",
+    "after": "a18950ef254d603b345b2ebd21b00e6ea15ae6ca85e30e1c317bd0496f1a99de"
+  },
+  {
+    "repository": "image-scoring-model",
+    "path": "image-scoring-model/docs/specs/as-built/eye-evidence.md",
+    "before": null,
+    "after": "f6131a505d7a29b532df9504bf42f36e769337565648787f6a406475597c18be"
+  },
+  {
+    "repository": "image-scoring-model",
+    "path": "image-scoring-model/docs/specs/as-built/training-and-evaluation.md",
+    "before": null,
+    "after": "51aaede2f19d4e3dec7e08e9fd21bb5ce08e492e1bdb226bb8026c3d0138022d"
+  },
+  {
+    "repository": "image-scoring-model",
+    "path": "image-scoring-model/docs/specs/as-built/INDEX.md",
+    "before": null,
+    "after": "4fa03e05afaddd379b267a7515d7ea374fd0178d36905bec0cf3d87fdbbbbbf4"
+  },
+  {
+    "repository": "image-scoring-model",
+    "path": "image-scoring-model/docs/specs/INDEX.md",
+    "before": null,
+    "after": "4561c752b263f25f6f2f152f7dffaa2295d201636960033a273f07e2a7ad265d"
+  },
+  {
+    "repository": "image-scoring-model",
+    "path": "image-scoring-model/docs/CANONICAL_SOURCES.md",
+    "before": "8c6605bca90cf09fc156bbc42df9fdbf2657a0ca804934848d92527df1af6de1",
+    "after": "3be20ee6ead0dd9bd2e7222fcee17cbb5df54ee2b77c4bc95553b58bf737b412"
+  },
+  {
+    "repository": "image-scoring-model",
+    "path": "image-scoring-model/docs/README.md",
+    "before": "6a8431255ed538ac86934f019838f7da45cdba11d69c21c383d7fbae8a1a9856",
+    "after": "d4a6e58bd774940cbf9d3af2244d4db3ec15c5b1f3de55151fe5c351a35e97cf"
+  },
+  {
+    "repository": "image-scoring-model",
+    "path": "image-scoring-model/docs/INDEX.md",
+    "before": "7831ac52f917f0dfa2da8ea2fb910c97ede1a12b1d6b1c24c6e3535dc5a61352",
+    "after": "25bd27cc31bfdffe5db7823c97863d77c1e20d9a33d88c47ee333c4ac876b437"
+  },
+  {
+    "repository": "image-scoring-model",
+    "path": "image-scoring-model/docs/log.md",
+    "before": "56af46f8c272e904a082a08f8fd2d76050cd728ea03f1595471655db1f1b57ab",
+    "after": "4941a1265628d2fdb8339e465382bc1c5c9cff42698a27b9945f5f9fed605f4d"
+  },
+  {
+    "repository": "image-scoring-pipeline",
+    "path": "image-scoring-pipeline/docs/specs/as-built/execution-and-scoring.md",
+    "before": null,
+    "after": "88082f3be94a128efecd237e90f6064064cf44f4aa7b447ad36a5df3a14cab68"
+  },
+  {
+    "repository": "image-scoring-pipeline",
+    "path": "image-scoring-pipeline/docs/specs/as-built/localization-and-consumers.md",
+    "before": null,
+    "after": "aa6566af068289bcaaec7cdd4a0a189cef27310591295e20b3d035f14bdfadd6"
+  },
+  {
+    "repository": "image-scoring-pipeline",
+    "path": "image-scoring-pipeline/docs/specs/as-built/model-catalog.md",
+    "before": null,
+    "after": "3f551e51e29deb63f6f5c3f3e8f6fef74af06cf7c551a85ec531fe633faadcb3"
+  },
+  {
+    "repository": "image-scoring-pipeline",
+    "path": "image-scoring-pipeline/docs/specs/as-built/INDEX.md",
+    "before": null,
+    "after": "06780c58f593f9d4ca28f035e46e0166d36e63a1869628bfb5a398cb78b52ad3"
+  },
+  {
+    "repository": "image-scoring-pipeline",
+    "path": "image-scoring-pipeline/docs/specs/INDEX.md",
+    "before": null,
+    "after": "4561c752b263f25f6f2f152f7dffaa2295d201636960033a273f07e2a7ad265d"
+  },
+  {
+    "repository": "image-scoring-pipeline",
+    "path": "image-scoring-pipeline/docs/CANONICAL_SOURCES.md",
+    "before": "52037ab920b40b12d845b6f7079293eadb71896561d85d73865001ca709d8494",
+    "after": "d5e0532ca45fde13b39b5395d6a763e8bb0bf9c59b1bf3b16008d258ac03084a"
+  },
+  {
+    "repository": "image-scoring-pipeline",
+    "path": "image-scoring-pipeline/docs/README.md",
+    "before": "d5c365f9f3a3f1834ff87fb2aa0c1a27f1f0f53f400df89b7f7c3237bc10abcd",
+    "after": "72b79631a8020b16e48515ad96cf1f4ea122cd0c8b7f87cb255d9fe4513b61b6"
+  },
+  {
+    "repository": "image-scoring-pipeline",
+    "path": "image-scoring-pipeline/docs/INDEX.md",
+    "before": "7f3eaacdeb34a8b41bbde98b4ad03ac43694526cb0de99e998ef1a1a663ae838",
+    "after": "cfdfa1388e414a3ae85863fdc4b2e35ffbc4f07544a378e813a722f1eb160273"
+  },
+  {
+    "repository": "image-scoring-skills",
+    "path": "image-scoring-skills/docs/specs/as-built/dedupe-physical-and-application.md",
+    "before": null,
+    "after": "e8f230d478bbb56eff2e7dec1e7710aa398edb6ede6255f52c66209f35639aa7"
+  },
+  {
+    "repository": "image-scoring-skills",
+    "path": "image-scoring-skills/docs/specs/as-built/editorial-and-color-evidence.md",
+    "before": null,
+    "after": "4de0a6dbe3bf41365bb1210ef5b9929fbfa7c4157c97f83b942511db9a342a40"
+  },
+  {
+    "repository": "image-scoring-skills",
+    "path": "image-scoring-skills/docs/specs/as-built/INDEX.md",
+    "before": null,
+    "after": "b4216cc89a047b45d1e8fedcf8f1f20ca4fc51fbd0d6c9fdecdc5ad106576e01"
+  },
+  {
+    "repository": "image-scoring-skills",
+    "path": "image-scoring-skills/docs/specs/INDEX.md",
+    "before": null,
+    "after": "4561c752b263f25f6f2f152f7dffaa2295d201636960033a273f07e2a7ad265d"
+  },
+  {
+    "repository": "image-scoring-skills",
+    "path": "image-scoring-skills/docs/CANONICAL_SOURCES.md",
+    "before": "7c2b8e342de6d50b03a292e87e1c4acfd5b92fd6a3d6e8d6b8537c4314ff6000",
+    "after": "c2de678893538bcc0fd1615a029449d108cd1cf13006216541042e94684a3bdc"
+  },
+  {
+    "repository": "image-scoring-skills",
+    "path": "image-scoring-skills/docs/README.md",
+    "before": "3163f12a08c7751e14e123ce5b8116a85fdaa502718cc7559d696bc002f23d6f",
+    "after": "29ab9e00c20413a227cbd402a11ce66f0d31454d020c5f1324791b6ada5486ab"
+  },
+  {
+    "repository": "image-scoring-skills",
+    "path": "image-scoring-skills/docs/log.md",
+    "before": null,
+    "after": "113929d2488e5f4bf48a8987d0ca9fcf4092cdee19704f242b9fb32cc6a24757"
+  }
+]

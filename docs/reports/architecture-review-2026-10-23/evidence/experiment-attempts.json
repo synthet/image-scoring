@@ -1,0 +1,11 @@
+{
+  "attempts": [
+    {
+      "attempt": 1,
+      "freeze": "experiment-freeze.json",
+      "result": "failed before loading data: Windows relative paths were not portable to Linux",
+      "gpu_hours": 0,
+      "action": "Use POSIX relative paths, explicitly pin bootstrap seed, preserve first freeze, issue a new freeze. No metrics were produced and no parameters were tuned."
+    }
+  ]
+}

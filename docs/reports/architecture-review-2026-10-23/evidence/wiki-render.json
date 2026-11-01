@@ -1,0 +1,14 @@
+{
+  "command": [
+    "~/.local/bin/llmwiki.exe",
+    "--root",
+    "D:/Projects/synthet-llm-wiki",
+    "--json",
+    "--mode",
+    "agent",
+    "render",
+    "--include-unreviewed"
+  ],
+  "exit_code": 2,
+  "stderr": "{\"error\":{\"code\":\"invalid_input\",\"details\":{\"reason\":\"UnicodeEncodeError\"},\"message\":\"The requested operation could not parse its local input.\",\"next_steps\":[],\"retryable\":false},\"ok\":false}\n"
+}

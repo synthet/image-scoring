@@ -1,0 +1,38 @@
+{
+  "command": [
+    "~/.local/bin/llmwiki.exe",
+    "--root",
+    "D:/Projects/synthet-llm-wiki",
+    "--json",
+    "--mode",
+    "agent",
+    "compile",
+    "--apply-result",
+    "D:\\Projects\\image-scoring\\.agent\\scratch\\architecture-review\\wiki-proposal-current.json"
+  ],
+  "exit_code": 0,
+  "response": {
+    "ok": true,
+    "result": {
+      "claim_revision_ids": [
+        "17bfaca1-2d58-49c8-a428-0742ae585cf7",
+        "47dbcdea-3a0c-4154-b3c0-943bfd69d2b5",
+        "f0d0bbf4-eb00-45f5-9535-9e19fdda1e91",
+        "7e21a9cb-f950-450b-85db-71cc22fa5a9d",
+        "24dbbfb4-a208-4add-be78-d4ca223e2000",
+        "ba99989f-da00-47cb-9694-210538c3c8d8",
+        "bc1220f9-4f8f-4424-a913-3b5c369a0a7a",
+        "d0eb0f49-0128-4c07-8904-2b050980d107",
+        "2318143b-d3ba-4cf5-999e-ea0f7a6c70ea",
+        "62b79ccd-0241-42bb-874c-cc7354cdc340",
+        "87c5e041-1b97-40e1-aaa9-c262727083bb",
+        "9636ae96-6752-456e-9eaf-5f207eb3e85f",
+        "c4f1f972-7af9-4455-8cb3-9ca3249f3cfd",
+        "f0b98525-533f-4068-bf34-1b44720b1529"
+      ],
+      "count": 14,
+      "reused_claim_revision_ids": [],
+      "run_id": "da4d81b8-000d-48ff-8687-52e24ea3dc92"
+    }
+  }
+}

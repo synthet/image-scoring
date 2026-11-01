@@ -1,0 +1,1472 @@
+{
+  "scoring": {
+    "labels": "historical human_blind; development only; latest per owner/unit; repeats excluded",
+    "snapshot_images": 77331,
+    "groups": "frozen folder/session/overlap blocks from sample",
+    "test_split": "not evaluated; no production adoption; preserve original study's test-access gate",
+    "boundary": {
+      "p02": 0.311,
+      "at_p02": 0.15,
+      "above_p02": 1.4556040756524665e-06
+    },
+    "comparisons": [
+      {
+        "split": "train",
+        "category": "general",
+        "variant": "current",
+        "eligible": 54,
+        "common_complete": 54,
+        "measured": 54,
+        "subgroups": {
+          "people|q0|NIKON CORPORATION NIKON Z 8": 1,
+          "bird|q1|NIKON CORPORATION NIKON D90": 2,
+          "other|q0|NIKON CORPORATION NIKON Z 8": 4,
+          "bird|q0|NIKON CORPORATION NIKON Z 6_2": 5,
+          "other|q1|NIKON CORPORATION NIKON D90": 2,
+          "other|q0|NIKON CORPORATION NIKON D90": 1,
+          "bird|q2|NIKON CORPORATION NIKON Z 8": 5,
+          "other|q2|NIKON CORPORATION NIKON Z 6_2": 3,
+          "people|q2|NIKON CORPORATION NIKON D90": 1,
+          "bird|q1|NIKON CORPORATION NIKON Z 8": 3,
+          "bird|q2|NIKON CORPORATION NIKON Z 6_2": 2,
+          "bird|q2|NIKON CORPORATION NIKON D90": 2,
+          "other|q1|NIKON CORPORATION NIKON Z 6_2": 6,
+          "bird|q1|NIKON CORPORATION NIKON Z 6_2": 4,
+          "other|q2|NIKON CORPORATION NIKON D90": 2,
+          "other|q1|other_camera": 1,
+          "people|q1|NIKON CORPORATION NIKON D90": 1,
+          "people|q0|other_camera": 2,
+          "other|q2|NIKON CORPORATION NIKON Z 8": 3,
+          "people|q2|other_camera": 1,
+          "other|q2|other_camera": 1,
+          "people|q2|NIKON CORPORATION NIKON Z 8": 1,
+          "people|q1|other_camera": 1
+        },
+        "metric": {
+          "value": 0.14556615124466807,
+          "ci95": [
+            -0.16151031840221466,
+            0.4295246325671564
+          ],
+          "units": 54,
+          "blocks": 39,
+          "effective_units": 42.601680589204946,
+          "successful_resamples": 1000
+        }
+      },
+      {
+        "split": "train",
+        "category": "general",
+        "variant": "continuous-v2-candidate",
+        "eligible": 54,
+        "common_complete": 54,
+        "measured": 54,
+        "subgroups": {
+          "people|q0|NIKON CORPORATION NIKON Z 8": 1,
+          "bird|q1|NIKON CORPORATION NIKON D90": 2,
+          "other|q0|NIKON CORPORATION NIKON Z 8": 4,
+          "bird|q0|NIKON CORPORATION NIKON Z 6_2": 5,
+          "other|q1|NIKON CORPORATION NIKON D90": 2,
+          "other|q0|NIKON CORPORATION NIKON D90": 1,
+          "bird|q2|NIKON CORPORATION NIKON Z 8": 5,
+          "other|q2|NIKON CORPORATION NIKON Z 6_2": 3,
+          "people|q2|NIKON CORPORATION NIKON D90": 1,
+          "bird|q1|NIKON CORPORATION NIKON Z 8": 3,
+          "bird|q2|NIKON CORPORATION NIKON Z 6_2": 2,
+          "bird|q2|NIKON CORPORATION NIKON D90": 2,
+          "other|q1|NIKON CORPORATION NIKON Z 6_2": 6,
+          "bird|q1|NIKON CORPORATION NIKON Z 6_2": 4,
+          "other|q2|NIKON CORPORATION NIKON D90": 2,
+          "other|q1|other_camera": 1,
+          "people|q1|NIKON CORPORATION NIKON D90": 1,
+          "people|q0|other_camera": 2,
+          "other|q2|NIKON CORPORATION NIKON Z 8": 3,
+          "people|q2|other_camera": 1,
+          "other|q2|other_camera": 1,
+          "people|q2|NIKON CORPORATION NIKON Z 8": 1,
+          "people|q1|other_camera": 1
+        },
+        "metric": {
+          "value": 0.14556615124466807,
+          "ci95": [
+            -0.16151031840221466,
+            0.4295246325671564
+          ],
+          "units": 54,
+          "blocks": 39,
+          "effective_units": 42.601680589204946,
+          "successful_resamples": 1000
+        }
+      },
+      {
+        "split": "train",
+        "category": "general",
+        "variant": "without-arniqa",
+        "eligible": 54,
+        "common_complete": 54,
+        "measured": 54,
+        "subgroups": {
+          "people|q0|NIKON CORPORATION NIKON Z 8": 1,
+          "bird|q1|NIKON CORPORATION NIKON D90": 2,
+          "other|q0|NIKON CORPORATION NIKON Z 8": 4,
+          "bird|q0|NIKON CORPORATION NIKON Z 6_2": 5,
+          "other|q1|NIKON CORPORATION NIKON D90": 2,
+          "other|q0|NIKON CORPORATION NIKON D90": 1,
+          "bird|q2|NIKON CORPORATION NIKON Z 8": 5,
+          "other|q2|NIKON CORPORATION NIKON Z 6_2": 3,
+          "people|q2|NIKON CORPORATION NIKON D90": 1,
+          "bird|q1|NIKON CORPORATION NIKON Z 8": 3,
+          "bird|q2|NIKON CORPORATION NIKON Z 6_2": 2,
+          "bird|q2|NIKON CORPORATION NIKON D90": 2,
+          "other|q1|NIKON CORPORATION NIKON Z 6_2": 6,
+          "bird|q1|NIKON CORPORATION NIKON Z 6_2": 4,
+          "other|q2|NIKON CORPORATION NIKON D90": 2,
+          "other|q1|other_camera": 1,
+          "people|q1|NIKON CORPORATION NIKON D90": 1,
+          "people|q0|other_camera": 2,
+          "other|q2|NIKON CORPORATION NIKON Z 8": 3,
+          "people|q2|other_camera": 1,
+          "other|q2|other_camera": 1,
+          "people|q2|NIKON CORPORATION NIKON Z 8": 1,
+          "people|q1|other_camera": 1
+        },
+        "metric": {
+          "value": 0.15199276267316936,
+          "ci95": [
+            -0.1543966481993023,
+            0.44791623951226617
+          ],
+          "units": 54,
+          "blocks": 39,
+          "effective_units": 42.601680589204946,
+          "successful_resamples": 1000
+        }
+      },
+      {
+        "split": "train",
+        "category": "technical",
+        "variant": "current",
+        "eligible": 54,
+        "common_complete": 54,
+        "measured": 54,
+        "subgroups": {
+          "people|q0|NIKON CORPORATION NIKON Z 8": 1,
+          "bird|q1|NIKON CORPORATION NIKON D90": 2,
+          "other|q0|NIKON CORPORATION NIKON Z 8": 4,
+          "bird|q0|NIKON CORPORATION NIKON Z 6_2": 5,
+          "other|q1|NIKON CORPORATION NIKON D90": 2,
+          "other|q0|NIKON CORPORATION NIKON D90": 1,
+          "bird|q2|NIKON CORPORATION NIKON Z 8": 5,
+          "other|q2|NIKON CORPORATION NIKON Z 6_2": 3,
+          "people|q2|NIKON CORPORATION NIKON D90": 1,
+          "bird|q1|NIKON CORPORATION NIKON Z 8": 3,
+          "bird|q2|NIKON CORPORATION NIKON Z 6_2": 2,
+          "bird|q2|NIKON CORPORATION NIKON D90": 2,
+          "other|q1|NIKON CORPORATION NIKON Z 6_2": 6,
+          "bird|q1|NIKON CORPORATION NIKON Z 6_2": 4,
+          "other|q2|NIKON CORPORATION NIKON D90": 2,
+          "other|q1|other_camera": 1,
+          "people|q1|NIKON CORPORATION NIKON D90": 1,
+          "people|q0|other_camera": 2,
+          "other|q2|NIKON CORPORATION NIKON Z 8": 3,
+          "people|q2|other_camera": 1,
+          "other|q2|other_camera": 1,
+          "people|q2|NIKON CORPORATION NIKON Z 8": 1,
+          "people|q1|other_camera": 1
+        },
+        "metric": {
+          "value": 0.2510958406345212,
+          "ci95": [
+            -0.08290427749238768,
+            0.5354807234630053
+          ],
+          "units": 54,
+          "blocks": 39,
+          "effective_units": 42.601680589204946,
+          "successful_resamples": 1000
+        }
+      },
+      {
+        "split": "train",
+        "category": "technical",
+        "variant": "continuous-v2-candidate",
+        "eligible": 54,
+        "common_complete": 54,
+        "measured": 54,
+        "subgroups": {
+          "people|q0|NIKON CORPORATION NIKON Z 8": 1,
+          "bird|q1|NIKON CORPORATION NIKON D90": 2,
+          "other|q0|NIKON CORPORATION NIKON Z 8": 4,
+          "bird|q0|NIKON CORPORATION NIKON Z 6_2": 5,
+          "other|q1|NIKON CORPORATION NIKON D90": 2,
+          "other|q0|NIKON CORPORATION NIKON D90": 1,
+          "bird|q2|NIKON CORPORATION NIKON Z 8": 5,
+          "other|q2|NIKON CORPORATION NIKON Z 6_2": 3,
+          "people|q2|NIKON CORPORATION NIKON D90": 1,
+          "bird|q1|NIKON CORPORATION NIKON Z 8": 3,
+          "bird|q2|NIKON CORPORATION NIKON Z 6_2": 2,
+          "bird|q2|NIKON CORPORATION NIKON D90": 2,
+          "other|q1|NIKON CORPORATION NIKON Z 6_2": 6,
+          "bird|q1|NIKON CORPORATION NIKON Z 6_2": 4,
+          "other|q2|NIKON CORPORATION NIKON D90": 2,
+          "other|q1|other_camera": 1,
+          "people|q1|NIKON CORPORATION NIKON D90": 1,
+          "people|q0|other_camera": 2,
+          "other|q2|NIKON CORPORATION NIKON Z 8": 3,
+          "people|q2|other_camera": 1,
+          "other|q2|other_camera": 1,
+          "people|q2|NIKON CORPORATION NIKON Z 8": 1,
+          "people|q1|other_camera": 1
+        },
+        "metric": {
+          "value": 0.25109584063452123,
+          "ci95": [
+            -0.08290427749238768,
+            0.5354807234630053
+          ],
+          "units": 54,
+          "blocks": 39,
+          "effective_units": 42.601680589204946,
+          "successful_resamples": 1000
+        }
+      },
+      {
+        "split": "train",
+        "category": "technical",
+        "variant": "without-arniqa",
+        "eligible": 54,
+        "common_complete": 54,
+        "measured": 54,
+        "subgroups": {
+          "people|q0|NIKON CORPORATION NIKON Z 8": 1,
+          "bird|q1|NIKON CORPORATION NIKON D90": 2,
+          "other|q0|NIKON CORPORATION NIKON Z 8": 4,
+          "bird|q0|NIKON CORPORATION NIKON Z 6_2": 5,
+          "other|q1|NIKON CORPORATION NIKON D90": 2,
+          "other|q0|NIKON CORPORATION NIKON D90": 1,
+          "bird|q2|NIKON CORPORATION NIKON Z 8": 5,
+          "other|q2|NIKON CORPORATION NIKON Z 6_2": 3,
+          "people|q2|NIKON CORPORATION NIKON D90": 1,
+          "bird|q1|NIKON CORPORATION NIKON Z 8": 3,
+          "bird|q2|NIKON CORPORATION NIKON Z 6_2": 2,
+          "bird|q2|NIKON CORPORATION NIKON D90": 2,
+          "other|q1|NIKON CORPORATION NIKON Z 6_2": 6,
+          "bird|q1|NIKON CORPORATION NIKON Z 6_2": 4,
+          "other|q2|NIKON CORPORATION NIKON D90": 2,
+          "other|q1|other_camera": 1,
+          "people|q1|NIKON CORPORATION NIKON D90": 1,
+          "people|q0|other_camera": 2,
+          "other|q2|NIKON CORPORATION NIKON Z 8": 3,
+          "people|q2|other_camera": 1,
+          "other|q2|other_camera": 1,
+          "people|q2|NIKON CORPORATION NIKON Z 8": 1,
+          "people|q1|other_camera": 1
+        },
+        "metric": {
+          "value": 0.22088282486278127,
+          "ci95": [
+            -0.11863122593077284,
+            0.5074720984064878
+          ],
+          "units": 54,
+          "blocks": 39,
+          "effective_units": 42.601680589204946,
+          "successful_resamples": 1000
+        }
+      },
+      {
+        "split": "train",
+        "category": "aesthetic",
+        "variant": "current",
+        "eligible": 54,
+        "common_complete": 54,
+        "measured": 54,
+        "subgroups": {
+          "people|q0|NIKON CORPORATION NIKON Z 8": 1,
+          "bird|q1|NIKON CORPORATION NIKON D90": 2,
+          "other|q0|NIKON CORPORATION NIKON Z 8": 4,
+          "bird|q0|NIKON CORPORATION NIKON Z 6_2": 5,
+          "other|q1|NIKON CORPORATION NIKON D90": 2,
+          "other|q0|NIKON CORPORATION NIKON D90": 1,
+          "bird|q2|NIKON CORPORATION NIKON Z 8": 5,
+          "other|q2|NIKON CORPORATION NIKON Z 6_2": 3,
+          "people|q2|NIKON CORPORATION NIKON D90": 1,
+          "bird|q1|NIKON CORPORATION NIKON Z 8": 3,
+          "bird|q2|NIKON CORPORATION NIKON Z 6_2": 2,
+          "bird|q2|NIKON CORPORATION NIKON D90": 2,
+          "other|q1|NIKON CORPORATION NIKON Z 6_2": 6,
+          "bird|q1|NIKON CORPORATION NIKON Z 6_2": 4,
+          "other|q2|NIKON CORPORATION NIKON D90": 2,
+          "other|q1|other_camera": 1,
+          "people|q1|NIKON CORPORATION NIKON D90": 1,
+          "people|q0|other_camera": 2,
+          "other|q2|NIKON CORPORATION NIKON Z 8": 3,
+          "people|q2|other_camera": 1,
+          "other|q2|other_camera": 1,
+          "people|q2|NIKON CORPORATION NIKON Z 8": 1,
+          "people|q1|other_camera": 1
+        },
+        "metric": {
+          "value": 0.2679919785708623,
+          "ci95": [
+            -0.010089539554838586,
+            0.5448475412546597
+          ],
+          "units": 54,
+          "blocks": 39,
+          "effective_units": 42.601680589204946,
+          "successful_resamples": 1000
+        }
+      },
+      {
+        "split": "train",
+        "category": "aesthetic",
+        "variant": "continuous-v2-candidate",
+        "eligible": 54,
+        "common_complete": 54,
+        "measured": 54,
+        "subgroups": {
+          "people|q0|NIKON CORPORATION NIKON Z 8": 1,
+          "bird|q1|NIKON CORPORATION NIKON D90": 2,
+          "other|q0|NIKON CORPORATION NIKON Z 8": 4,
+          "bird|q0|NIKON CORPORATION NIKON Z 6_2": 5,
+          "other|q1|NIKON CORPORATION NIKON D90": 2,
+          "other|q0|NIKON CORPORATION NIKON D90": 1,
+          "bird|q2|NIKON CORPORATION NIKON Z 8": 5,
+          "other|q2|NIKON CORPORATION NIKON Z 6_2": 3,
+          "people|q2|NIKON CORPORATION NIKON D90": 1,
+          "bird|q1|NIKON CORPORATION NIKON Z 8": 3,
+          "bird|q2|NIKON CORPORATION NIKON Z 6_2": 2,
+          "bird|q2|NIKON CORPORATION NIKON D90": 2,
+          "other|q1|NIKON CORPORATION NIKON Z 6_2": 6,
+          "bird|q1|NIKON CORPORATION NIKON Z 6_2": 4,
+          "other|q2|NIKON CORPORATION NIKON D90": 2,
+          "other|q1|other_camera": 1,
+          "people|q1|NIKON CORPORATION NIKON D90": 1,
+          "people|q0|other_camera": 2,
+          "other|q2|NIKON CORPORATION NIKON Z 8": 3,
+          "people|q2|other_camera": 1,
+          "other|q2|other_camera": 1,
+          "people|q2|NIKON CORPORATION NIKON Z 8": 1,
+          "people|q1|other_camera": 1
+        },
+        "metric": {
+          "value": 0.2679919785708623,
+          "ci95": [
+            -0.010089539554838586,
+            0.5448475412546597
+          ],
+          "units": 54,
+          "blocks": 39,
+          "effective_units": 42.601680589204946,
+          "successful_resamples": 1000
+        }
+      },
+      {
+        "split": "train",
+        "category": "aesthetic",
+        "variant": "without-arniqa",
+        "eligible": 54,
+        "common_complete": 54,
+        "measured": 54,
+        "subgroups": {
+          "people|q0|NIKON CORPORATION NIKON Z 8": 1,
+          "bird|q1|NIKON CORPORATION NIKON D90": 2,
+          "other|q0|NIKON CORPORATION NIKON Z 8": 4,
+          "bird|q0|NIKON CORPORATION NIKON Z 6_2": 5,
+          "other|q1|NIKON CORPORATION NIKON D90": 2,
+          "other|q0|NIKON CORPORATION NIKON D90": 1,
+          "bird|q2|NIKON CORPORATION NIKON Z 8": 5,
+          "other|q2|NIKON CORPORATION NIKON Z 6_2": 3,
+          "people|q2|NIKON CORPORATION NIKON D90": 1,
+          "bird|q1|NIKON CORPORATION NIKON Z 8": 3,
+          "bird|q2|NIKON CORPORATION NIKON Z 6_2": 2,
+          "bird|q2|NIKON CORPORATION NIKON D90": 2,
+          "other|q1|NIKON CORPORATION NIKON Z 6_2": 6,
+          "bird|q1|NIKON CORPORATION NIKON Z 6_2": 4,
+          "other|q2|NIKON CORPORATION NIKON D90": 2,
+          "other|q1|other_camera": 1,
+          "people|q1|NIKON CORPORATION NIKON D90": 1,
+          "people|q0|other_camera": 2,
+          "other|q2|NIKON CORPORATION NIKON Z 8": 3,
+          "people|q2|other_camera": 1,
+          "other|q2|other_camera": 1,
+          "people|q2|NIKON CORPORATION NIKON Z 8": 1,
+          "people|q1|other_camera": 1
+        },
+        "metric": {
+          "value": 0.2679919785708623,
+          "ci95": [
+            -0.010089539554838586,
+            0.5448475412546597
+          ],
+          "units": 54,
+          "blocks": 39,
+          "effective_units": 42.601680589204946,
+          "successful_resamples": 1000
+        }
+      },
+      {
+        "split": "train",
+        "category": "culling",
+        "variant": "current",
+        "eligible": 22,
+        "common_complete": 22,
+        "measured": 22,
+        "subgroups": {
+          "stack|people|6-12|disagree": 1,
+          "burst|other|3-5|disagree": 1,
+          "stack|bird|2|agree": 1,
+          "burst|other|2|agree": 1,
+          "stack|bird|3-5|agree": 2,
+          "burst|other|6-12|disagree": 1,
+          "burst|bird|2|disagree": 2,
+          "stack|other|2|disagree": 3,
+          "burst|other|2|disagree": 1,
+          "burst|other|6-12|agree": 1,
+          "stack|people|2|disagree": 1,
+          "stack|bird|2|disagree": 2,
+          "stack|other|3-5|agree": 1,
+          "stack|other|3-5|disagree": 1,
+          "stack|people|3-5|disagree": 1,
+          "stack|other|2|agree": 1,
+          "burst|bird|6-12|disagree": 1
+        },
+        "metric": {
+          "value": 0.6528214689512223,
+          "ci95": [
+            0.4164307166789484,
+            0.874531712022509
+          ],
+          "units": 22,
+          "blocks": 17,
+          "effective_units": 17.524586211410742,
+          "successful_resamples": 1000
+        }
+      },
+      {
+        "split": "train",
+        "category": "culling",
+        "variant": "continuous-v2-candidate",
+        "eligible": 22,
+        "common_complete": 22,
+        "measured": 22,
+        "subgroups": {
+          "stack|people|6-12|disagree": 1,
+          "burst|other|3-5|disagree": 1,
+          "stack|bird|2|agree": 1,
+          "burst|other|2|agree": 1,
+          "stack|bird|3-5|agree": 2,
+          "burst|other|6-12|disagree": 1,
+          "burst|bird|2|disagree": 2,
+          "stack|other|2|disagree": 3,
+          "burst|other|2|disagree": 1,
+          "burst|other|6-12|agree": 1,
+          "stack|people|2|disagree": 1,
+          "stack|bird|2|disagree": 2,
+          "stack|other|3-5|agree": 1,
+          "stack|other|3-5|disagree": 1,
+          "stack|people|3-5|disagree": 1,
+          "stack|other|2|agree": 1,
+          "burst|bird|6-12|disagree": 1
+        },
+        "metric": {
+          "value": 0.6528214689512223,
+          "ci95": [
+            0.4164307166789484,
+            0.874531712022509
+          ],
+          "units": 22,
+          "blocks": 17,
+          "effective_units": 17.524586211410742,
+          "successful_resamples": 1000
+        }
+      },
+      {
+        "split": "train",
+        "category": "culling",
+        "variant": "without-arniqa",
+        "eligible": 22,
+        "common_complete": 22,
+        "measured": 22,
+        "subgroups": {
+          "stack|people|6-12|disagree": 1,
+          "burst|other|3-5|disagree": 1,
+          "stack|bird|2|agree": 1,
+          "burst|other|2|agree": 1,
+          "stack|bird|3-5|agree": 2,
+          "burst|other|6-12|disagree": 1,
+          "burst|bird|2|disagree": 2,
+          "stack|other|2|disagree": 3,
+          "burst|other|2|disagree": 1,
+          "burst|other|6-12|agree": 1,
+          "stack|people|2|disagree": 1,
+          "stack|bird|2|disagree": 2,
+          "stack|other|3-5|agree": 1,
+          "stack|other|3-5|disagree": 1,
+          "stack|people|3-5|disagree": 1,
+          "stack|other|2|agree": 1,
+          "burst|bird|6-12|disagree": 1
+        },
+        "metric": {
+          "value": 0.6127072813191071,
+          "ci95": [
+            0.38873420206389087,
+            0.8109990321532003
+          ],
+          "units": 22,
+          "blocks": 17,
+          "effective_units": 17.524586211410742,
+          "successful_resamples": 1000
+        }
+      },
+      {
+        "split": "validation",
+        "category": "general",
+        "variant": "current",
+        "eligible": 22,
+        "common_complete": 22,
+        "measured": 22,
+        "subgroups": {
+          "other|q2|NIKON CORPORATION NIKON Z 6_2": 2,
+          "other|q1|NIKON CORPORATION NIKON Z 8": 3,
+          "bird|q2|NIKON CORPORATION NIKON Z 8": 2,
+          "other|q0|NIKON CORPORATION NIKON Z 8": 2,
+          "bird|q0|NIKON CORPORATION NIKON Z 8": 3,
+          "bird|q1|NIKON CORPORATION NIKON Z 8": 2,
+          "other|q1|NIKON CORPORATION NIKON Z 6_2": 1,
+          "other|q0|NIKON CORPORATION NIKON D90": 1,
+          "bird|q1|NIKON CORPORATION NIKON Z 6_2": 1,
+          "other|q2|NIKON CORPORATION NIKON D90": 1,
+          "other|q0|NIKON CORPORATION NIKON Z 6_2": 2,
+          "people|q2|NIKON CORPORATION NIKON D90": 1,
+          "other|q2|NIKON CORPORATION NIKON Z 8": 1
+        },
+        "metric": {
+          "value": 0.339522659348141,
+          "ci95": [
+            -0.19438855287990325,
+            0.7364847049493507
+          ],
+          "units": 22,
+          "blocks": 11,
+          "effective_units": 20.556302902066612,
+          "successful_resamples": 999
+        }
+      },
+      {
+        "split": "validation",
+        "category": "general",
+        "variant": "continuous-v2-candidate",
+        "eligible": 22,
+        "common_complete": 22,
+        "measured": 22,
+        "subgroups": {
+          "other|q2|NIKON CORPORATION NIKON Z 6_2": 2,
+          "other|q1|NIKON CORPORATION NIKON Z 8": 3,
+          "bird|q2|NIKON CORPORATION NIKON Z 8": 2,
+          "other|q0|NIKON CORPORATION NIKON Z 8": 2,
+          "bird|q0|NIKON CORPORATION NIKON Z 8": 3,
+          "bird|q1|NIKON CORPORATION NIKON Z 8": 2,
+          "other|q1|NIKON CORPORATION NIKON Z 6_2": 1,
+          "other|q0|NIKON CORPORATION NIKON D90": 1,
+          "bird|q1|NIKON CORPORATION NIKON Z 6_2": 1,
+          "other|q2|NIKON CORPORATION NIKON D90": 1,
+          "other|q0|NIKON CORPORATION NIKON Z 6_2": 2,
+          "people|q2|NIKON CORPORATION NIKON D90": 1,
+          "other|q2|NIKON CORPORATION NIKON Z 8": 1
+        },
+        "metric": {
+          "value": 0.339522659348141,
+          "ci95": [
+            -0.19438855287990325,
+            0.7364847049493507
+          ],
+          "units": 22,
+          "blocks": 11,
+          "effective_units": 20.556302902066612,
+          "successful_resamples": 999
+        }
+      },
+      {
+        "split": "validation",
+        "category": "general",
+        "variant": "without-arniqa",
+        "eligible": 22,
+        "common_complete": 22,
+        "measured": 22,
+        "subgroups": {
+          "other|q2|NIKON CORPORATION NIKON Z 6_2": 2,
+          "other|q1|NIKON CORPORATION NIKON Z 8": 3,
+          "bird|q2|NIKON CORPORATION NIKON Z 8": 2,
+          "other|q0|NIKON CORPORATION NIKON Z 8": 2,
+          "bird|q0|NIKON CORPORATION NIKON Z 8": 3,
+          "bird|q1|NIKON CORPORATION NIKON Z 8": 2,
+          "other|q1|NIKON CORPORATION NIKON Z 6_2": 1,
+          "other|q0|NIKON CORPORATION NIKON D90": 1,
+          "bird|q1|NIKON CORPORATION NIKON Z 6_2": 1,
+          "other|q2|NIKON CORPORATION NIKON D90": 1,
+          "other|q0|NIKON CORPORATION NIKON Z 6_2": 2,
+          "people|q2|NIKON CORPORATION NIKON D90": 1,
+          "other|q2|NIKON CORPORATION NIKON Z 8": 1
+        },
+        "metric": {
+          "value": 0.352132711444353,
+          "ci95": [
+            -0.17589922965963303,
+            0.6858197040372499
+          ],
+          "units": 22,
+          "blocks": 11,
+          "effective_units": 20.556302902066612,
+          "successful_resamples": 999
+        }
+      },
+      {
+        "split": "validation",
+        "category": "technical",
+        "variant": "current",
+        "eligible": 22,
+        "common_complete": 22,
+        "measured": 22,
+        "subgroups": {
+          "other|q2|NIKON CORPORATION NIKON Z 6_2": 2,
+          "other|q1|NIKON CORPORATION NIKON Z 8": 3,
+          "bird|q2|NIKON CORPORATION NIKON Z 8": 2,
+          "other|q0|NIKON CORPORATION NIKON Z 8": 2,
+          "bird|q0|NIKON CORPORATION NIKON Z 8": 3,
+          "bird|q1|NIKON CORPORATION NIKON Z 8": 2,
+          "other|q1|NIKON CORPORATION NIKON Z 6_2": 1,
+          "other|q0|NIKON CORPORATION NIKON D90": 1,
+          "bird|q1|NIKON CORPORATION NIKON Z 6_2": 1,
+          "other|q2|NIKON CORPORATION NIKON D90": 1,
+          "other|q0|NIKON CORPORATION NIKON Z 6_2": 2,
+          "people|q2|NIKON CORPORATION NIKON D90": 1,
+          "other|q2|NIKON CORPORATION NIKON Z 8": 1
+        },
+        "metric": {
+          "value": 0.24508216892976345,
+          "ci95": [
+            -0.2865875603899684,
+            0.7276909489902745
+          ],
+          "units": 22,
+          "blocks": 11,
+          "effective_units": 20.556302902066612,
+          "successful_resamples": 999
+        }
+      },
+      {
+        "split": "validation",
+        "category": "technical",
+        "variant": "continuous-v2-candidate",
+        "eligible": 22,
+        "common_complete": 22,
+        "measured": 22,
+        "subgroups": {
+          "other|q2|NIKON CORPORATION NIKON Z 6_2": 2,
+          "other|q1|NIKON CORPORATION NIKON Z 8": 3,
+          "bird|q2|NIKON CORPORATION NIKON Z 8": 2,
+          "other|q0|NIKON CORPORATION NIKON Z 8": 2,
+          "bird|q0|NIKON CORPORATION NIKON Z 8": 3,
+          "bird|q1|NIKON CORPORATION NIKON Z 8": 2,
+          "other|q1|NIKON CORPORATION NIKON Z 6_2": 1,
+          "other|q0|NIKON CORPORATION NIKON D90": 1,
+          "bird|q1|NIKON CORPORATION NIKON Z 6_2": 1,
+          "other|q2|NIKON CORPORATION NIKON D90": 1,
+          "other|q0|NIKON CORPORATION NIKON Z 6_2": 2,
+          "people|q2|NIKON CORPORATION NIKON D90": 1,
+          "other|q2|NIKON CORPORATION NIKON Z 8": 1
+        },
+        "metric": {
+          "value": 0.24508216892976345,
+          "ci95": [
+            -0.2865875603899684,
+            0.7276909489902745
+          ],
+          "units": 22,
+          "blocks": 11,
+          "effective_units": 20.556302902066612,
+          "successful_resamples": 999
+        }
+      },
+      {
+        "split": "validation",
+        "category": "technical",
+        "variant": "without-arniqa",
+        "eligible": 22,
+        "common_complete": 22,
+        "measured": 22,
+        "subgroups": {
+          "other|q2|NIKON CORPORATION NIKON Z 6_2": 2,
+          "other|q1|NIKON CORPORATION NIKON Z 8": 3,
+          "bird|q2|NIKON CORPORATION NIKON Z 8": 2,
+          "other|q0|NIKON CORPORATION NIKON Z 8": 2,
+          "bird|q0|NIKON CORPORATION NIKON Z 8": 3,
+          "bird|q1|NIKON CORPORATION NIKON Z 8": 2,
+          "other|q1|NIKON CORPORATION NIKON Z 6_2": 1,
+          "other|q0|NIKON CORPORATION NIKON D90": 1,
+          "bird|q1|NIKON CORPORATION NIKON Z 6_2": 1,
+          "other|q2|NIKON CORPORATION NIKON D90": 1,
+          "other|q0|NIKON CORPORATION NIKON Z 6_2": 2,
+          "people|q2|NIKON CORPORATION NIKON D90": 1,
+          "other|q2|NIKON CORPORATION NIKON Z 8": 1
+        },
+        "metric": {
+          "value": 0.3416176786102719,
+          "ci95": [
+            -0.23081041217026596,
+            0.7979398420581127
+          ],
+          "units": 22,
+          "blocks": 11,
+          "effective_units": 20.556302902066612,
+          "successful_resamples": 999
+        }
+      },
+      {
+        "split": "validation",
+        "category": "aesthetic",
+        "variant": "current",
+        "eligible": 22,
+        "common_complete": 22,
+        "measured": 22,
+        "subgroups": {
+          "other|q2|NIKON CORPORATION NIKON Z 6_2": 2,
+          "other|q1|NIKON CORPORATION NIKON Z 8": 3,
+          "bird|q2|NIKON CORPORATION NIKON Z 8": 2,
+          "other|q0|NIKON CORPORATION NIKON Z 8": 2,
+          "bird|q0|NIKON CORPORATION NIKON Z 8": 3,
+          "bird|q1|NIKON CORPORATION NIKON Z 8": 2,
+          "other|q1|NIKON CORPORATION NIKON Z 6_2": 1,
+          "other|q0|NIKON CORPORATION NIKON D90": 1,
+          "bird|q1|NIKON CORPORATION NIKON Z 6_2": 1,
+          "other|q2|NIKON CORPORATION NIKON D90": 1,
+          "other|q0|NIKON CORPORATION NIKON Z 6_2": 2,
+          "people|q2|NIKON CORPORATION NIKON D90": 1,
+          "other|q2|NIKON CORPORATION NIKON Z 8": 1
+        },
+        "metric": {
+          "value": 0.49997744256365195,
+          "ci95": [
+            -0.14343188960820927,
+            0.751978795056001
+          ],
+          "units": 22,
+          "blocks": 11,
+          "effective_units": 20.556302902066612,
+          "successful_resamples": 999
+        }
+      },
+      {
+        "split": "validation",
+        "category": "aesthetic",
+        "variant": "continuous-v2-candidate",
+        "eligible": 22,
+        "common_complete": 22,
+        "measured": 22,
+        "subgroups": {
+          "other|q2|NIKON CORPORATION NIKON Z 6_2": 2,
+          "other|q1|NIKON CORPORATION NIKON Z 8": 3,
+          "bird|q2|NIKON CORPORATION NIKON Z 8": 2,
+          "other|q0|NIKON CORPORATION NIKON Z 8": 2,
+          "bird|q0|NIKON CORPORATION NIKON Z 8": 3,
+          "bird|q1|NIKON CORPORATION NIKON Z 8": 2,
+          "other|q1|NIKON CORPORATION NIKON Z 6_2": 1,
+          "other|q0|NIKON CORPORATION NIKON D90": 1,
+          "bird|q1|NIKON CORPORATION NIKON Z 6_2": 1,
+          "other|q2|NIKON CORPORATION NIKON D90": 1,
+          "other|q0|NIKON CORPORATION NIKON Z 6_2": 2,
+          "people|q2|NIKON CORPORATION NIKON D90": 1,
+          "other|q2|NIKON CORPORATION NIKON Z 8": 1
+        },
+        "metric": {
+          "value": 0.49997744256365195,
+          "ci95": [
+            -0.14343188960820927,
+            0.751978795056001
+          ],
+          "units": 22,
+          "blocks": 11,
+          "effective_units": 20.556302902066612,
+          "successful_resamples": 999
+        }
+      },
+      {
+        "split": "validation",
+        "category": "aesthetic",
+        "variant": "without-arniqa",
+        "eligible": 22,
+        "common_complete": 22,
+        "measured": 22,
+        "subgroups": {
+          "other|q2|NIKON CORPORATION NIKON Z 6_2": 2,
+          "other|q1|NIKON CORPORATION NIKON Z 8": 3,
+          "bird|q2|NIKON CORPORATION NIKON Z 8": 2,
+          "other|q0|NIKON CORPORATION NIKON Z 8": 2,
+          "bird|q0|NIKON CORPORATION NIKON Z 8": 3,
+          "bird|q1|NIKON CORPORATION NIKON Z 8": 2,
+          "other|q1|NIKON CORPORATION NIKON Z 6_2": 1,
+          "other|q0|NIKON CORPORATION NIKON D90": 1,
+          "bird|q1|NIKON CORPORATION NIKON Z 6_2": 1,
+          "other|q2|NIKON CORPORATION NIKON D90": 1,
+          "other|q0|NIKON CORPORATION NIKON Z 6_2": 2,
+          "people|q2|NIKON CORPORATION NIKON D90": 1,
+          "other|q2|NIKON CORPORATION NIKON Z 8": 1
+        },
+        "metric": {
+          "value": 0.49997744256365195,
+          "ci95": [
+            -0.14343188960820927,
+            0.751978795056001
+          ],
+          "units": 22,
+          "blocks": 11,
+          "effective_units": 20.556302902066612,
+          "successful_resamples": 999
+        }
+      },
+      {
+        "split": "validation",
+        "category": "culling",
+        "variant": "current",
+        "eligible": 10,
+        "common_complete": 10,
+        "measured": 8,
+        "subgroups": {
+          "burst|bird|3-5|disagree": 1,
+          "burst|other|6-12|disagree": 1,
+          "stack|other|2|disagree": 1,
+          "burst|other|3-5|disagree": 1,
+          "stack|bird|2|disagree": 1,
+          "stack|other|2|agree": 1,
+          "stack|bird|3-5|disagree": 1,
+          "burst|bird|3-5|agree": 1,
+          "burst|bird|2|agree": 1,
+          "stack|other|6-12|disagree": 1
+        },
+        "metric": {
+          "value": 0.5888115398014323,
+          "ci95": [
+            0.0,
+            1.0
+          ],
+          "units": 8,
+          "blocks": 5,
+          "effective_units": 7.004334993495003,
+          "successful_resamples": 988
+        }
+      },
+      {
+        "split": "validation",
+        "category": "culling",
+        "variant": "continuous-v2-candidate",
+        "eligible": 10,
+        "common_complete": 10,
+        "measured": 8,
+        "subgroups": {
+          "burst|bird|3-5|disagree": 1,
+          "burst|other|6-12|disagree": 1,
+          "stack|other|2|disagree": 1,
+          "burst|other|3-5|disagree": 1,
+          "stack|bird|2|disagree": 1,
+          "stack|other|2|agree": 1,
+          "stack|bird|3-5|disagree": 1,
+          "burst|bird|3-5|agree": 1,
+          "burst|bird|2|agree": 1,
+          "stack|other|6-12|disagree": 1
+        },
+        "metric": {
+          "value": 0.5888115398014323,
+          "ci95": [
+            0.0,
+            1.0
+          ],
+          "units": 8,
+          "blocks": 5,
+          "effective_units": 7.004334993495003,
+          "successful_resamples": 988
+        }
+      },
+      {
+        "split": "validation",
+        "category": "culling",
+        "variant": "without-arniqa",
+        "eligible": 10,
+        "common_complete": 10,
+        "measured": 8,
+        "subgroups": {
+          "burst|bird|3-5|disagree": 1,
+          "burst|other|6-12|disagree": 1,
+          "stack|other|2|disagree": 1,
+          "burst|other|3-5|disagree": 1,
+          "stack|bird|2|disagree": 1,
+          "stack|other|2|agree": 1,
+          "stack|bird|3-5|disagree": 1,
+          "burst|bird|3-5|agree": 1,
+          "burst|bird|2|agree": 1,
+          "stack|other|6-12|disagree": 1
+        },
+        "metric": {
+          "value": 0.5888115398014323,
+          "ci95": [
+            0.0,
+            1.0
+          ],
+          "units": 8,
+          "blocks": 5,
+          "effective_units": 7.004334993495003,
+          "successful_resamples": 988
+        }
+      }
+    ],
+    "decision": "inconclusive for production; development comparison cannot certify held-out quality"
+  },
+  "eye": {
+    "population": "synthetic scalar evidence; not natural-image accuracy",
+    "n": 16,
+    "selection_changes": 4,
+    "cases": [
+      {
+        "focus": 0.2,
+        "confidence": 0.1,
+        "current": {
+          "best_eye_side": "right",
+          "eye_visible_count": 2,
+          "focus_score": 0.6,
+          "sharpness_score": 0.6,
+          "clarity_score": 0.0,
+          "quality_grade": 2,
+          "failure_type": "none",
+          "confidence": 0.9,
+          "model_name": "eye_quality_heuristic",
+          "model_version": "0.1.0"
+        },
+        "candidate": {
+          "best_eye_side": "right",
+          "eye_visible_count": 1,
+          "focus_score": 0.6,
+          "sharpness_score": 0.6,
+          "clarity_score": 0.0,
+          "quality_grade": 2,
+          "failure_type": "none",
+          "confidence": 0.9,
+          "model_name": "eye_quality_heuristic",
+          "model_version": "0.1.0"
+        },
+        "changed": false
+      },
+      {
+        "focus": 0.2,
+        "confidence": 0.3,
+        "current": {
+          "best_eye_side": "right",
+          "eye_visible_count": 2,
+          "focus_score": 0.6,
+          "sharpness_score": 0.6,
+          "clarity_score": 0.0,
+          "quality_grade": 2,
+          "failure_type": "none",
+          "confidence": 0.9,
+          "model_name": "eye_quality_heuristic",
+          "model_version": "0.1.0"
+        },
+        "candidate": {
+          "best_eye_side": "right",
+          "eye_visible_count": 1,
+          "focus_score": 0.6,
+          "sharpness_score": 0.6,
+          "clarity_score": 0.0,
+          "quality_grade": 2,
+          "failure_type": "none",
+          "confidence": 0.9,
+          "model_name": "eye_quality_heuristic",
+          "model_version": "0.1.0"
+        },
+        "changed": false
+      },
+      {
+        "focus": 0.2,
+        "confidence": 0.45,
+        "current": {
+          "best_eye_side": "right",
+          "eye_visible_count": 2,
+          "focus_score": 0.6,
+          "sharpness_score": 0.6,
+          "clarity_score": 0.0,
+          "quality_grade": 2,
+          "failure_type": "none",
+          "confidence": 0.9,
+          "model_name": "eye_quality_heuristic",
+          "model_version": "0.1.0"
+        },
+        "candidate": {
+          "best_eye_side": "right",
+          "eye_visible_count": 2,
+          "focus_score": 0.6,
+          "sharpness_score": 0.6,
+          "clarity_score": 0.0,
+          "quality_grade": 2,
+          "failure_type": "none",
+          "confidence": 0.9,
+          "model_name": "eye_quality_heuristic",
+          "model_version": "0.1.0"
+        },
+        "changed": false
+      },
+      {
+        "focus": 0.2,
+        "confidence": 0.9,
+        "current": {
+          "best_eye_side": "right",
+          "eye_visible_count": 2,
+          "focus_score": 0.6,
+          "sharpness_score": 0.6,
+          "clarity_score": 0.0,
+          "quality_grade": 2,
+          "failure_type": "none",
+          "confidence": 0.9,
+          "model_name": "eye_quality_heuristic",
+          "model_version": "0.1.0"
+        },
+        "candidate": {
+          "best_eye_side": "right",
+          "eye_visible_count": 2,
+          "focus_score": 0.6,
+          "sharpness_score": 0.6,
+          "clarity_score": 0.0,
+          "quality_grade": 2,
+          "failure_type": "none",
+          "confidence": 0.9,
+          "model_name": "eye_quality_heuristic",
+          "model_version": "0.1.0"
+        },
+        "changed": false
+      },
+      {
+        "focus": 0.5,
+        "confidence": 0.1,
+        "current": {
+          "best_eye_side": "right",
+          "eye_visible_count": 2,
+          "focus_score": 0.6,
+          "sharpness_score": 0.6,
+          "clarity_score": 0.0,
+          "quality_grade": 2,
+          "failure_type": "none",
+          "confidence": 0.9,
+          "model_name": "eye_quality_heuristic",
+          "model_version": "0.1.0"
+        },
+        "candidate": {
+          "best_eye_side": "right",
+          "eye_visible_count": 1,
+          "focus_score": 0.6,
+          "sharpness_score": 0.6,
+          "clarity_score": 0.0,
+          "quality_grade": 2,
+          "failure_type": "none",
+          "confidence": 0.9,
+          "model_name": "eye_quality_heuristic",
+          "model_version": "0.1.0"
+        },
+        "changed": false
+      },
+      {
+        "focus": 0.5,
+        "confidence": 0.3,
+        "current": {
+          "best_eye_side": "right",
+          "eye_visible_count": 2,
+          "focus_score": 0.6,
+          "sharpness_score": 0.6,
+          "clarity_score": 0.0,
+          "quality_grade": 2,
+          "failure_type": "none",
+          "confidence": 0.9,
+          "model_name": "eye_quality_heuristic",
+          "model_version": "0.1.0"
+        },
+        "candidate": {
+          "best_eye_side": "right",
+          "eye_visible_count": 1,
+          "focus_score": 0.6,
+          "sharpness_score": 0.6,
+          "clarity_score": 0.0,
+          "quality_grade": 2,
+          "failure_type": "none",
+          "confidence": 0.9,
+          "model_name": "eye_quality_heuristic",
+          "model_version": "0.1.0"
+        },
+        "changed": false
+      },
+      {
+        "focus": 0.5,
+        "confidence": 0.45,
+        "current": {
+          "best_eye_side": "right",
+          "eye_visible_count": 2,
+          "focus_score": 0.6,
+          "sharpness_score": 0.6,
+          "clarity_score": 0.0,
+          "quality_grade": 2,
+          "failure_type": "none",
+          "confidence": 0.9,
+          "model_name": "eye_quality_heuristic",
+          "model_version": "0.1.0"
+        },
+        "candidate": {
+          "best_eye_side": "right",
+          "eye_visible_count": 2,
+          "focus_score": 0.6,
+          "sharpness_score": 0.6,
+          "clarity_score": 0.0,
+          "quality_grade": 2,
+          "failure_type": "none",
+          "confidence": 0.9,
+          "model_name": "eye_quality_heuristic",
+          "model_version": "0.1.0"
+        },
+        "changed": false
+      },
+      {
+        "focus": 0.5,
+        "confidence": 0.9,
+        "current": {
+          "best_eye_side": "right",
+          "eye_visible_count": 2,
+          "focus_score": 0.6,
+          "sharpness_score": 0.6,
+          "clarity_score": 0.0,
+          "quality_grade": 2,
+          "failure_type": "none",
+          "confidence": 0.9,
+          "model_name": "eye_quality_heuristic",
+          "model_version": "0.1.0"
+        },
+        "candidate": {
+          "best_eye_side": "right",
+          "eye_visible_count": 2,
+          "focus_score": 0.6,
+          "sharpness_score": 0.6,
+          "clarity_score": 0.0,
+          "quality_grade": 2,
+          "failure_type": "none",
+          "confidence": 0.9,
+          "model_name": "eye_quality_heuristic",
+          "model_version": "0.1.0"
+        },
+        "changed": false
+      },
+      {
+        "focus": 0.7,
+        "confidence": 0.1,
+        "current": {
+          "best_eye_side": "left",
+          "eye_visible_count": 2,
+          "focus_score": 0.7,
+          "sharpness_score": 0.7,
+          "clarity_score": 0.0,
+          "quality_grade": 2,
+          "failure_type": "none",
+          "confidence": 0.1,
+          "model_name": "eye_quality_heuristic",
+          "model_version": "0.1.0"
+        },
+        "candidate": {
+          "best_eye_side": "right",
+          "eye_visible_count": 1,
+          "focus_score": 0.6,
+          "sharpness_score": 0.6,
+          "clarity_score": 0.0,
+          "quality_grade": 2,
+          "failure_type": "none",
+          "confidence": 0.9,
+          "model_name": "eye_quality_heuristic",
+          "model_version": "0.1.0"
+        },
+        "changed": true
+      },
+      {
+        "focus": 0.7,
+        "confidence": 0.3,
+        "current": {
+          "best_eye_side": "left",
+          "eye_visible_count": 2,
+          "focus_score": 0.7,
+          "sharpness_score": 0.7,
+          "clarity_score": 0.0,
+          "quality_grade": 2,
+          "failure_type": "none",
+          "confidence": 0.3,
+          "model_name": "eye_quality_heuristic",
+          "model_version": "0.1.0"
+        },
+        "candidate": {
+          "best_eye_side": "right",
+          "eye_visible_count": 1,
+          "focus_score": 0.6,
+          "sharpness_score": 0.6,
+          "clarity_score": 0.0,
+          "quality_grade": 2,
+          "failure_type": "none",
+          "confidence": 0.9,
+          "model_name": "eye_quality_heuristic",
+          "model_version": "0.1.0"
+        },
+        "changed": true
+      },
+      {
+        "focus": 0.7,
+        "confidence": 0.45,
+        "current": {
+          "best_eye_side": "left",
+          "eye_visible_count": 2,
+          "focus_score": 0.7,
+          "sharpness_score": 0.7,
+          "clarity_score": 0.0,
+          "quality_grade": 3,
+          "failure_type": "none",
+          "confidence": 0.45,
+          "model_name": "eye_quality_heuristic",
+          "model_version": "0.1.0"
+        },
+        "candidate": {
+          "best_eye_side": "left",
+          "eye_visible_count": 2,
+          "focus_score": 0.7,
+          "sharpness_score": 0.7,
+          "clarity_score": 0.0,
+          "quality_grade": 3,
+          "failure_type": "none",
+          "confidence": 0.45,
+          "model_name": "eye_quality_heuristic",
+          "model_version": "0.1.0"
+        },
+        "changed": false
+      },
+      {
+        "focus": 0.7,
+        "confidence": 0.9,
+        "current": {
+          "best_eye_side": "left",
+          "eye_visible_count": 2,
+          "focus_score": 0.7,
+          "sharpness_score": 0.7,
+          "clarity_score": 0.0,
+          "quality_grade": 3,
+          "failure_type": "none",
+          "confidence": 0.9,
+          "model_name": "eye_quality_heuristic",
+          "model_version": "0.1.0"
+        },
+        "candidate": {
+          "best_eye_side": "left",
+          "eye_visible_count": 2,
+          "focus_score": 0.7,
+          "sharpness_score": 0.7,
+          "clarity_score": 0.0,
+          "quality_grade": 3,
+          "failure_type": "none",
+          "confidence": 0.9,
+          "model_name": "eye_quality_heuristic",
+          "model_version": "0.1.0"
+        },
+        "changed": false
+      },
+      {
+        "focus": 0.9,
+        "confidence": 0.1,
+        "current": {
+          "best_eye_side": "left",
+          "eye_visible_count": 2,
+          "focus_score": 0.9,
+          "sharpness_score": 0.9,
+          "clarity_score": 0.0,
+          "quality_grade": 2,
+          "failure_type": "none",
+          "confidence": 0.1,
+          "model_name": "eye_quality_heuristic",
+          "model_version": "0.1.0"
+        },
+        "candidate": {
+          "best_eye_side": "right",
+          "eye_visible_count": 1,
+          "focus_score": 0.6,
+          "sharpness_score": 0.6,
+          "clarity_score": 0.0,
+          "quality_grade": 2,
+          "failure_type": "none",
+          "confidence": 0.9,
+          "model_name": "eye_quality_heuristic",
+          "model_version": "0.1.0"
+        },
+        "changed": true
+      },
+      {
+        "focus": 0.9,
+        "confidence": 0.3,
+        "current": {
+          "best_eye_side": "left",
+          "eye_visible_count": 2,
+          "focus_score": 0.9,
+          "sharpness_score": 0.9,
+          "clarity_score": 0.0,
+          "quality_grade": 2,
+          "failure_type": "none",
+          "confidence": 0.3,
+          "model_name": "eye_quality_heuristic",
+          "model_version": "0.1.0"
+        },
+        "candidate": {
+          "best_eye_side": "right",
+          "eye_visible_count": 1,
+          "focus_score": 0.6,
+          "sharpness_score": 0.6,
+          "clarity_score": 0.0,
+          "quality_grade": 2,
+          "failure_type": "none",
+          "confidence": 0.9,
+          "model_name": "eye_quality_heuristic",
+          "model_version": "0.1.0"
+        },
+        "changed": true
+      },
+      {
+        "focus": 0.9,
+        "confidence": 0.45,
+        "current": {
+          "best_eye_side": "left",
+          "eye_visible_count": 2,
+          "focus_score": 0.9,
+          "sharpness_score": 0.9,
+          "clarity_score": 0.0,
+          "quality_grade": 4,
+          "failure_type": "none",
+          "confidence": 0.45,
+          "model_name": "eye_quality_heuristic",
+          "model_version": "0.1.0"
+        },
+        "candidate": {
+          "best_eye_side": "left",
+          "eye_visible_count": 2,
+          "focus_score": 0.9,
+          "sharpness_score": 0.9,
+          "clarity_score": 0.0,
+          "quality_grade": 4,
+          "failure_type": "none",
+          "confidence": 0.45,
+          "model_name": "eye_quality_heuristic",
+          "model_version": "0.1.0"
+        },
+        "changed": false
+      },
+      {
+        "focus": 0.9,
+        "confidence": 0.9,
+        "current": {
+          "best_eye_side": "left",
+          "eye_visible_count": 2,
+          "focus_score": 0.9,
+          "sharpness_score": 0.9,
+          "clarity_score": 0.0,
+          "quality_grade": 4,
+          "failure_type": "none",
+          "confidence": 0.9,
+          "model_name": "eye_quality_heuristic",
+          "model_version": "0.1.0"
+        },
+        "candidate": {
+          "best_eye_side": "left",
+          "eye_visible_count": 2,
+          "focus_score": 0.9,
+          "sharpness_score": 0.9,
+          "clarity_score": 0.0,
+          "quality_grade": 4,
+          "failure_type": "none",
+          "confidence": 0.9,
+          "model_name": "eye_quality_heuristic",
+          "model_version": "0.1.0"
+        },
+        "changed": false
+      }
+    ],
+    "decision": "inconclusive: confidence filtering changes selection; no labels justify its adoption"
+  },
+  "dedupe": {
+    "labels": "none used; historical development measurements; no false-cull rate",
+    "comparisons": [
+      {
+        "shoot": "53922fb959c438b001bf",
+        "strict": false,
+        "pairs": 793,
+        "fully_measured": 246,
+        "frames_in_pairs": 887,
+        "edges": 16,
+        "suppressed": 7,
+        "retained_direct_keepers": 7,
+        "representatives_in_candidate_frames": 431
+      },
+      {
+        "shoot": "53922fb959c438b001bf",
+        "strict": true,
+        "pairs": 793,
+        "fully_measured": 246,
+        "frames_in_pairs": 887,
+        "edges": 3,
+        "suppressed": 1,
+        "retained_direct_keepers": 1,
+        "representatives_in_candidate_frames": 431
+      },
+      {
+        "shoot": "f2cdc06853bf79237b88",
+        "strict": false,
+        "pairs": 327,
+        "fully_measured": 131,
+        "frames_in_pairs": 478,
+        "edges": 11,
+        "suppressed": 6,
+        "retained_direct_keepers": 6,
+        "representatives_in_candidate_frames": 266
+      },
+      {
+        "shoot": "f2cdc06853bf79237b88",
+        "strict": true,
+        "pairs": 327,
+        "fully_measured": 131,
+        "frames_in_pairs": 478,
+        "edges": 1,
+        "suppressed": 1,
+        "retained_direct_keepers": 1,
+        "representatives_in_candidate_frames": 266
+      },
+      {
+        "shoot": "f5702142a8d8bfd33596",
+        "strict": false,
+        "pairs": 778,
+        "fully_measured": 316,
+        "frames_in_pairs": 894,
+        "edges": 25,
+        "suppressed": 13,
+        "retained_direct_keepers": 10,
+        "representatives_in_candidate_frames": 458
+      },
+      {
+        "shoot": "f5702142a8d8bfd33596",
+        "strict": true,
+        "pairs": 778,
+        "fully_measured": 316,
+        "frames_in_pairs": 894,
+        "edges": 5,
+        "suppressed": 1,
+        "retained_direct_keepers": 1,
+        "representatives_in_candidate_frames": 458
+      }
+    ],
+    "decision": "inconclusive: strict uncertainty changes coverage, no unseen-shoot accuracy proof"
+  },
+  "gpu_hours": 0,
+  "elapsed_seconds": 5.3798152769959415,
+  "peak_process_rss_kib": 369060
+}

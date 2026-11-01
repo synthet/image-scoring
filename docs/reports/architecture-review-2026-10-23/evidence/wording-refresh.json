@@ -1,0 +1,12 @@
+[
+  {
+    "path": "docs/planning/focus-evidence-synergy-2026-10-23.md",
+    "before_sha256": "a097c3a57610dd56571c652d7d752001c0e6ce3f07a0e1632cde30718b48eb9a",
+    "after_sha256": "7899afbe8a5e791284f70d4748b6d4c0b44b8ca88e51e0b84e9f688dd652996c"
+  },
+  {
+    "path": "docs/reports/architecture-review-2026-10-23/kestrel-as-built.md",
+    "before_sha256": "73f4b5eebb68c40bc8ee28e3f6ffe511932f0abd98fbcefd7ead0a4ed2b18938",
+    "after_sha256": "3cb168985486c4430dbae3b9cd573e1fcb7daf65e742f0b2655290120dabad7f"
+  }
+]

@@ -1,0 +1,398 @@
+[
+  {
+    "repository": "image-scoring-model",
+    "command": [
+      "docker",
+      "run",
+      "--rm",
+      "--network",
+      "none",
+      "--read-only",
+      "--tmpfs",
+      "/tmp",
+      "--mount",
+      "type=bind,source=D:\\Projects\\image-scoring-model,target=/review,readonly",
+      "--workdir",
+      "/review",
+      "--entrypoint",
+      "python",
+      "image-scoring:latest",
+      "-B",
+      "scripts/okf_lint.py",
+      "--json",
+      "--profile",
+      "project",
+      "docs",
+      "--only",
+      "architecture/PIPELINE.md",
+      "--only",
+      "technical/API_CONTRACT.md",
+      "--only",
+      "specs/as-built/eye-evidence.md",
+      "--only",
+      "specs/as-built/training-and-evaluation.md",
+      "--only",
+      "specs/as-built/INDEX.md",
+      "--only",
+      "specs/INDEX.md",
+      "--only",
+      "CANONICAL_SOURCES.md",
+      "--only",
+      "README.md",
+      "--only",
+      "INDEX.md",
+      "--only",
+      "log.md"
+    ],
+    "exit_code": 0,
+    "reports": [
+      {
+        "bundle_root": "/review/docs",
+        "bundle_name": "docs",
+        "profile": "project",
+        "total_md": 48,
+        "concepts_checked": 9,
+        "skipped": 1,
+        "findings": [],
+        "counts": {
+          "error": 0,
+          "warning": 0,
+          "info": 0
+        }
+      }
+    ],
+    "files": [
+      {
+        "path": "architecture/PIPELINE.md",
+        "sha256": "91007b168cfdbd33a55ec3b2356ade6ec4b81503dd4bb251fa09bfc8b62684f9"
+      },
+      {
+        "path": "technical/API_CONTRACT.md",
+        "sha256": "57c02797252fc4e0a063d3e4c3ef07dc973f804031cb7f38d2f98943b6364356"
+      },
+      {
+        "path": "specs/as-built/eye-evidence.md",
+        "sha256": "f6131a505d7a29b532df9504bf42f36e769337565648787f6a406475597c18be"
+      },
+      {
+        "path": "specs/as-built/training-and-evaluation.md",
+        "sha256": "51aaede2f19d4e3dec7e08e9fd21bb5ce08e492e1bdb226bb8026c3d0138022d"
+      },
+      {
+        "path": "specs/as-built/INDEX.md",
+        "sha256": "4fa03e05afaddd379b267a7515d7ea374fd0178d36905bec0cf3d87fdbbbbbf4"
+      },
+      {
+        "path": "specs/INDEX.md",
+        "sha256": "4561c752b263f25f6f2f152f7dffaa2295d201636960033a273f07e2a7ad265d"
+      },
+      {
+        "path": "CANONICAL_SOURCES.md",
+        "sha256": "3be20ee6ead0dd9bd2e7222fcee17cbb5df54ee2b77c4bc95553b58bf737b412"
+      },
+      {
+        "path": "README.md",
+        "sha256": "b3d491d6b523ee2f53a6d518f90cb2b0dcaa49537d6bccec935a218b631aae5b"
+      },
+      {
+        "path": "INDEX.md",
+        "sha256": "853a35537273841ef8f315a22e14ae30650dc1d2307a200a0ac03b5fcbce00bd"
+      },
+      {
+        "path": "log.md",
+        "sha256": "798ec13dfb201b059679a2a6922849cd82df2ea81367ed7882b4b6ea7b14940d"
+      }
+    ]
+  },
+  {
+    "repository": "image-scoring-pipeline",
+    "command": [
+      "docker",
+      "run",
+      "--rm",
+      "--network",
+      "none",
+      "--read-only",
+      "--tmpfs",
+      "/tmp",
+      "--mount",
+      "type=bind,source=D:\\Projects\\image-scoring-pipeline,target=/review,readonly",
+      "--workdir",
+      "/review",
+      "--entrypoint",
+      "python",
+      "image-scoring:latest",
+      "-B",
+      "scripts/okf_lint.py",
+      "--json",
+      "--profile",
+      "vexlum",
+      "docs",
+      "--only",
+      "technical/MODELS_SUMMARY.md",
+      "--only",
+      "technical/MULTI_MODEL_SCORING.md",
+      "--only",
+      "architecture/pipeline-architecture.md",
+      "--only",
+      "specs/as-built/execution-and-scoring.md",
+      "--only",
+      "specs/as-built/localization-and-consumers.md",
+      "--only",
+      "specs/as-built/model-catalog.md",
+      "--only",
+      "specs/as-built/INDEX.md",
+      "--only",
+      "specs/INDEX.md",
+      "--only",
+      "CANONICAL_SOURCES.md",
+      "--only",
+      "README.md",
+      "--only",
+      "INDEX.md"
+    ],
+    "exit_code": 0,
+    "reports": [
+      {
+        "bundle_root": "/review/docs",
+        "bundle_name": "docs",
+        "profile": "vexlum",
+        "total_md": 459,
+        "concepts_checked": 11,
+        "skipped": 0,
+        "findings": [],
+        "counts": {
+          "error": 0,
+          "warning": 0,
+          "info": 0
+        }
+      }
+    ],
+    "files": [
+      {
+        "path": "technical/MODELS_SUMMARY.md",
+        "sha256": "a6d2aa521847caa1da293e243030c5ed8b919d054cb61095a5c7b3e194b08d10"
+      },
+      {
+        "path": "technical/MULTI_MODEL_SCORING.md",
+        "sha256": "0bd2a965c4d1419fa484004ef8aa8282d1a9de5ff2ecee51e3cfc6d84b11354b"
+      },
+      {
+        "path": "architecture/pipeline-architecture.md",
+        "sha256": "ab98fc8ebd68bcc34a6fa288372df5927b05dac4d45500ffc4538dc892d6e3c1"
+      },
+      {
+        "path": "specs/as-built/execution-and-scoring.md",
+        "sha256": "88082f3be94a128efecd237e90f6064064cf44f4aa7b447ad36a5df3a14cab68"
+      },
+      {
+        "path": "specs/as-built/localization-and-consumers.md",
+        "sha256": "aa6566af068289bcaaec7cdd4a0a189cef27310591295e20b3d035f14bdfadd6"
+      },
+      {
+        "path": "specs/as-built/model-catalog.md",
+        "sha256": "3f551e51e29deb63f6f5c3f3e8f6fef74af06cf7c551a85ec531fe633faadcb3"
+      },
+      {
+        "path": "specs/as-built/INDEX.md",
+        "sha256": "06780c58f593f9d4ca28f035e46e0166d36e63a1869628bfb5a398cb78b52ad3"
+      },
+      {
+        "path": "specs/INDEX.md",
+        "sha256": "4561c752b263f25f6f2f152f7dffaa2295d201636960033a273f07e2a7ad265d"
+      },
+      {
+        "path": "CANONICAL_SOURCES.md",
+        "sha256": "d5e0532ca45fde13b39b5395d6a763e8bb0bf9c59b1bf3b16008d258ac03084a"
+      },
+      {
+        "path": "README.md",
+        "sha256": "72b79631a8020b16e48515ad96cf1f4ea122cd0c8b7f87cb255d9fe4513b61b6"
+      },
+      {
+        "path": "INDEX.md",
+        "sha256": "629eabbda6bb6e08637ecf105edb70e4c87af7f8758cc86ff9a4e853c25aad7e"
+      }
+    ]
+  },
+  {
+    "repository": "image-scoring-skills",
+    "command": [
+      "docker",
+      "run",
+      "--rm",
+      "--network",
+      "none",
+      "--read-only",
+      "--tmpfs",
+      "/tmp",
+      "--mount",
+      "type=bind,source=D:\\Projects\\image-scoring-skills,target=/review,readonly",
+      "--workdir",
+      "/review",
+      "--entrypoint",
+      "python",
+      "image-scoring:latest",
+      "-B",
+      "scripts/okf_lint.py",
+      "--json",
+      "--profile",
+      "project",
+      "docs",
+      "--only",
+      "library-dedupe-cleanup-workflow.md",
+      "--only",
+      "jev-decision-layer.md",
+      "--only",
+      "specs/as-built/dedupe-physical-and-application.md",
+      "--only",
+      "specs/as-built/editorial-and-color-evidence.md",
+      "--only",
+      "specs/as-built/INDEX.md",
+      "--only",
+      "specs/INDEX.md",
+      "--only",
+      "CANONICAL_SOURCES.md",
+      "--only",
+      "README.md",
+      "--only",
+      "log.md"
+    ],
+    "exit_code": 0,
+    "reports": [
+      {
+        "bundle_root": "/review/docs",
+        "bundle_name": "docs",
+        "profile": "project",
+        "total_md": 60,
+        "concepts_checked": 8,
+        "skipped": 1,
+        "findings": [],
+        "counts": {
+          "error": 0,
+          "warning": 0,
+          "info": 0
+        }
+      }
+    ],
+    "files": [
+      {
+        "path": "library-dedupe-cleanup-workflow.md",
+        "sha256": "31e293f43a59f95f44857fd75870e19b9c5fd4e87d990c75976ada685fcbc441"
+      },
+      {
+        "path": "jev-decision-layer.md",
+        "sha256": "50cf3033bffb59bc4bb6d5f7eef0e520e827e398f1c56ffe2a8ecadfcd78fbd3"
+      },
+      {
+        "path": "specs/as-built/dedupe-physical-and-application.md",
+        "sha256": "e8f230d478bbb56eff2e7dec1e7710aa398edb6ede6255f52c66209f35639aa7"
+      },
+      {
+        "path": "specs/as-built/editorial-and-color-evidence.md",
+        "sha256": "4de0a6dbe3bf41365bb1210ef5b9929fbfa7c4157c97f83b942511db9a342a40"
+      },
+      {
+        "path": "specs/as-built/INDEX.md",
+        "sha256": "b4216cc89a047b45d1e8fedcf8f1f20ca4fc51fbd0d6c9fdecdc5ad106576e01"
+      },
+      {
+        "path": "specs/INDEX.md",
+        "sha256": "4561c752b263f25f6f2f152f7dffaa2295d201636960033a273f07e2a7ad265d"
+      },
+      {
+        "path": "CANONICAL_SOURCES.md",
+        "sha256": "a680d547de66a62fc4dc28fa7c3f05e5aab6596a025abad2d9f989ea89e75234"
+      },
+      {
+        "path": "README.md",
+        "sha256": "cad908c8998a14c9546834e3cc0fbdaf8af18f28d1d6eec4d380cf386e430a4a"
+      },
+      {
+        "path": "log.md",
+        "sha256": "113929d2488e5f4bf48a8987d0ca9fcf4092cdee19704f242b9fb32cc6a24757"
+      }
+    ]
+  },
+  {
+    "repository": "image-scoring",
+    "command": [
+      "docker",
+      "run",
+      "--rm",
+      "--network",
+      "none",
+      "--read-only",
+      "--tmpfs",
+      "/tmp",
+      "--mount",
+      "type=bind,source=D:\\Projects\\image-scoring,target=/review,readonly",
+      "--workdir",
+      "/review",
+      "--entrypoint",
+      "python",
+      "image-scoring:latest",
+      "-B",
+      "scripts/okf_lint.py",
+      "--json",
+      "--profile",
+      "project",
+      "docs",
+      "--only",
+      "planning/focus-evidence-synergy-2026-10-23.md",
+      "--only",
+      "reports/INDEX.md",
+      "--only",
+      "reports/architecture-review-2026-10-23/INDEX.md",
+      "--only",
+      "reports/architecture-review-2026-10-23/kestrel-as-built.md",
+      "--only",
+      "reports/architecture-review-2026-10-23/knowledge-consolidation.md",
+      "--only",
+      "reports/architecture-review-2026-10-23/verification-and-handoff.md"
+    ],
+    "exit_code": 0,
+    "reports": [
+      {
+        "bundle_root": "/review/docs",
+        "bundle_name": "docs",
+        "profile": "project",
+        "total_md": 37,
+        "concepts_checked": 6,
+        "skipped": 0,
+        "findings": [],
+        "counts": {
+          "error": 0,
+          "warning": 0,
+          "info": 0
+        }
+      }
+    ],
+    "files": [
+      {
+        "path": "planning/focus-evidence-synergy-2026-10-23.md",
+        "sha256": "7899afbe8a5e791284f70d4748b6d4c0b44b8ca88e51e0b84e9f688dd652996c"
+      },
+      {
+        "path": "reports/INDEX.md",
+        "sha256": "cc8f487a24aecb2eeca69c495647b4e274347108687952e7a7cb4bc74ceeda8b"
+      },
+      {
+        "path": "reports/architecture-review-2026-10-23/INDEX.md",
+        "sha256": "216743c7c3fc2186649ae8b1a7c6394afe2de6054be857d2aded6eca871c921a"
+      },
+      {
+        "path": "reports/architecture-review-2026-10-23/kestrel-as-built.md",
+        "sha256": "3cb168985486c4430dbae3b9cd573e1fcb7daf65e742f0b2655290120dabad7f"
+      },
+      {
+        "path": "reports/architecture-review-2026-10-23/knowledge-consolidation.md",
+        "sha256": "11cfa2eec2fdd0b62e4693d1c9871b9112d627757bd469c6a6018cb03c2dba17"
+      },
+      {
+        "path": "reports/architecture-review-2026-10-23/verification-and-handoff.md",
+        "sha256": "0a92b03cd228f1e0e970f09d9462e0324621519505f1d590df01384219394f85"
+      }
+    ]
+  }
+]

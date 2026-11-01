@@ -1,0 +1,17 @@
+[
+  {
+    "path": "wiki/notes/architecture-focus-campaign-2026-10-24.md",
+    "before_sha256": null,
+    "after_sha256": "dc8108c7ec3b78fd4f291c7a6151bdd2580a5d496278a96989e44fabd7d7628e"
+  },
+  {
+    "path": "wiki/notes/README.md",
+    "before_sha256": "7c7fea31331568090aa9883f3085abbd942911a96833bd61969213fac77b973d",
+    "after_sha256": "d12954809f03764ccb95c6d5877b2ed9f05aac077caf52e51e904d74a874d2ec"
+  },
+  {
+    "path": "docs/log.md",
+    "before_sha256": "6342ff60e9c0db92d84cf731e8e56c826db37ae2ea49268282ace9ad37fe191d",
+    "after_sha256": "8d51a985511956a11b6e874c4c21cf00840d47ea261b3b38d4d68e26f8277648"
+  }
+]
