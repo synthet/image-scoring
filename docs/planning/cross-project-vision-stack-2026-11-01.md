@@ -91,6 +91,24 @@ A count shows presence, not usage volume. Config values and the database were no
 - **Shared focus statistic.** The pipeline's noise-corrected sharpness is already vendored into
   skills; extending it to the model eye scorer and Kestrel removes the largest numerical conflict.
 
+## 5a. pgvector embeddings from sibling projects
+
+Pipeline spaces today (`modules/embedding_spaces.py`): `mobilenet_v2_imagenet_gap` (default,
+1280-d), `clip_vit_b32_image` (512), `bioclip_2_image` and `bioclip_2_crop` (768), `blip_vit_b16_image`
+(768), and opt-in 768-d culling towers `openclip_l14_laion2b_image`, `openai_clip_vit_l14_image`,
+`dinov2_reg_base_image` and `siglip2_base_image`.
+
+| Candidate | Source | Evidence | Disposition |
+|---|---|---|---|
+| DINOv3-B image and bird crop (768) | skills study | 45/300 variant pairs at the floor vs 111 for DINOv2 | pipeline#741 (filed earlier) |
+| SSCD bird crop (512) | skills study | 9/300 variant pairs at the floor; copy/same-capture signal | **pipeline#744** |
+| pHash/dHash `bit(64)` with Hamming search | skills `hash_tiers.py` | exact and trivial copies; replaces per-study hash tiers | **pipeline#744** (part 2) |
+| DINOv2 patch-mean crop | skills study | dominated by DINOv3-B | Reject |
+| Model repo / Kestrel embeddings | — | neither produces image embeddings today | None; revisit if model#7 trains on eye-crop features |
+
+All new spaces follow the one-identity-per-input-mode rule (pipeline#641), stay opt-in, and are
+never deletion gates by themselves (pipeline#606).
+
 ## 6. Implementation plan, low-hanging first
 
 | Order | Item | Issue | Size | Why first |
@@ -103,7 +121,7 @@ A count shows presence, not usage volume. Config values and the database were no
 | 6 | Pairwise-wins / Bradley-Terry keeper study | skills#24 | M | Offline; label count first |
 | 7 | Focus-measure profiling go/no-go | pipeline#738 | S | Only matters if technical-failure detection is enabled |
 | 8 | Keep-one as a pipeline culling policy, reconciled with #511 and #607 | pipeline#743 | M–L | Skills#21 is merged; needs a parity test |
-| 9 | SSCD and DINOv3 embedding spaces | pipeline#606, pipeline#741 | M | Removes per-study recompute |
+| 9 | DINOv3 and SSCD embedding spaces, perceptual-hash index | pipeline#741, pipeline#744 (research: #606) | M | Removes per-study recompute |
 | 10 | Bird-masked GPU features, AF background check, E7, catchlight, MMR carousel | skills#25–#29, model#7 | M–L | Already filed by another session; align with items 3 and 4 |
 
 Rules for every item: no production policy activation, no library metadata or stored-score
