@@ -267,3 +267,14 @@ existing direction. Commercial tool comparisons in it are vendor-sourced and not
 - **F (skills):** learned keeper ranking from owner picks once T-4 shows enough labelled bursts.
 - **G (skills):** present judge pairs in both orders and keep only consistent verdicts, extending
   the fixed-seed randomisation in `audit_panel.py`.
+
+## 11. Status (2026-11-01)
+
+| Item | Result | Evidence |
+|---|---|---|
+| B, T-4 tie inventory | **Inconclusive; study stopped.** 23 tie sets, all pairs; Jev answered 23; owner verdicts on 9 (< 30); Jev and owner agree 9/9, but not independently, because the owner approved proposals that already included Jev's answers | skills PR #36, comment on skills#24 |
+| C1, T-10/T-11 profiling | **No-go for a GPU port.** `image_technical_failures` has 0 rows, so the detector never runs in production. On 200 exported JPEGs: decode 210 ms median, `analyze` 24 ms at 512 px and 130 ms at native size | comment on pipeline#738 |
+| C1 finding | When enabled, the detector would measure blur on the downscaled model input without a box | pipeline#746 |
+
+Revisit B when keep-one produces larger tie sets, or when at least 30 owner verdicts exist that were made
+without seeing Jev's pick.
