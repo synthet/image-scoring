@@ -186,7 +186,7 @@ panels, Jev tie answers), so the first task counts them by class.
 | ID | Role | Repo / files | Depends | AC | Verification / evidence |
 |---|---|---|---|---|---|
 | T-1 | hub agent | hub `docs/planning/cv-library-report-adoption-2026-11-01.md` | — | AC-1 | lint exit 0, term scan 0 |
-| T-2 | owner | GitHub: one issue in `image-scoring-skills` (B), one in `image-scoring-pipeline` (C1), each linking this plan | T-1 | — | issue numbers recorded here |
+| T-2 | owner | GitHub: one issue in `image-scoring-skills` (B), one in `image-scoring-pipeline` (C1), each linking this plan | T-1 | — | done: [skills #24](https://github.com/synthet/image-scoring-skills/issues/24), [pipeline #738](https://github.com/synthet/image-scoring-pipeline/issues/738) |
 | T-3 | skills agent | coordinate with the session on `feat/neardupe-keep-one`; create a worktree from the default branch, or from that branch once merged | T-2 | — | `git worktree list`; peer reply recorded |
 | T-4 | skills agent | read-only inventory: labelled tie clusters per frozen shoot, split by label class (owner-applied, judge, Jev); `scripts/neardupe_study/experiments/keeper_borda_inventory.py` | T-3 | AC-5 | JSON counts; stop with **inconclusive** if fewer than 30 labelled tie clusters |
 | T-5 | skills agent | write failing tests `scripts/neardupe_study/test_keeper_borda.py` (7 tests, section 6) | T-3 | AC-2..4 | `pytest -q scripts/neardupe_study/test_keeper_borda.py` fails for the missing policy |
