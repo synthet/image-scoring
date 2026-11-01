@@ -40,7 +40,7 @@ A count shows presence, not usage volume. Config values and the database were no
 
 | Heuristic | Model | Pipeline | Skills | Kestrel |
 |---|---|---|---|---|
-| Sharpness | eye crops: plain Laplacian variance / 500, blended `0.45*sharpness + 0.35*clarity + 0.20*edge_energy` | `focus_quality.py`: Immerkaer noise estimate, Laplacian variance minus `20*sigma^2`, subject vs context ring at native resolution | vendored copy of the pipeline statistic at `bfafd1b5` (no drift as of 2026-11-01) | gradient statistic, `detail_score` half-saturation at 12 levels/px |
+| Sharpness | eye crops: plain Laplacian variance / 500, blended `0.45*sharpness + 0.35*clarity + 0.20*edge_energy` | `focus_quality.py`: Immerkaer noise estimate, Laplacian variance minus `20*sigma^2`, subject vs context ring at native resolution | vendored copy of the pipeline statistic at `bfafd1b5` (no drift as of 2026-11-01) | gradient statistic, `detail_score` half-saturation at 12 levels/px; noise estimated separately (MAD on flat pixels, ADR-0008) and scored as its own `clean` term, not subtracted from detail |
 | Grouping | — | stacks by visual similarity; `clustering.default_time_gap` defaults to 120 s | keep-one "same moment": pose tolerances and measured pairs, no time gap | `DEFAULT_GAP_MS = 500` (250–3000) |
 | Tie-break | — | `quality_ranking.py` canonical order, mirrored in the gallery's `electron/db.ts` | keep-one: protected, then 5% head-sharpness lead, then refcull focus gap 0.03, then Jev on measured ties | — |
 | Box format | `[x,y,w,h]` | corner `[x1,y1,x2,y2]` | pipeline boxes | — |
@@ -60,7 +60,14 @@ A count shows presence, not usage volume. Config values and the database were no
    copy can still apply. Filed as skills#30.
 4. **Stale roadmap.** The planned `paired-physical-v1` pipeline module was never built and keep-one
    replaced its rule. Filed as skills#31.
-5. **Two culling models in waiting:** keep-one (skills) and replacement-graph set-cover
+5. **Three noise treatments for sharpness.** The pipeline subtracts the noise term from the
+   Laplacian variance; Kestrel scores noise as a separate penalty but leaves its gradient detail
+   and blur fast-reject uncorrected; the model eye scorer ignores noise (item 1). The hub
+   contract (hub#1) should name one statistic as canonical and record why the others differ.
+6. **A model name without a producer.** The gallery lists `qalign` in `electron/scoringModels.ts`,
+   but no pipeline module produces Q-Align scores. Either remove the entry or record it as
+   planned.
+7. **Two culling models in waiting:** keep-one (skills) and replacement-graph set-cover
    (pipeline#511). Reconciliation is part of pipeline#743.
 
 ## 4. Gaps
