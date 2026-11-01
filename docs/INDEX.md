@@ -32,10 +32,7 @@ okf_version: 0.1
 ## Feature specifications (cross-repo)
 
 - [planning/focus-evidence-synergy-2026-10-23.md](planning/focus-evidence-synergy-2026-10-23.md) — proposed Nikon/Kestrel/model/pipeline/skills integration and acceptance criteria
-- [specs/README.md](specs/README.md) — how specs are split across siblings
-- [specs/visual-evidence-overlays/INDEX.md](specs/visual-evidence-overlays/INDEX.md) — evidence overlay spec map
 - [specs/05-diagnostics-and-visual-inspection.md](specs/05-diagnostics-and-visual-inspection.md) — behaviour authority
-- [planning/visual-evidence-overlays-ecosystem.md](planning/visual-evidence-overlays-ecosystem.md) — delivery phases
 
 ## Activity
 

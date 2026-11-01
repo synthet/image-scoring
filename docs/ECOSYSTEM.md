@@ -82,5 +82,4 @@ Do not fork long guides into this hub. Prefer:
 
 ## Visual evidence overlays (cross-repo)
 
-Phased delivery index: [planning/visual-evidence-overlays-ecosystem.md](planning/visual-evidence-overlays-ecosystem.md).
 Behaviour spec: [specs/05-diagnostics-and-visual-inspection.md](specs/05-diagnostics-and-visual-inspection.md).
