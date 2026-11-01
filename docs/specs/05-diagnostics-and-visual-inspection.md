@@ -1,3 +1,13 @@
+---
+type: Specification
+title: Visual diagnostics and inspector overlays
+description: Reference design for diagnostic overlay rendering and control behaviour.
+resource: docs/specs/05-diagnostics-and-visual-inspection.md
+tags: [docs, specs, diagnostics, overlays]
+timestamp: 2026-10-31T00:00:00Z
+okf_version: 0.1
+---
+
 # Visual diagnostics and inspector overlays (reference design)
 
 Functional specification for diagnostic overlay rendering and control behaviour.

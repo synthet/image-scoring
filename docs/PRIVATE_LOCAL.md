@@ -1,3 +1,13 @@
+---
+type: Guide
+title: Local private documentation (hub)
+description: Where private, operator-local documentation lives and how the hub checks it stays untracked.
+resource: docs/PRIVATE_LOCAL.md
+tags: [docs, privacy, policy]
+timestamp: 2026-10-31T00:00:00Z
+okf_version: 0.1
+---
+
 # Local private documentation (hub)
 
 Proprietary names, third-party lineage, hashes, and reference inventories belong only under
