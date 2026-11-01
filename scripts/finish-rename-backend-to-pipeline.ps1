@@ -38,6 +38,17 @@ if (Test-Path -LiteralPath $NewPath) {
     }
 }
 
+# Record linked worktrees before the rename; paths inside the repo move with it.
+$oldFull = [IO.Path]::GetFullPath($OldPath).TrimEnd('\')
+$worktrees = @(git -C $OldPath worktree list --porcelain |
+    Where-Object { $_ -like 'worktree *' } |
+    ForEach-Object { [IO.Path]::GetFullPath($_.Substring(9)).TrimEnd('\') } |
+    Where-Object { $_ -ne $oldFull } |
+    ForEach-Object {
+        if ($_.StartsWith($oldFull + '\', [StringComparison]::OrdinalIgnoreCase)) { $NewPath + $_.Substring($oldFull.Length) } else { $_ }
+    })
+Write-Host "==> Linked worktrees to repair after rename: $($worktrees.Count)"
+
 try {
     Write-Host "==> Renaming directory $OldPath to $(Split-Path $NewPath -Leaf)..."
     Rename-Item -LiteralPath $OldPath -NewName (Split-Path $NewPath -Leaf)
@@ -49,15 +60,12 @@ try {
         Write-Host "[OK] Fallback junction created: $OldPath -> $NewPath"
     }
 
-    # Repair any known worktrees
-    $wtList = @('D:\Projects\isb-wt-549') | Where-Object { Test-Path -LiteralPath $_ }
-    foreach ($wt in $wtList) {
-        $gitFile = Join-Path $wt '.git'
-        if (Test-Path -LiteralPath $gitFile) {
-            Set-Content -Path $gitFile -Value "gitdir: $NewPath/.git/worktrees/$(Split-Path $wt -Leaf)"
-            git -C $NewPath worktree repair $wt
-            Write-Host "[OK] Repaired worktree $wt"
-        }
+    # Repair every linked worktree recorded before the rename (both link directions).
+    $existing = @($worktrees | Where-Object { Test-Path -LiteralPath $_ })
+    if ($existing.Count -gt 0) {
+        git -C $NewPath worktree repair @existing
+        if ($LASTEXITCODE -ne 0) { Write-Warning "git worktree repair exited $LASTEXITCODE" }
+        Write-Host "[OK] Repaired $($existing.Count) worktree(s)"
     }
 
     Write-Host ""
