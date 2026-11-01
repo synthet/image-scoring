@@ -223,3 +223,47 @@ panels, Jev tie answers), so the first task counts them by class.
 - C2 Kornia port (only after a T-11 go and separate approval).
 - D Copydays check (needs a dataset download and approval).
 - Activating any adopted keeper policy (separate owner-approved change).
+
+## 10. Second source: bird-specific culling stack report
+
+Source: a second downloaded report, "Building 'Gem-bot': Kornia and the Open-Source Stack for
+Automated Bird Photo Culling, Scoring and Sequencing" (late 2026, 228 lines; not committed). It
+is bird-specific and better grounded than the first. Its core rules (measure on the bird and the
+eye, rank within a burst, treat IQA scores as features, never auto-delete) match the ecosystem's
+existing direction. Commercial tool comparisons in it are vendor-sourced and not used here.
+
+| Recommendation | Status | Evidence | Disposition |
+|---|---|---|---|
+| Detect bird, mask, localize eye; measure on crops | Built | pipeline localization rollout, eye-quality model, native-resolution crops in `focus_quality.analyze(box=...)` | Already built |
+| Subject vs background sharpness ratio | Built | `focus_quality.py` context ring around the box | Already built |
+| Rank relative to the burst best | Built | keep-one `SHARP_TIE` ratio; within-burst keeper rules | Already built |
+| AF point as a focus prior | In progress | Nikon AF metadata work (pipeline #670 plan) | Already planned |
+| DINOv3/SigLIP 2 embeddings; LightGlue+RANSAC verification | Built | skills near-dupe study signals | Already built |
+| MMR / k-DPP carousel diversity | Built | skills `mmr_reference.py`, carousel constraints | Already built |
+| Stack and demote, never auto-delete | Built | soft-cull first; hard delete only with explicit owner approval | Already built |
+| pyiqa learned IQA as features | Built | pipeline uses pyiqa models (MUSIQ, LIQE, TOPIQ, ARNIQA) | Already built; Q-Align not used |
+| Randomised A/B order for judges | Partly built | `audit_panel.py` randomises A/B once per pair with a fixed seed | **Follow-up G** |
+| **Bradley-Terry fit over pairwise verdicts** (`choix.ilsr_pairwise`) | **Not built** | no Bradley-Terry/Plackett-Luce code in skills | **Add to study B as a variant** |
+| **Closed eye / nictitating membrane, catchlight** | **Not built** | no detector in pipeline or model repos | **Follow-up E** |
+| **Learned keeper ranking from owner picks** (pairwise/LambdaMART) | **Not built** | no learned keeper model | **Follow-up F**, gated on T-4 label counts |
+| Q-Align / SigLIP aesthetic predictors | Not built | — | Reject for now: trained on web imagery, weak prior |
+| Focus stacking, HDBSCAN re-clustering, fastdup/CleanVision audits | — | — | Reject: not culling goals, or whole-frame only |
+
+### Changes to study B
+
+- T-4 also counts, per labelled tie cluster, the available pairwise verdicts (owner choices,
+  judge panels, Jev) so a Bradley-Terry variant can be judged on the same denominator.
+- T-6 adds a second optional policy, `bradley-terry`, that fits `choix.ilsr_pairwise` (small
+  `alpha`, e.g. 0.01) over the available verdicts inside the tie set and falls back to the
+  deterministic rank when a cluster has no verdicts. It needs `choix` in the study environment
+  only; no production dependency.
+- T-5 adds `test_bradley_terry_uses_verdicts_and_falls_back_without_them`.
+- T-8 compares three policies: current, pairwise-wins over signals, Bradley-Terry over verdicts.
+
+### New follow-ups (not started; one issue each when picked up)
+
+- **E (model repo):** closed-eye / nictitating-membrane and catchlight classifier on eye crops,
+  trained on a few hundred labelled crops. Needs dataset permission, labels and frozen splits.
+- **F (skills):** learned keeper ranking from owner picks once T-4 shows enough labelled bursts.
+- **G (skills):** present judge pairs in both orders and keep only consistent verdicts, extending
+  the fixed-seed randomisation in `audit_panel.py`.
