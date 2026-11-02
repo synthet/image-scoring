@@ -4,7 +4,7 @@ title: Backend to Pipeline Directory Rename Migration Guide
 description: Migration status, locking diagnostics, and execution steps for renaming image-scoring-backend to image-scoring-pipeline.
 resource: docs/guides/RENAME_BACKEND_TO_PIPELINE.md
 tags: [backend, pipeline, migration, layout]
-timestamp: 2026-10-10T16:08:00Z
+timestamp: 2026-11-02T14:32:00Z
 okf_version: 0.1
 ---
 
@@ -12,12 +12,12 @@ okf_version: 0.1
 
 ## 1. Executive Summary
 
-The transition of the primary backend repository from `image-scoring-backend` to `image-scoring-pipeline` is **fully configured and functional**:
+The rename of the primary backend repository from `image-scoring-backend` to `image-scoring-pipeline` is **complete** (2026-11-02):
 - All git remotes, manifests, workspaces, design packages, and environment configurations point to `image-scoring-pipeline`.
-- `D:\Projects\image-scoring-pipeline` currently exists as an NTFS **directory junction** pointing to `D:\Projects\image-scoring-backend`.
+- `D:\Projects\image-scoring-pipeline` is the real directory. `D:\Projects\image-scoring-backend` is a backward-compatibility NTFS **directory junction** pointing to it.
 - All tools, IDEs, and ecosystem scripts resolve paths and pass layout audits (`layout-doctor.ps1` returns `Layout OK`).
 
-Completing the final physical directory rename on disk requires releasing open handles in Windows before executing the rename script.
+Sections 3 and 4 record how the rename was blocked and how it was finished.
 
 ---
 
@@ -30,7 +30,9 @@ Completing the final physical directory rename on disk requires releasing open h
 | **VS Code / Cursor Workspace** | Configured | `image-scoring.code-workspace` uses `image-scoring-pipeline` |
 | **Docker Compose / Environment** | Configured | `.env` sets `IMAGE_SCORING_HOST_PROJECT_WIN=D:\Projects\image-scoring-pipeline` while preserving legacy volume prefix `image-scoring-backend` |
 | **Layout Doctor** | Passing | `.\scripts\layout-doctor.ps1` confirms `[ok] image-scoring-pipeline` |
-| **Interim Filesystem Link** | Active | `D:\Projects\image-scoring-pipeline -> D:\Projects\image-scoring-backend` (Junction) |
+| **Physical Directory** | Renamed | `D:\Projects\image-scoring-pipeline` is the real directory (2026-11-02) |
+| **Fallback Filesystem Link** | Active | `D:\Projects\image-scoring-backend -> D:\Projects\image-scoring-pipeline` (Junction) |
+| **Interim Filesystem Link** | Removed | The earlier `D:\Projects\image-scoring-pipeline -> D:\Projects\image-scoring-backend` junction was replaced by the rename |
 
 ---
 
@@ -58,12 +60,19 @@ Active processes identified pinning `D:\Projects\image-scoring-backend`:
 2. **Agent / IDE Workspace**: The active Antigravity CLI / IDE session holding workspace watcher handles.
 3. **MCP Servers**: Background `is-be-mcp` (Node `compactIndex.js`) processes.
 
+### Resolution (2026-11-02)
+Windows also refuses the rename while any process has its working directory inside the folder, including through the junction. Closing terminals was not enough: five Warp prompt-helper `pwsh.exe` processes were stuck mid-termination and could not be ended. A reboot cleared them. The script then ran successfully, before Docker Desktop, Warp, or any agent session opened the folder.
+
+For any future directory rename on Windows, check process working directories as well as open files, and run the rename right after a reboot.
+
 ---
 
 ## 4. Completion Script & Procedure
 
 A standalone automation script has been created at:
 [`scripts/finish-rename-backend-to-pipeline.ps1`](../../scripts/finish-rename-backend-to-pipeline.ps1)
+
+This script completed the rename on 2026-11-02 and repaired all 5 linked worktrees. Running it again reports that the rename is already done.
 
 ### Execution Steps
 
