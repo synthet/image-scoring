@@ -1,36 +1,6 @@
 {
   "_comment": "Project MCP servers for Claude Code. Define local stdio and approved remote HTTP servers here; secrets via env, never inline. Copy .cursor/mcp.example.json -> .cursor/mcp.json (gitignored) for Cursor. Naming convention: <scope>-<ro|rw>-<purpose> (ro/read = read-only, rw/write = write-capable). Prefer a compact search+dispatch surface over many raw tools.",
   "mcpServers": {
-    "jev-rw-systemone": {
-      "side_effects": "write-capable",
-      "approval_required": true,
-      "approval_note": "Each judgment spends API quota.",
-      "command": "uv",
-      "args": [
-        "run",
-        "--project",
-        "D:/Projects/jev-mcp",
-        "python",
-        "D:/Projects/jev-mcp/scripts/run_jev_mcp.py"
-      ],
-      "env": {
-        "JEV_ENV_FILE": "D:/Projects/jev-mcp/.env",
-        "JEV_MODEL": "jev-1.13.0"
-      },
-      "type": "stdio"
-    },
-    "llmwiki-ro-core": {
-      "side_effects": "read-only",
-      "command": "uv",
-      "args": [
-        "run",
-        "--project",
-        "D:/Projects/synthet-llm-wiki",
-        "python",
-        "D:/Projects/synthet-llm-wiki/scripts/run_llmwiki_mcp.py"
-      ],
-      "type": "stdio"
-    },
     "openaiDeveloperDocs": {
       "url": "https://developers.openai.com/mcp",
       "type": "http"
