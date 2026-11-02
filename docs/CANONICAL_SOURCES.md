@@ -21,7 +21,7 @@ question.
 | Data model / schema | `<path to schema / migrations>` |
 | Config keys | `<path to config module / schema>` |
 | Status / state enums | `<path to the enum definition>` |
-| Domain vocabulary | `<path to a terminology doc>` |
+| Domain vocabulary (burst, stack, same moment, sharpness, box format) | [`specs/vision-terms-contract.md`](specs/vision-terms-contract.md) |
 | Build / test / lint commands | [`../AGENTS.md`](../AGENTS.md) |
 | Codex project configuration | [`.codex/config.toml`](../.codex/config.toml) and [`.codex/README.md`](../.codex/README.md) |
 | Optional file-search MCP (fff) | [fff repo](https://github.com/dmtrKovalenko/fff); template keys `fff-mcp` / `is-hub-fff` in [`.cursor/mcp.example.json`](../.cursor/mcp.example.json) |
