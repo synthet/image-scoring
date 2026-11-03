@@ -6,6 +6,10 @@ All notable changes to the image-scoring hub are recorded here. The format follo
 
 ## [Unreleased]
 
+### Added
+
+- Register `driftara`, the gallery's single MCP server and CLI, in the hub's Claude Code, Cursor and Codex configs, next to `vexlum`.
+
 ## [0.3.0] — 2026-11-01
 
 ### Changed

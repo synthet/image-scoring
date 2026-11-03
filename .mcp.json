@@ -15,6 +15,17 @@
       "args": [
         "${IMAGE_SCORING_PIPELINE_DIR:-../image-scoring-pipeline}/mcp-server/dist/vexlum.js"
       ]
+    },
+    "driftara": {
+      "_comment": "Gallery search/resolve/execute entry point (image-scoring-gallery docs/technical/DRIFTARA_MCP.md). Build first: cd image-scoring-gallery/mcp-server && npm ci && npm run build. IMAGE_SCORING_GALLERY_DIR overrides the sibling checkout path.",
+      "side_effects": "write-capable",
+      "approval_required": true,
+      "approval_note": "execute can run gallery actions. ipc.* and live.* need the gallery app running; destructive ones also need DRIFTARA_ALLOW_ELEVATED=1 in the app's environment, not on this entry.",
+      "type": "stdio",
+      "command": "node",
+      "args": [
+        "${IMAGE_SCORING_GALLERY_DIR:-../image-scoring-gallery}/mcp-server/dist/driftara.js"
+      ]
     }
   },
   "_examples": {

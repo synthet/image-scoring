@@ -44,6 +44,15 @@
       "args": ["mcp-server/dist/compactIndex.js"],
       "cwd": "${workspaceFolder:image-scoring-pipeline}"
     },
+    "driftara": {
+      "_comment": "Gallery search/resolve/execute entry point; replaces is-ui-mcp (deprecated, kept below). Destructive actions also need DRIFTARA_ALLOW_ELEVATED=1 in the gallery app's environment.",
+      "side_effects": "write-capable",
+      "approval_required": true,
+      "approval_note": "execute can run gallery actions; ipc.* and live.* need the gallery app running.",
+      "command": "node",
+      "args": ["mcp-server/dist/driftara.js"],
+      "cwd": "${workspaceFolder:image-scoring-gallery}"
+    },
     "is-ui-mcp": {
       "command": "node",
       "args": ["mcp-server/dist/compactIndex.js"],
