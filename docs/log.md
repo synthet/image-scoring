@@ -4,6 +4,10 @@ Append-only. One line per wiki restructure, newest under the current month.
 Format: `- YYYY-MM-DD: <verb> — <details and paths>` (verbs: `created`, `updated`, `ingested`,
 `lint-fixed`, `reorganized`).
 
+## 2026-11
+
+- 2026-11-02: created — planning/eye-benchmark-fleet-adoption-2026-11-02.md: review of model PRs #23 and #24, the finding that production eyes come from the pipeline's unbenchmarked crop path with a 0.8 floor copied in three repos, per-repo adoption, synergies and keep-one plan amendments.
+
 ## 2026-10
 
 - 2026-10-29: reorganized — decommissioned nested Git submodules in image-scoring (gallery, mobile, model, pipeline, skills, ui); codified flat sibling checkout layout under D:\Projects; superseded SUBMODULE_DEDUPLICATION_OPTIONS.md, updated LAYOUT.md, added root ignore for image-scoring-*/, and verified clean multi-root workspace passing layout-doctor.

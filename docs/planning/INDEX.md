@@ -10,4 +10,5 @@ okf_version: 0.1
 
 # Ecosystem planning
 
+- [Eye benchmark fleet adoption — 2026-11-02](eye-benchmark-fleet-adoption-2026-11-02.md) — review of the 2026-11 eye-model benchmark and two-stage localizer, per-repo adoption, synergies and keep-one plan amendments.
 - [Unfinished business and next steps — 2026-10-26](unfinished-business-2026-10-26.md) — prioritized program map, delivery gaps, dependencies, completion exclusions and a full issue/epic/source-marker register.
