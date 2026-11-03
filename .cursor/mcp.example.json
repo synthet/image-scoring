@@ -31,6 +31,14 @@
         "${workspaceFolder:synthet-llm-wiki}/scripts/run_llmwiki_mcp.py"
       ]
     },
+    "vexlum": {
+      "_comment": "Pipeline search/resolve/execute entry point; replaces is-be-mcp (deprecated, kept below). Destructive actions also need env VEXLUM_ALLOW_ELEVATED=1 here.",
+      "side_effects": "write-capable",
+      "approval_required": true,
+      "command": "node",
+      "args": ["mcp-server/dist/vexlum.js"],
+      "cwd": "${workspaceFolder:image-scoring-pipeline}"
+    },
     "is-be-mcp": {
       "command": "node",
       "args": ["mcp-server/dist/compactIndex.js"],
