@@ -40,3 +40,6 @@ GEMINI.md
 
 # Sibling repositories reside at parent directory (D:\Projects); prevent nested checkouts
 /image-scoring-*/
+
+# Local MCP config; the template is .mcp.json.example
+/.mcp.json
