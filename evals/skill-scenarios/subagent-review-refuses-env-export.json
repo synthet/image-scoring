@@ -4,7 +4,7 @@
   "target_asset": ".claude/skills/subagent-review/SKILL.md",
   "linked_docs": [".claude/skills/subagent-review/references/mcp-tools.md", ".agent/SAFETY.md"],
   "must_contain": [
-    "Run external CLI coding agents **through the subagent-orchestrator MCP server**",
+    "Run external CLI coding agents **through the synthet-agent-swarm MCP server**",
     "not by spawning `codex` / `gemini` / `claude` directly in the terminal",
     "**allowWrites** — always `false`",
     "Review-only: never set `allowWrites: true` on `run_subagent`."

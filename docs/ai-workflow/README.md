@@ -22,7 +22,7 @@ okf_version: 0.1
 | Codex skills | `.agents/skills/*/SKILL.md` | **Generated** from `.claude/skills/` — do not edit by hand |
 | Codex subagents | `.codex/agents/*.toml` | **Generated** from `.claude/agents/` — do not edit by hand |
 | Codex config | `.codex/config.toml` | Project-scoped defaults and portable MCP endpoints |
-| MCP template | `.cursor/mcp.example.json`, `.mcp.json` | Copy to gitignored `.cursor/mcp.json` to attach servers |
+| MCP template | `.cursor/mcp.example.json`, `.mcp.json.example` | Copy to gitignored `.cursor/mcp.json` or `.mcp.json` to attach servers |
 | Agent governance | `.agent/` | Safety, inventory, subagent role matrix, workflow playbooks |
 | Project memory | `.agent-memory/` | log → dream → promote (see `CURSOR_USAGE.md`) |
 | Workflow playbooks | `.agent/workflows/*.md` | spec / plan / tasks / implement / pr-ready / test-and-fix / … |

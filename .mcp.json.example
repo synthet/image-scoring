@@ -1,12 +1,12 @@
 {
-  "_comment": "Project MCP servers for Claude Code. Define local stdio and approved remote HTTP servers here; secrets via env, never inline. Copy .cursor/mcp.example.json -> .cursor/mcp.json (gitignored) for Cursor. Naming convention: <scope>-<ro|rw>-<purpose> (ro/read = read-only, rw/write = write-capable). Prefer a compact search+dispatch surface over many raw tools.",
+  "_comment": "Project MCP servers for Claude Code: copy to .mcp.json (gitignored). Keep this template free of local paths and credentials. Define local stdio and approved remote HTTP servers here; secrets via env, never inline. Copy .cursor/mcp.example.json -> .cursor/mcp.json (gitignored) for Cursor. Naming convention: <scope>-<ro|rw>-<purpose> (ro/read = read-only, rw/write = write-capable). Prefer a compact search+dispatch surface over many raw tools.",
   "mcpServers": {
     "openaiDeveloperDocs": {
       "url": "https://developers.openai.com/mcp",
       "type": "http"
     },
     "vexlum": {
-      "_comment": "Pipeline search/resolve/execute entry point (image-scoring-pipeline docs/technical/VEXLUM_MCP.md). Build first: cd image-scoring-pipeline/mcp-server && npm ci && npm run build. IMAGE_SCORING_PIPELINE_DIR overrides the sibling checkout path.",
+      "_comment": "Pipeline search/resolve/execute entry point (image-scoring-pipeline docs/technical/VEXLUM_MCP.md). Build first: cd image-scoring-pipeline/mcp-server && npm ci && npm run build.",
       "side_effects": "write-capable",
       "approval_required": true,
       "approval_note": "execute can run pipeline actions; destructive ones also need VEXLUM_ALLOW_ELEVATED=1 on this entry.",
@@ -17,10 +17,10 @@
       ]
     },
     "driftara": {
-      "_comment": "Gallery search/resolve/execute entry point (image-scoring-gallery docs/technical/DRIFTARA_MCP.md). Build first: cd image-scoring-gallery/mcp-server && npm ci && npm run build. IMAGE_SCORING_GALLERY_DIR overrides the sibling checkout path.",
+      "_comment": "Gallery search/resolve/execute entry point (image-scoring-gallery docs/technical/DRIFTARA_MCP.md). Build first: cd image-scoring-gallery/mcp-server && npm ci && npm run build.",
       "side_effects": "write-capable",
       "approval_required": true,
-      "approval_note": "execute can run gallery actions. ipc.* and live.* need the gallery app running; destructive ones also need DRIFTARA_ALLOW_ELEVATED=1 in the app's environment, not on this entry.",
+      "approval_note": "execute can run gallery actions; write tiers need confirmation, and elevated ones also need DRIFTARA_ALLOW_ELEVATED=1 in the gallery app's environment.",
       "type": "stdio",
       "command": "node",
       "args": [

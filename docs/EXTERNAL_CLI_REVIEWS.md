@@ -1,7 +1,7 @@
 ---
 type: Runbook
 title: External CLI Reviews
-description: Set up and run review-only Codex/Gemini reviews through the subagent-orchestrator MCP server.
+description: Set up and run review-only Codex/Gemini reviews through the synthet-agent-swarm MCP server.
 resource: EXTERNAL_CLI_REVIEWS.md
 tags: [docs, agents, review, mcp]
 timestamp: 2026-06-16T00:00:00Z
@@ -11,18 +11,18 @@ okf_version: 0.1
 # External CLI reviews
 
 Run external CLI coding agents (Codex, Gemini) as **review-only** second opinions through the
-**subagent-orchestrator** MCP server — never by shelling out to `codex` / `gemini` directly.
+**synthet-agent-swarm** MCP server — never by shelling out to `codex` / `gemini` directly.
 
 ## Dependency
 
-This subsystem depends on a sibling **`subagent-orchestrator`** MCP server (not bundled in this
+This subsystem depends on a sibling **`synthet-agent-swarm`** MCP server (not bundled in this
 framework). Check it out alongside this repo and build it once, then expose it as an MCP server.
 
 ## Setup
 
 1. Build the orchestrator (in its own checkout): `npm install && npm run build`.
 2. Add it to `.cursor/mcp.json` (gitignored) as project key **`cli-review`**, or to your user-level
-   `~/.cursor/mcp.json` as **`subagent-orchestrator`**.
+   `~/.cursor/mcp.json` as **`synthet-agent-swarm`**.
 3. Reload Cursor / restart the MCP client so the server is picked up.
 
 ## Use

@@ -6,6 +6,10 @@ Format: `- YYYY-MM-DD: <verb> — <details and paths>` (verbs: `created`, `updat
 
 ## 2026-11
 
+- 2026-11-03: updated — specs/vision-terms-contract.md: added the eye consumer floor and keypoint provider identity (hub #7).
+
+- 2026-11-03: updated — planning/eye-benchmark-fleet-adoption-2026-11-02.md: added the measured fleet eye path and the agreement-rule calibration costs; corrected the claim that the cascade stores both detectors' boxes.
+
 - 2026-11-02: created — planning/eye-benchmark-fleet-adoption-2026-11-02.md: review of model PRs #23 and #24, the finding that production eyes come from the pipeline's unbenchmarked crop path with a 0.8 floor copied in three repos, per-repo adoption, synergies and keep-one plan amendments.
 
 ## 2026-10
