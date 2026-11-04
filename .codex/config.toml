@@ -32,3 +32,14 @@ args = ["D:/Projects/image-scoring-pipeline/mcp-server/dist/vexlum.js"]
 cwd = "D:/Projects/image-scoring-pipeline"
 startup_timeout_sec = 30
 tool_timeout_sec = 120
+
+# Gallery search/resolve/execute entry point (image-scoring-gallery docs/technical/DRIFTARA_MCP.md).
+# Build first: cd image-scoring-gallery/mcp-server && npm ci && npm run build.
+# execute can run gallery actions; ipc.* and live.* need the gallery app running, and destructive
+# ones also need DRIFTARA_ALLOW_ELEVATED=1 in the app's environment.
+[mcp_servers.driftara]
+command = "node"
+args = ["D:/Projects/image-scoring-gallery/mcp-server/dist/driftara.js"]
+cwd = "D:/Projects/image-scoring-gallery"
+startup_timeout_sec = 30
+tool_timeout_sec = 120
