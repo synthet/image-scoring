@@ -54,7 +54,7 @@ Use compact records that identify the tool and result without leaking full paylo
 For MCP or external-review tools, include the review mode and whether writes were disabled:
 
 ```json
-[{"name":"subagent-orchestrator.run_subagent","purpose":"codex review","status":"passed","mode":"review-only","allowWrites":false}]
+[{"name":"synthet-agent-swarm.run_subagent","purpose":"codex review","status":"passed","mode":"review-only","allowWrites":false}]
 ```
 
 ### `policy_checks`

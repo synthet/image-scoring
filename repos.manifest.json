@@ -152,9 +152,9 @@
   ],
   "optionalSiblings": [
     {
-      "dir": "subagent-orchestrator",
-      "github": "synthet/subagent-orchestrator",
-      "note": "External CLI reviews (imgscore-subagent-orchestrator MCP); see backend docs/technical/EXTERNAL_CLI_REVIEWS.md."
+      "dir": "synthet-agent-swarm",
+      "github": "synthet/synthet-agent-swarm",
+      "note": "External CLI reviews (synthet-agent-swarm MCP); see backend docs/technical/EXTERNAL_CLI_REVIEWS.md."
     }
   ]
 }
