@@ -4,7 +4,7 @@ title: Eye benchmark fleet adoption plan
 description: How each image-scoring repository can use the 2026-11 eye-model benchmark and the two-stage localizer, with review findings and cross-project synergies.
 resource: docs/planning/eye-benchmark-fleet-adoption-2026-11-02.md
 tags: [planning, eye-pose, keypoints, detection, evaluation, synergy]
-timestamp: 2026-11-02T00:00:00Z
+timestamp: 2026-11-03T00:00:00Z
 okf_version: 0.1
 ---
 
@@ -17,6 +17,10 @@ okf_version: 0.1
 
 All of these were read on 2026-11-02 together with the pipeline, gallery, mobile, UI, skills and
 Kestrel repositories. Every file reference below was checked in that survey.
+
+**Update 2026-11-03.** Model PRs #25, #29, #30, #31 and #32 merged, and model issues #26, #27 and #28 are closed. Two things changed:
+- The fleet path is now measured (section 1).
+- The two-detector agreement rule is calibrated, and its costs make it a larger change than this plan first assumed (section 3, row 8 of section 6). This plan's earlier claim that the cascade already stores both detectors' boxes was wrong; RTMDet does not run on frames where YOLO found a bird.
 
 **Scope.** This plan only proposes work: each item needs a backlog entry in its owning repository. No production policy, stored keypoint, threshold or library metadata changes as part of it.
 
@@ -37,7 +41,15 @@ The eyes the fleet actually stores and shows come from the pipeline:
 | gallery | `electron/db.ts:2631` (eye overlay, direct SQL) |
 | skills | `scripts/neardupe_study/proposals.py:40` (keep-one anchor eyes and the `eye_set_change` veto) |
 
-That path is structurally close to the benchmark's `A_td` (two-stage `eye_pose_v0`: 0.69 within 5%). But its IoU matching and 0.8 floor were **not benchmarked**.
+That path is structurally close to the benchmark's `A_td` (two-stage `eye_pose_v0`: 0.69 within 5%). The original benchmark did not score its IoU matching or 0.8 floor. Model #31 added a `pipeline_crop` adapter that replays this path, and it scores as follows on library birds (78 visible eyes):
+
+| Path | Within 5% | Small birds | False eyes on hidden sides | No-subject frames with a false eye (n = 21) |
+|---|---|---|---|---|
+| Crop path at the 0.8 floor | 0.67 [0.54–0.80] | 0.68 | 0.02 | 0.19 |
+| Crop path at the 0.25 gate | 0.72 [0.58–0.86] | — | 0.09 | 0.33 |
+| `A_pipe` | 0.49 | 0.35 | 0.21 | 0.14 |
+
+The best two-stage model is only 0.03 ahead of the crop path at the floor, which is not significant (−0.04 to 0.09). The floor nearly removes false eyes on hidden sides. The measured gap that remains is false detector boxes.
 
 The 0.8 floor itself came from an AI-judged spot check of 110 items (pipeline
 `docs/reports/eye-keypoint-spot-check-2026-09-27.md`). The code says it should be re-fitted against owner-checked points. The benchmark's owner labels are the first such points.
@@ -73,7 +85,7 @@ Both PRs merged on 2026-11-03 (UTC). Every finding below still holds on model `m
 | Repo | Adopt | Size | Depends on |
 |---|---|---|---|
 | **model** | Fix the PR #24 items. Add a `pipeline` adapter to `training/eval_eye_benchmark.py` that replays `keypoints.py`, or reads its stored keypoints for the sampled files, and report it with and without the 0.8 floor. Map `bird_pose_15_v0` parts 6 and 10 into the 6-point schema (owner decision). Fix older-NEF preview decoding. | M | — |
-| **pipeline** | (a) Re-fit `EYE_CONSUMER_MIN_CONF` on the calibration sample `field_eye_calib_v1`, never on the 147-frame test set. (b) A YOLO + RTMDet agreement rule: `modules/localization_cascade.py` already stores both detectors' boxes, and `iou()` (`:47`) can be reused. In the benchmark, frames where only `bird_detect_v1` fired held no bird in 48 of 54 cases. (c) An optional `bird_head.model_file` swap to `bird_pose_15_v0` with an eye-index map and a `provider_version` bump. (d) Correct the backend-integration guidance: the model repo's guide still describes an `EYE_QUALITY` phase that was never built. | M | model adapter (for a and c) |
+| **pipeline** | (a) Re-fit `EYE_CONSUMER_MIN_CONF` on the calibration sample `field_eye_calib_v1`, never on the 147-frame test set. (b) A YOLO + RTMDet agreement rule. In the benchmark, frames where only `bird_detect_v1` fired held no bird in 48 of 54 cases. The cascade runs RTMDet only when YOLO finds nothing (`modules/localization_cascade_runner.py`), so agreement needs new RTMDet compute on detected frames; `iou()` (`modules/localization_cascade.py:47`) can be reused. The calibrated rule (detector confidence ≥ 0.60, agreement ≥ 0.50) took no-subject false eyes from 0.19 to 0.00 on the test set, but bird recall fell from 0.76 to 0.63, hidden-side false eyes rose from 0.02 to 0.19, and latency rose about 10×, or about 4× with the per-crop check. Rescope before building (pipeline#780). (c) An optional `bird_head.model_file` swap to `bird_pose_15_v0` with an eye-index map and a `provider_version` bump. (d) Correct the backend-integration guidance: the model repo's guide still describes an `EYE_QUALITY` phase that was never built. | M | model adapter (for a and c) |
 | **skills** | Keep-one depends on 0.8-floor eyes (`refcull_eye`, anchor eyes, the `eye_set_change` veto), so re-check it after any floor or model change. The benchmark's 21% false-eye rate on hidden sides is measured at the model's own gates, not at 0.8. See section 5 for the keep-one plan. `/carousel` already treats eye scores as supporting evidence only: no change. | S | pipeline (a)–(c) |
 | **gallery** | Stop hardcoding the 0.8 floor in `electron/db.ts`. Take eyes or the floor from the pipeline API (`GET /api/images/{id}` already returns filtered `eye_keypoints`). Show an "unreliable eye" state instead of dropping the eye silently. | S | hub contract |
 | **ui** | Add codes to `src/constants/evidenceDisplay.ts` for a low-confidence eye and a non-bird subject. `small_subject_second_pass` and `head_unverified` already exist. Reuse the `keypointOccluded` / `experimental` tokens for the style. | XS | — |
@@ -88,7 +100,7 @@ Both PRs merged on 2026-11-03 (UTC). Every finding below still holds on model `m
 3. **Detector agreement fixes three problems:**
    - false boxes (cats, deer) carried into two-stage;
    - keep-one's 1,479 frames with no detection: the cascade already runs RTMDet only on YOLO `no_detection` frames, and 966 of those frames sit within 1 s of a localized neighbour, which gives a gate;
-   - moving the pipeline cascade from shadow to active.
+   - moving the pipeline cascade from shadow to active, which needs its own selection gate.
 4. **Shared labelling.** These collect overlapping ground truth: boxes, eye presence and verified negatives.
    - the model repository's `training/label_eyes/` page;
    - mobile `eye_crop` presence tasks;
@@ -121,12 +133,12 @@ Both PRs merged on 2026-11-03 (UTC). Every finding below still holds on model `m
 |---|---|---|---|
 | 1 | PR #24 shadowed-bird fix, its test and a separate detector threshold | model | S |
 | 2 | Fix the PR #23 report (section 2) | model | XS |
-| 3 | `pipeline` adapter in the benchmark: measure the production eye path | model | S–M |
+| 3 | `pipeline` adapter in the benchmark: measure the production eye path (done: model#31) | model | S–M |
 | 4 | Keep-one plan amendments (section 5) | skills | XS |
 | 5 | Run the cascade on keep-one `no_detection` frames, shadow only (scope of pipeline#627) | pipeline + skills | S |
 | 6 | Floor and provider identity in the vision terms contract | hub | XS |
-| 7 | Re-fit the floor on `field_eye_calib_v1`; publish it through the API; gallery and skills read it | pipeline, gallery, skills | M |
-| 8 | YOLO + RTMDet agreement rule, calibrated on the calibration sample | pipeline | M |
+| 7 | Re-fit the floor on `field_eye_calib_v1` (labelled: 60 visible and 62 hidden eye slots); publish it through the API; gallery and skills read it | pipeline, gallery, skills | M |
+| 8 | YOLO + RTMDet agreement rule: rescope first, then re-calibrate on fresh data with a hidden-side term fixed in advance | pipeline, model | M–L |
 | 9 | Mobile `eye_crop` presence tasks for false-eye ground truth | mobile | S |
 | 10 | `bird_pose_15_v0` as the keypoint model (owner decision) | model + pipeline | M |
 | 11 | UI codes and the gallery "unreliable eye" state | ui, gallery | S |
