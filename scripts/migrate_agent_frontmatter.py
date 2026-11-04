@@ -45,7 +45,7 @@ def defaults_for(rel: str, name: str, text: str) -> dict[str, str]:
     haystack = f"{rel} {name} {text[:2000]}".lower()
     is_external = any(
         term in haystack
-        for term in ("external", "codex", "gemini", "subagent-orchestrator")
+        for term in ("external", "codex", "gemini", "synthet-agent-swarm")
     )
     mutates_remote = any(
         term in haystack
