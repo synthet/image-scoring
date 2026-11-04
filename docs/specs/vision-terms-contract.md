@@ -1,10 +1,10 @@
 ---
 type: Specification
 title: Vision terms contract
-description: Shared meaning of burst, stack, same moment, sharpness and box format across the image-scoring repositories.
+description: Shared meaning of burst, stack, same moment, sharpness, box format and eye evidence across the image-scoring repositories.
 resource: docs/specs/vision-terms-contract.md
 tags: [specs, contract, vocabulary, culling, deduplication]
-timestamp: 2026-11-01T00:00:00Z
+timestamp: 2026-11-03T00:00:00Z
 okf_version: 0.1
 ---
 
@@ -59,6 +59,21 @@ image, as stored in pipeline `image_regions`.
 
 Pixel boxes are only valid for the exact image they were measured on. A pixel box from a downscaled
 model input does not apply to the original (see pipeline#746).
+
+## Eye evidence
+
+| Term | Meaning | Owner | Current value |
+|---|---|---|---|
+| **Eye consumer floor** | Minimum keypoint confidence for a consumer to treat an eye as found | pipeline (`EYE_CONSUMER_MIN_CONF`, `modules/keypoints.py`) | 0.8 |
+| **Keypoint provider identity** | Which model, detector and settings produced the stored eyes | pipeline (`image_keypoint_runs.provider_version`, `provider_config_hash`) | per run |
+
+The gallery (`EYE_MIN_CONFIDENCE`, `electron/db.ts`) and skills (`EYE_MIN_CONF`,
+`scripts/neardupe_study/proposals.py`) hold copies of the floor, so a change must update both.
+The owner-labelled review that kept 0.8 is in the model repository's
+`docs/reports/eye-model-benchmark-2026-11-03.md`.
+
+A change of model, detector or floor bumps the provider identity, and downstream receipts such as
+keep-one record it.
 
 ## Change rule
 
